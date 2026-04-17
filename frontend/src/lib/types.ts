@@ -4,6 +4,7 @@ export interface TreeNode {
   start_index: number;
   end_index: number;
   summary: string;
+  body?: string | null;
   nodes?: TreeNode[];
 }
 
@@ -31,7 +32,8 @@ export interface ManifestEntry {
   slug: string;
   name: string;
   scope: string;
-  file: string;
+  file?: string;
+  skill_folder?: string;
 }
 
 export interface TreeStats {
