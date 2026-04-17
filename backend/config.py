@@ -16,10 +16,8 @@ class Settings(BaseSettings):
     app_env: Literal["dev", "prod"] = "dev"
 
     cors_allow_origins: list[str] = [
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "http://localhost:3010",
-        "http://127.0.0.1:3010",
+        "http://localhost:3001",
+        "http://127.0.0.1:3001",
     ]
 
     llm_provider: Literal["openrouter", "ollama", "mock"] = "mock"
