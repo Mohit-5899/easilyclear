@@ -1,0 +1,381 @@
+{
+  "doc_name": "Springboard Academy — Rajasthan Geography Notes (RAS Pre) [UNOFFICIAL]",
+  "book_slug": "springboard_rajasthan_geography_ras_pre_UNOFFICIAL",
+  "doc_description": "",
+  "source_url": "file:///Users/mohitmandawat/Downloads/802144792-Rajasthan-Geography-English-PDF.pdf",
+  "source_authority": "coaching_unofficial",
+  "source_publisher": "Springboard Academy (RAS Pre Notes, Scribd mirror)",
+  "language": "en",
+  "subject": "geography",
+  "subject_scope": "rajasthan",
+  "exam_coverage": [
+    "ras_pre"
+  ],
+  "ingested_at": "2026-04-15T18:00:42.912642+00:00",
+  "cleaned_at": "2026-04-15T18:00:43.760064+00:00",
+  "cleanup_version": "v1",
+  "cleaner_layers_applied": [
+    "whitelist",
+    "regex"
+  ],
+  "pageindex_version": "vendored-f2dcffc0",
+  "llm_model_indexing": "google/gemma-4-26b-a4b-it",
+  "structure": [
+    {
+      "title": "Jaipur- 302018",
+      "node_id": "0000",
+      "start_index": 1,
+      "end_index": 2,
+      "summary": "The partial document outlines key topics related to Jaipur, including its major physiographic regions, climatic characteristics, rivers, lakes, natural vegetation, soil, and major crops like wheat, maize, barley, cotton, sugarcane, and bajra. It also covers major industries, population aspects such as growth, density, literacy, sex ratio, and major tribes. Additionally, it discusses metallic and non-metallic minerals, conventional and non-conventional power resources, biodiversity conservation, and tourist centers and circuits."
+    },
+    {
+      "title": "SYLLABUS",
+      "node_id": "0001",
+      "start_index": 2,
+      "end_index": 3,
+      "summary": "The partial document outlines the syllabus for the Geography of Rajasthan, covering key topics such as the state's physical geography, including its origin, location, physiographic regions, climate, and water geography (rivers, lakes, drainage systems, irrigation projects, and water conservation techniques). It also addresses resource geography, focusing on soil, vegetation, wildlife conservation, and minerals (metallic and non-metallic). Economic geography topics include agriculture, animal husbandry, industries, energy resources (conventional and non-conventional), population dynamics, and tourism, including UNESCO sites. Additionally, it highlights biodiversity conservation, major physiographic regions, climatic characteristics, natural vegetation, major crops, power resources, and tourist circuits."
+    },
+    {
+      "title": "Geography of Rajasthan",
+      "node_id": "0002",
+      "start_index": 3,
+      "end_index": 4,
+      "summary": "The partial document provides an outline of the geography of Rajasthan, covering its physical, resource, and economic geography. It includes topics such as the origin, location, and extension of Rajasthan, physiographic regions, climate, drainage systems, rivers, lakes, and irrigation projects. It also discusses water conservation techniques, soil, vegetation, wildlife conservation, and minerals (both metallic and non-metallic). The economic geography section addresses agriculture, animal husbandry, industry, energy (conventional and non-conventional), population, tourism, and UNESCO heritage sites. Additionally, the document includes a chapter-wise breakdown with page numbers for each topic."
+    },
+    {
+      "title": "Chapter Name",
+      "node_id": "0003",
+      "start_index": 4,
+      "end_index": 5,
+      "summary": "The partial document outlines the contents of a book or report about Rajasthan, covering topics such as its origin, location, and extension, physiographic divisions, climate, drainage systems (rivers and lakes), irrigation, soil, minerals (metallic and non-metallic), vegetation, wildlife conservation, agriculture, industry, energy, population, and tourism. Additionally, it provides an introduction to the concept of Pangea, Panthalassa, and the Tethys Sea, explaining the division of Pangea into Gondwanaland (southern part) and Angaraland (northern part), with examples of regions included in each.",
+      "nodes": [
+        {
+          "title": "Origin, Location & Extention of Rajasthan",
+          "node_id": "0004",
+          "start_index": 5,
+          "end_index": 18,
+          "summary": "The partial document provides detailed information about the geography, history, and physical features of Rajasthan. It covers the following main points:\n\n1. **Pangea and Panthalassa**: Explanation of the supercontinent Pangea and the super ocean Panthalassa, along with the Tethys Sea's location between Angaraland and Gondwanaland.\n\n2. **Origin and Formation of Rajasthan**: Discussion on the division of Pangea into Gondwana Land (southern part) and Angara Land (northern part), and the geological formation of Rajasthan, including the Aravalli and Hadoti regions.\n\n3. **Location and Extension of Rajasthan**: Details about Rajasthan's geographical location in India, its latitudinal and longitudinal coordinates, and its boundaries, including international and interstate borders.\n\n4. **Area and Shape of Rajasthan**: Information on Rajasthan's area, its rank in India, and comparisons with other countries. The shape of Rajasthan is described as rhombus or kite-shaped, with details on the largest and smallest districts.\n\n5. **Boundaries of Rajasthan**: Description of Rajasthan's international and interstate boundaries, including neighboring states and districts that share borders.\n\n6. **Historical and Geographical Regions**: Identification of various historical and geographical regions in Rajasthan, such as Marwar, Shekhawati, Mewar, Hadoti, and others, along with their historical significance and covered districts.\n\n7. **Physical Divisions of Rajasthan**: Classification of Rajasthan into four physical divisions—Desert, Aravalli, Eastern Plain, and Hadoti Plateau—along with their area, population, soil types, climate, and districts.\n\n8. **Miscellaneous Notes**: Additional details on specific regions, ancient names, and unique geographical features like Rathi, Thali, Maru, and others, as well as historical capitals and cultural significance."
+        },
+        {
+          "title": "Physiographic Division",
+          "node_id": "0005",
+          "start_index": 18,
+          "end_index": 18,
+          "summary": "The partial document provides an overview of the physical divisions of Rajasthan, categorizing the region into four main divisions: Desert, Aravali, Eastern Plain, and Hadoti Plateau. It includes details about the area, population, number of districts, soil types, and climate characteristics associated with each division."
+        },
+        {
+          "title": "Climate",
+          "node_id": "0006",
+          "start_index": 18,
+          "end_index": 8,
+          "summary": "The partial document discusses the main points covered, including the task of generating a description based on provided text, focusing on summarizing key aspects without adding extraneous information."
+        },
+        {
+          "title": "Drainage System · Rivers",
+          "node_id": "0007",
+          "start_index": 8,
+          "end_index": 9,
+          "summary": "The partial document provides geographical details about Rajasthan, including its latitudinal and longitudinal locations. It covers:\n\n1. **Latitudinal Location**:\n   - Latitude range: 23°03' NL to 30°12' NL.\n   - Key places: Borkunda (Banswara) and Kona Village (Sri Ganganagar).\n   - Tropic of Cancer passes through Banswara and Dungarpur, with a length of 26 km in Rajasthan.\n   - Highlights the significance of June 21 as the longest day in the northern hemisphere, celebrated as Summer Solstice and International Yoga Day.\n   - Latitude lines are referred to as climate lines, and Kushalgarh (Banswara) is the nearest city to the Tropic of Cancer.\n\n2. **Longitudinal Location**:\n   - Longitude range: 69°30' EL to 78°17' EL.\n   - Key places: Katra Village (Jaisalmer) and Silana Village (Dholpur).\n   - Time gap between Dholpur (East) and Jaisalmer (West) is 35 minutes and 8 seconds.\n   - Longitudinal lines are referred to as date and time lines.\n   - Gagrana (Nagaur District) is identified as the mid-village of Rajasthan based on satellite surveys.\n\n3. **Extension of Rajasthan**:\n   - Area: 342,239 km² (132,139 square miles).\n   - Includes details about the calculation of longitude in terms of time (1° longitude = 4 minutes, 1' longitude = 4 seconds)."
+        },
+        {
+          "title": "Lakes",
+          "node_id": "0008",
+          "start_index": 9,
+          "end_index": 10,
+          "summary": "The partial document provides geographical and statistical details about Rajasthan, India. It covers the longitudinal gap, mid-village (Gagrana in Nagaur district), and time differences between eastern (Dholpur) and western (Jaisalmer) parts of Rajasthan. It discusses the state's area, including its percentage of India's total area (10.41%) and its global share (0.25%). It highlights Jaisalmer as the largest district (11.22% of Rajasthan's area) and Dholpur as the smallest (0.89%). Comparisons are made with countries like Germany, Japan, Sri Lanka, Britain, and Israel. The shape of Rajasthan is described as rhombus or kite-shaped, as per T.H. Handley. Additionally, the largest and smallest districts by area are listed, with Jaisalmer being the largest and Dholpur the smallest."
+        },
+        {
+          "title": "Irrigation",
+          "node_id": "0009",
+          "start_index": 10,
+          "end_index": 18,
+          "summary": "The partial document provides detailed geographical, historical, and administrative information about Rajasthan. It covers the following main points:\n\n1. **Area and Rankings**: Rajasthan's area as a percentage of India and the world, with Jaisalmer being the largest district and Dholpur the smallest. Comparisons with countries like Germany, Japan, and Britain are also included.\n\n2. **Shape and Boundaries**: Rajasthan's rhombus or kite shape, international boundary details with Pakistan, and interstate boundaries with neighboring states (Madhya Pradesh, Haryana, Gujarat, Uttar Pradesh, Punjab). Specific districts forming borders with multiple states are highlighted.\n\n3. **Regional Classifications**: Historical and geographical regions such as Rathi, Shekhawati, Maru, Bhorat, Matsay, Hadoti, Vagad, Marwar, Mewar, and others, along with their covered districts and historical significance.\n\n4. **Physical Divisions**: Rajasthan's division into four physical regions (Desert, Aravali, Eastern Plain, Hadoti Plateau) with details on area, population, districts, soil types, and climate.\n\n5. **Historical Names and Features**: Ancient names and historical significance of various regions and districts, such as Ahichhatrapur (Nagaur), Malani (Barmer), and Jangal (Bikaner and Jodhpur).\n\n6. **Miscellaneous Facts**: Unique features like anti-earthquake buildings in Chandrawati, the significance of rivers, and cultural aspects like Mand singing in Jaisalmer.\n\nThe document provides a comprehensive overview of Rajasthan's geography, history, and administrative boundaries."
+        },
+        {
+          "title": "Soil",
+          "node_id": "0010",
+          "start_index": 18,
+          "end_index": 12,
+          "summary": "The partial document discusses the main points covered, including the task of generating a description of a given text, focusing on summarizing its key aspects without adding extraneous information."
+        },
+        {
+          "title": "Minerals · Metallic & Non-Mettalic",
+          "node_id": "0011",
+          "start_index": 12,
+          "end_index": 13,
+          "summary": "The partial document provides detailed information about the interstate boundaries of Rajasthan, including neighboring states, boundary lengths, and the districts of Rajasthan that share borders with these states. Key points covered include:\n\n1. Rajasthan shares boundaries with five neighboring states: Madhya Pradesh, Haryana, Gujarat, Uttar Pradesh, and Punjab, with a total interstate boundary of 4850 km.\n2. Specific districts of Rajasthan that share borders with each neighboring state are listed.\n3. Important facts about districts forming borders with two states, such as Hanumangarh, Deeg, Dholpur, and Banswara, are highlighted.\n4. Details about districts forming borders with a state twice, including Kota and Chittorgarh, are mentioned, along with the division of Chittorgarh by Bhilwara.\n5. Classification of Rajasthan's districts based on their location on interstate and international boundaries, including:\n   - 25 districts on the interstate boundary.\n   - 6 districts on the international boundary.\n   - 2 districts on both international and interstate boundaries (Sriganganagar and Barmer).\n6. Identification of 21 landlocked districts in Rajasthan.\n7. Districts with the maximum and minimum boundary lengths (Jhalawar and Barmer) and the district with the maximum neighboring districts (Jaipur Rural) are noted."
+        },
+        {
+          "title": "Vegetation",
+          "node_id": "0012",
+          "start_index": 13,
+          "end_index": 14,
+          "summary": "The partial document discusses the geographical and administrative details of Rajasthan's districts, focusing on their boundaries and unique characteristics. It highlights districts forming borders with other states, distinguishing between dismantled and non-dismantled districts. It provides data on districts located on interstate and international boundaries, including those on both. The document also mentions landlocked districts, districts with maximum and minimum boundaries, and specific boundary disputes like Mangarh Hill between Rajasthan and Gujarat. Additionally, it notes that Rajsamand district's headquarters, Rajnagar, differs from its name."
+        },
+        {
+          "title": "Wildlife & its Conservation",
+          "node_id": "0013",
+          "start_index": 14,
+          "end_index": 15,
+          "summary": "The partial document covers geographical and historical details of Rajasthan, including:\n\n1. Rajsamand district headquarters being Rajnagar and a boundary dispute over Mangarh Hill between Rajasthan and Gujarat.\n2. The Rathi region, characterized by less than 25 cm rainfall, covering districts like Jaisalmer, Bikaner, and Barmer, and the Rathi breed of cow.\n3. Historical regions such as:\n   - Rath/Ahirwaat: Yadav dynasty-ruled areas, mainly Alwar and Kotputli-Bahror.\n   - Shekhawati: Shekhawat dynasty-ruled areas, covering Churu, Sikar, Neem Ka Thana, and Jhunjhunu.\n   - Torawati: Catchment area of the Kantli River, covering Sikar and Jhunjhunu.\n   - Thali: Upland desert areas, covering Churu and Bikaner."
+        },
+        {
+          "title": "Agriculture",
+          "node_id": "0014",
+          "start_index": 15,
+          "end_index": 16,
+          "summary": "The partial document provides a detailed description of various historical, geographical, and cultural regions of Rajasthan. It covers:\n\n1. **Rathi Region**: Low rainfall area including Jaisalmer, Bikaner, and Barmer, with the Rathi cow breed and historical Yadav dynasty influence.\n2. **Shekhawati Region**: Ruled by the Shekhawat dynasty, covering Churu, Sikar, Neem Ka Thana, and Jhunjhunu, with sub-regions like Torawati.\n3. **Thali Region**: Upland desert areas in Churu and Bikaner, with features like Talli (sand dune valleys).\n4. **Maru Region**: Western Rajasthan, primarily in Jodhpur division.\n5. **Bhorat Region**: Plateau between Kumbhalgarh and Gogunda hills, including Bhomat (hills and plateau between Udaipur and Dungarpur).\n6. **Matsay Region**: Historical region in southwestern Alwar, with Virat Nagar as its capital and districts like Alwar, Bharatpur, Karauli, and Dholpur.\n7. **Mal/Hadoti Region**: Southeastern plateau region covering Kota, Bundi, Bara, Jhalawar, and Malav Pradesh (extension of Malwa Plateau).\n8. **Beed and Beehad**: Grasslands in Jhunjhunu and badlands (ravines) in Karauli, Dholpur, and Sawai Madhopur.\n9. **Vagad Region**: Southern Rajasthan, including Banswara, Dungarpur, and Pratapgarh, with Bangar (ancient alluvial soil) in Pali, Nagaur, Sikar, and Jhunjhunu.\n10. **Brajnagar and Brijnagar**: Historical names for Jhalarapatan and areas of Bharatpur near Uttar Pradesh.\n11. **Marwar Region**: Western Rajasthan, including Jodhpur, Jaisalmer, Jalore, Pali, Sirohi, and Barmer, with sub-regions like Merwara and Mewar (ruled by the Guhil dynasty).\n12. **Yaudheya Region**: Historical northern Rajasthan, including Sriganganagar and Hanumangarh.\n\nThe document highlights the historical significance, geographical features, and cultural heritage of these regions."
+        },
+        {
+          "title": "Industry",
+          "node_id": "0015",
+          "start_index": 16,
+          "end_index": 17,
+          "summary": "The partial document provides a detailed geographical and historical overview of various regions in Rajasthan, India. It describes specific areas, their historical names, geographical features, and cultural significance. Key points include:\n\n1. Definitions of regions like Maru, Bhorat, Matsay, Hadoti, Beed, Vagad, Marwar, Mewar, and others, along with their geographical locations and covered districts.\n2. Historical names and their significance, such as Ahichhatrapur (Nagaur), Sapadlaksha (Chauhan dynasty region), Dhundhad (Dhundh river region), and others.\n3. Cultural and historical details, including ancient capitals, dynasties, and notable features like anti-earthquake buildings in Chandrawati and Mand singing in Jaisalmer.\n4. Geographical features like plateaus, grasslands, badlands, and river regions, along with their associated districts.\n5. Specific mentions of tribes, vegetation, and historical rulers, such as the Mev caste in Mewat and the Hada Chauhan dynasty in Hayhay.\n6. Connections to rivers, such as the Mahi River in Kathal and the Dhundh River in Dhundhad.\n7. Ancient names of districts and their historical or cultural relevance, such as Malani (Barmer), Jabalipur (Jalore), and Brajnagar (Jhalarapatan)."
+        },
+        {
+          "title": "Energy",
+          "node_id": "0016",
+          "start_index": 17,
+          "end_index": 18,
+          "summary": "The partial document provides detailed historical and geographical information about various regions and districts of Rajasthan. It covers ancient names, capitals, vegetation, and notable features of regions such as Jangal, Ahichhatrapur, Sapadlaksha, Dhundhad, Kuru, Shursen, Hayahay, Chandrawati, Jabalipur, Malani, Mand, Mewat, Meval, and Kathal. Additionally, it outlines the physical divisions of Rajasthan into Desert, Aravali, Eastern Plain, and Hadoti Plateau, providing data on their area, population, districts, soil types, and climate characteristics."
+        },
+        {
+          "title": "Population",
+          "node_id": "0017",
+          "start_index": 18,
+          "end_index": 35,
+          "summary": "The partial document provides detailed notes on the geography of Rajasthan, focusing on its physical divisions, desert regions, and the Aravali mountain range. Key points include:\n\n1. **Physical Divisions of Rajasthan**:\n   - Rajasthan is divided into four physical divisions: Desert, Aravali, Eastern Plain, and Hadoti Plateau, with details on their area, population, districts, soil types, and climate.\n\n2. **Thar Desert**:\n   - Known as the 'Thar Desert,' it is divided into Arid (Rathi) and Semi-Arid (Bangar) regions, with details on rainfall, sand dunes, and their types (e.g., Barkhan, Transverse, Longitudinal, Star-shaped, Parabolic, Seif, Shrub Coppies).\n   - Features like Khadeen, Rann, water belts, Akal Wood Fossil Park, Boulder Clay, and Oases are described.\n   - The desert's extension, shifting patterns, and its role in desertification are highlighted.\n\n3. **Aravali Mountain Range**:\n   - An ancient, folded, and residual mountain range formed during the Pre-Cambrian period.\n   - Divided into Northern, Middle, and Southern Aravali, with details on peaks (e.g., Gurushikhar, Raghunathgarh, Jarga) and plateaus (e.g., Udiya Plateau, Abu Block, Bhorat, Bhomat, Lasadiya).\n   - Importance of Aravali in preventing desertification, biodiversity, water divide, tribal shelter, tourism, and mineral resources.\n   - Aravali is referred to as the \"Planning Region\" of Rajasthan due to its significance in state development plans.\n\n4. **Other Geographical Features**:\n   - Important hills and their locations, such as Trikoot Hills, Chidiya Took, Chappan Hills, and Sundha Mountain, are listed with notable landmarks and features.\n\nThe document serves as a comprehensive guide to Rajasthan's geography, emphasizing its physical and ecological diversity."
+        },
+        {
+          "title": "Tourism",
+          "node_id": "0018",
+          "start_index": 35,
+          "end_index": 20,
+          "summary": "The partial document discusses the main points covered, including the task of generating a description based on provided text, focusing on summarizing key aspects without adding extraneous information."
+        }
+      ]
+    },
+    {
+      "title": "Historical & Geographical Places of Rajasthan",
+      "node_id": "0019",
+      "start_index": 20,
+      "end_index": 18,
+      "summary": "The partial document discusses the main points covered, including the task of generating a description based on provided text, focusing on summarizing key aspects without adding extraneous information."
+    },
+    {
+      "title": "PHYSICAL DIVISION OF RAJASTHAN",
+      "node_id": "0020",
+      "start_index": 18,
+      "end_index": 43,
+      "summary": "The partial document provides detailed notes on the geography of Rajasthan, covering its physical divisions, desert regions, and significant geographical features. Key points include:\n\n1. **Physical Divisions of Rajasthan**: Rajasthan is divided into four regions—Desert, Aravali, Eastern Plain, and Hadoti Plateau—detailing their area, population, districts, soil types, and climate.\n\n2. **Thar Desert**: Information on the Thar Desert, including its formation, slope, and division into arid and semi-arid regions. It describes sand dunes (types like Barkhan, Transverse, Longitudinal, Star-shaped, Parabolic, and Seif), their characteristics, and their contribution to desertification.\n\n3. **Semi-Arid Desert**: Details on the semi-arid region, including subdivisions like Luni Basin, Nagauri Upland, Shekhawati Inland Drainage Area, and Ghagghar Basin, along with their features, soil, and agricultural practices.\n\n4. **Desert Features**: Other desert-related points such as Khadeen lakes, Rann, water belts, Akal Wood Fossil Park, Boulder Clay, oases, and shifting sand dunes.\n\n5. **Aravali Mountains**: Comprehensive details on the Aravali range, including its formation, structure, peaks, plateaus, biodiversity, and its role as a water divide and barrier against desertification. It also highlights its significance in tourism, tribal habitation, and mineral resources.\n\n6. **Eastern Plain**: Description of the Eastern Plain, its formation, and subdivisions (Mahi Plain, Banas and Banganga Plain, Chambal Plain), along with their soil types, crops, and population density.\n\n7. **Hadoti Plateau**: Information on the Hadoti Plateau, its formation, divisions (Deccan Lava Plateau and Vindhyan Scarpland), and sub-divisions (Crescent Shape Hills, Shahabad Upland, Dag-Gangdhar Upland). It also mentions minerals found in the region.\n\n8. **Climate of Rajasthan**: Overview of Rajasthan's climate, classified as sub-tropical, with details on direct and slanting sun rays and the distinction between climate and weather.\n\nThe document provides an in-depth geographical analysis of Rajasthan, emphasizing its physical features, climatic conditions, and regional characteristics."
+    },
+    {
+      "title": "CLIMATE",
+      "node_id": "0021",
+      "start_index": 43,
+      "end_index": 59,
+      "summary": "The partial document provides detailed notes on the geography of Rajasthan, focusing on its climate and drainage system. Key points include:\n\n1. **Meaning of Climate**: Defined as long-term atmospheric phenomena, determined by a 30-year average of weather conditions.\n2. **Climate Characteristics**: Rajasthan has a sub-tropical climate with variations in sun rays (direct in Banswara, slanting in Ganganagar).\n3. **Climate Classification**: \n   - General classification based on rainfall and temperature, dividing Rajasthan into five climatic zones (Arid, Semi-Arid, Sub-Humid, Humid, Very Humid).\n   - Individual classifications by Koppen, Trewartha, and Thornthwaite, detailing specific climate types, vegetation, and regional extensions.\n4. **Seasonal Classification**: Four seasons (Summer, Rainy, Autumn, Winter) with phenomena like Loo winds, sandstorms, monsoon bursts, and retreating monsoons. Global events like El Niño and La Niña and their impacts on monsoon are also discussed.\n5. **Rainfall Distribution**: Unequal rainfall patterns divided into three regions (Scanty, Medium, High rainfall) with monsoon branches and their effects.\n6. **Other Climate Points**: Isohyets and isobar lines are explained, showing rainfall and air pressure distribution.\n7. **Drainage System**: Divided into three parts (Arabian Sea, Bay of Bengal, and Inland Drainage systems). The Aravalli range acts as a water divide, with most rivers being part of the inland drainage system. Rajasthan's surface and underground water resources are also highlighted."
+    },
+    {
+      "title": "DRAINAGE SYSTEM",
+      "node_id": "0022",
+      "start_index": 59,
+      "end_index": 82,
+      "summary": "The partial document provides detailed notes on the drainage system and rivers of Rajasthan, categorized into three parts based on discharge points: Arabian Sea, Inland Drainage System, and Bay of Bengal. It highlights the characteristics, origins, discharge points, lengths, catchment areas, tributaries, and notable features of major rivers such as Luni, Mahi, Chambal, Banas, and others. It also discusses dam projects, water tunnels, and the significance of rivers in Rajasthan for irrigation, drinking water, biodiversity, and hydroelectric power. Additionally, it covers inland drainage rivers like Ghagghar, Kantli, and Sabi, and their unique features. The document includes information on brine and freshwater lakes, their locations, and causes of salinity. It emphasizes the importance of rivers and lakes in creating fertile plains, raising groundwater levels, and supporting biodiversity and religious practices."
+    },
+    {
+      "title": "Lakes",
+      "node_id": "0023",
+      "start_index": 82,
+      "end_index": 97,
+      "summary": "The partial document provides detailed notes on the geography of Rajasthan, focusing primarily on its lakes and irrigation systems. It categorizes lakes into brine water and freshwater lakes, listing their locations, characteristics, historical significance, and uses. Key lakes such as Sambhar, Panchpadra, Deedwana, Jaisamand, Pichhola, Fateh Sagar, and Pushkar are described in detail, including their construction periods, associated rivers, and cultural or economic importance. The document also highlights the role of lakes in salt production, water conservation, tourism, biodiversity, and religious significance. Additionally, it discusses irrigation in Rajasthan, including modes, classifications, and multipurpose projects, emphasizing their importance in agriculture and water management."
+    },
+    {
+      "title": "Irrigation",
+      "node_id": "0024",
+      "start_index": 97,
+      "end_index": 117,
+      "summary": "The partial document provides detailed notes on Rajasthan's geography, focusing on irrigation and soil. It covers the modes and classifications of irrigation, including small, medium, and macro irrigation projects. It elaborates on multipurpose river valley projects like Chambal, Mahi, Bhakra-Nangal, Vyas, Renukaji, and Lakhwar, detailing their contributions, phases, dams, hydroelectric capacities, and beneficiary areas. Canal multipurpose projects such as Indira Gandhi Canal, Gang Canal, Rajeev Gandhi Sidhmukh Canal, Narmada Canal, Gurgaon Canal, Bharatpur Canal, and the Eastern Rajasthan Canal Project (ERCP) are discussed, highlighting their objectives, financial cooperation, and irrigation benefits. The document also lists micro and medium irrigation projects across Rajasthan. Additionally, it introduces soil, its organization, classification, types, and associated problems, with a note on pedology as the study of soil."
+    },
+    {
+      "title": "Soil",
+      "node_id": "0025",
+      "start_index": 117,
+      "end_index": 127,
+      "summary": "The partial document provides detailed notes on the geography of Rajasthan, focusing on soil and minerals. It covers the following main points:\n\n1. **Soil**:\n   - Definition and study of soil (Pedology).\n   - Organization and classification of soil, including scientific classification by USDA and the State Agriculture Department.\n   - Types of soils in Rajasthan, such as Sandy Soil, Brown-Sandy Soil, Saline Soil, Alluvial Soil, Red Loamy Soil, Black Soil, Red-Black Soil, and Red-Yellow Soil, along with their formation, extension, characteristics, and agricultural production.\n   - Soil problems like erosion, salinity, water logging, alkalinity, and soil degradation, their causes, and measures to address them.\n\n2. **Minerals**:\n   - Overview of minerals in Rajasthan, highlighting its mineral diversity and storage.\n   - Rajasthan's status as the \"museum of minerals\" and Aravali as the \"storehouse of minerals.\"\n   - Classification of minerals into metallic and non-metallic types.\n   - Information on mineral production, income, and policies related to minerals in Rajasthan."
+    },
+    {
+      "title": "Minerals · Metallic & Non-Metallic",
+      "node_id": "0026",
+      "start_index": 127,
+      "end_index": 149,
+      "summary": "The partial document provides detailed notes on the geography of Rajasthan, focusing on its mineral resources, production, policies, and related institutions. Key points include:\n\n1. **Mineral Diversity and Storage**: Rajasthan is noted for its high mineral diversity, earning it the title \"Museum of Minerals.\" The Aravali region is highlighted as the \"Storehouse of Minerals.\"\n\n2. **Mineral Production and Income**: Rajasthan contributes significantly to India's mineral production, particularly non-metallic minerals, but has lower income from metallic minerals.\n\n3. **Types of Rocks and Minerals**: The document categorizes minerals based on rock types (Sedimentary, Dharwad, Vindhya) and provides examples of minerals found in each.\n\n4. **Classification of Minerals**: Minerals are classified into metallic, non-metallic, ferrous, and non-ferrous categories, with examples like iron ore, lead-zinc, gypsum, and energy minerals (coal, petroleum, natural gas).\n\n5. **Production Areas**: Detailed production areas for various minerals like copper, iron ore, lead-zinc, silver, gold, manganese, fluorite, diamond, clay minerals, stone minerals, potash, and energy minerals are provided.\n\n6. **Mineral Policies**: The document outlines Rajasthan's mineral policies from 1978 to 2015, focusing on scientific exploitation, mining leases, illegal mining penalties, and increasing mineral contributions to GDP. It also mentions specific policies like the Marble and Granite Policy (2002) and M-Sand Policy (2021).\n\n7. **Mineral Institutes**: Key institutions like RSMML, Hindustan Zinc Limited, Hindustan Copper Limited, and the Pachpadra Petroleum Refinery are discussed, including their establishment, headquarters, and projects.\n\n8. **Energy Minerals**: Rajasthan's significant reserves and production of petroleum, natural gas, and coal are highlighted, with details on basins, production areas, and types of coal.\n\n9. **Monopoly Minerals**: Minerals exclusively produced in Rajasthan, such as lead, zinc, wollastonite, and jasper, are listed.\n\n10. **Forest Policies and Related Information**: The document briefly touches on forest policies, census, classification, afforestation programs, and environmental awards, emphasizing the target of achieving 33% forest cover in geographical areas."
+    },
+    {
+      "title": "Vegetation",
+      "node_id": "0027",
+      "start_index": 149,
+      "end_index": 162,
+      "summary": "The partial document provides detailed notes on Rajasthan's geography, focusing on forest and wildlife conservation. It covers the following main points:\n\n1. **Forest Policies**: Overview of national and state forest policies, including targets for forest coverage and eco-tourism policies.\n2. **Forest Census**: Details of forest surveys, forest area statistics, and geographical distribution of forest cover in Rajasthan.\n3. **Classification of Forests**: Legal/administrative and geographical classifications, including reserved, protected, and unclassified forests, as well as types of forests based on rainfall and temperature.\n4. **Important Forests and Grasses**: Key tree species, their scientific names, uses, and regional distribution, along with significant grasses like Sewan, Dhaman, and Bamboo.\n5. **Afforestation Programmes**: Various initiatives like Desert Afforestation, Aravali Afforestation, and Harit Rajasthan Yojna, aimed at increasing forest cover and biodiversity.\n6. **Forestry and Environment Awards**: Recognition programs such as the Amrita Devi Bishnoi Award and others for contributions to forest and wildlife conservation.\n7. **Major Acts and Important Days**: Key legislation like the Wildlife Protection Act, Forest Conservation Act, and important environmental days like World Forestry Day and World Environment Day.\n8. **Other Important Facts**: Institutions like CAZRI and AFRI, biological parks, nature parks, and Rajasthan's significance in wildlife conservation, including in-situ and ex-situ conservation methods."
+    },
+    {
+      "title": "Wildlife & its Conservation",
+      "node_id": "0028",
+      "start_index": 162,
+      "end_index": 177,
+      "summary": "The partial document provides detailed notes on Rajasthan's geography, focusing on wildlife and conservation efforts. It highlights Rajasthan's significance in wildlife, ranking second in India after Assam, and its transition from being a \"Hunters' Paradise\" before independence to active conservation efforts post-independence. The document explains two conservation methods: In-situ (e.g., National Parks, Wildlife Sanctuaries, Tiger Projects) and Ex-situ (e.g., Zoos, Deer Parks). It lists and describes Rajasthan's National Parks, Wildlife Sanctuaries, Tiger Projects, and Hunting Prohibited Regions, including their establishment, locations, and unique features. Additionally, it mentions key wildlife species like the Great Indian Bustard (Godawan) and Gagroni Parrot, along with district-wise wildlife mascots introduced in 2016. The document also briefly touches on agriculture in Rajasthan, its importance in employment, trade, contribution to GSVA, and agro-based industries."
+    },
+    {
+      "title": "Agriculture",
+      "node_id": "0029",
+      "start_index": 177,
+      "end_index": 187,
+      "summary": "The partial document provides detailed notes on Rajasthan's geography, focusing on agriculture and industrial development. Key points include:\n\n1. **Agriculture in Rajasthan**:\n   - Agriculture is termed the \"Gamble of Monsoon\" and is vital for employment, international trade, GSVA, and agro-based industries.\n   - Classification of crops based on seasons (Kharif, Rabi, Zaid) and usage (food grains, pulses, cash crops, oilseeds, fibrous crops, beverage crops).\n   - Major crops and their nicknames (e.g., Cotton - White Gold, Jowar - Bread of the Poor).\n   - Physical conditions favorable for crops and efforts for agricultural development.\n   - Agricultural research centers and special crop varieties.\n   - Major agricultural development programs like the National Horticulture Mission, Soil Health Card, Pradhan Mantri Fasal Bima Yojana, and Organic Agriculture Policy.\n   - Agricultural universities and policies, including the latest agriculture policy (2013) and organic farming initiatives.\n\n2. **Industrial Development in Rajasthan**:\n   - Rajasthan is considered a backward state industrially due to underdeveloped infrastructure and climate, with Kota being the industrial hub.\n   - Classification of industries based on size (micro, small, medium), manufacturing, and ownership.\n   - Jaipur has the highest number of industries, while Alwar has the most large-scale industries.\n\nThe document emphasizes the importance of agriculture and industries in Rajasthan's economy, highlighting initiatives, classifications, and development efforts."
+    },
+    {
+      "title": "Industry",
+      "node_id": "0030",
+      "start_index": 187,
+      "end_index": 205,
+      "summary": "The partial document provides detailed notes on the geography and industrial development of Rajasthan. It covers the following main points:\n\n1. **General Introduction**: Overview of Rajasthan's industrial status, highlighting its backwardness due to infrastructure and climate challenges, with Kota as the industrial city and Jaipur and Alwar leading in industries.\n\n2. **Classification of Industries**: Industries are categorized based on size (micro, small, medium), manufacturing (agriculture-based, mineral-based, forest produce-based, engineering, chemical fertilizers), and ownership (private, cooperative, public). Specific industries like cotton textiles, sugar, wool, vegetable ghee, mustard oil, dairy, biodiesel, olive oil, cement, glass, salt, marble, granite, and mica are discussed in detail.\n\n3. **Industrial Development Efforts**: Includes industrial policies (1978 to 2019), Special Economic Zones (SEZs) like Boranada, Sitapura, and Mahindra SEZ, industrial parks (Japanese, Korean, Ceramic, Agro Food, Spices, Garment, Stone, Software, Flower, Hosiery), and investment programs like Resurgent Rajasthan and Delhi-Mumbai Industrial Corridor (DMIC).\n\n4. **Institutions Supporting Industries**: Key organizations like RFC, RAJSICO, RIICO, and RUDA are highlighted for their roles in providing loans, training, and infrastructure for industrial development.\n\n5. **Industrial Development Schemes**: Schemes like Mukhya Mantri Swavalamban Yojana, Mukhya Mantri Yuva Udhyamita Protsahan Abhiyan, Start-up Scheme, and Aside Scheme are detailed, focusing on financial support and promoting entrepreneurship.\n\n6. **Energy Production and Infrastructure**: Discusses the role of energy in industrial and economic development, with a historical perspective on energy capacity growth in Rajasthan, from 13.2 MW at independence to 24,783.64 MW currently.\n\nThe document provides a comprehensive overview of Rajasthan's industrial landscape, policies, and supporting infrastructure."
+    },
+    {
+      "title": "Energy",
+      "node_id": "0031",
+      "start_index": 205,
+      "end_index": 233,
+      "summary": "The partial document provides detailed notes on Rajasthan's energy production and resources, including conventional and non-conventional energy sources. It covers the classification of energy resources, types of energy stations (thermal, supercritical, ultra-mega power projects), and specific energy projects in Rajasthan, such as hydro, thermal, gas, nuclear, solar, wind, biomass, biogas, and biofuel energy. It highlights major energy projects, their locations, capacities, and contributions, including solar parks, wind energy plants, and nuclear power plants. The document also discusses energy-related institutions, policies, and schemes like Ujjwal Discom Assurance Yojana, Deendayal Upadhyay Gram Jyoti Yojna, Kusum Scheme, and Saubhagya Yojna. Additionally, it includes information on energy conservation days and the history of the census in India, emphasizing its evolution, methodology, and key facts from Census 2011."
+    },
+    {
+      "title": "Population",
+      "node_id": "0032",
+      "start_index": 233,
+      "end_index": 242,
+      "summary": "The partial document provides detailed notes on Rajasthan's geography, focusing on census history, population statistics, and tourism. Key points include:\n\n1. **Census History and Facts**:\n   - Census evolution from ancient (Arthashastra) to modern times (systematic census from 1881 under Lord Ripon).\n   - Census 2011 details: budget, mascot, motto, inclusion of transgender individuals, and first paperless census.\n   - Population statistics: India's total population (121.085 crore), Rajasthan's population (6.85 crore), growth rates, density, sex ratio (overall, child, rural, urban), and literacy rates (male, female, rural, urban).\n\n2. **Demographic Insights**:\n   - Population distribution by districts, growth trends, and density variations.\n   - Scheduled Castes (17.8%) and Scheduled Tribes (13.5%) population data.\n   - Religious demographics: Hindus (88.49%), Muslims (9.07%), and others.\n\n3. **Tourism in Rajasthan**:\n   - Tourism industry status since 1989 and its evolution as a \"People-Industry\" in 2004-05.\n   - Tourism divisions (Jodhpur, Ajmer, Udaipur, Kota), tagline (\"Rajasthan - Incredible State of India\"), and slogan (\"Padharo Mhare Desh\").\n   - Tourist arrivals in 2022-23: 986.32 lakh (domestic and foreign).\n   - Tourism circuits, spots, policies, and plans."
+    },
+    {
+      "title": "Tourism",
+      "node_id": "0033",
+      "start_index": 242,
+      "end_index": 253,
+      "summary": "The partial document provides an extensive overview of Rajasthan's tourism and geography, covering the following main points:\n\n1. **Tourism Overview**:\n   - Tourism was granted industry status in 1989 and \"People-Industry\" status in 2004-05.\n   - Rajasthan has four tourism divisions: Jodhpur, Ajmer, Udaipur, and Kota.\n   - Tagline: \"Rajasthan - Incredible State of India\"; Slogan: \"Padharo Mhare Desh.\"\n   - Camel is the symbolic animal associated with tourism.\n\n2. **Tourist Arrivals**:\n   - Statistics for domestic and foreign tourist arrivals in 2021 and 2022-23.\n   - Popular destinations for domestic tourists: Ajmer and Pushkar; for foreign tourists: Jaipur, Udaipur, and Jodhpur.\n\n3. **Tourist Circuits**:\n   - Various circuits like General, Archaeological, Eco Adventure, Wildlife, Tribal, and Spiritual Circuits.\n   - Specific circuits include Shekhawati, Alwar, Bharatpur, Dhundhar, Ranthambore, Hadoti, Mewar, Mount Abu, Merwara, and Desert Triangle.\n   - Golden Triangle: Jaipur, Delhi, Agra.\n\n4. **Tourist Spots and Festivals**:\n   - Historic, cultural, and geographical sites, including major temples and dargahs.\n   - Key tourism festivals like Camel Festival, Jaipur Literature Festival, Gangaur Festival, and Kumbhalgarh Festival.\n\n5. **Tourism Policies and Schemes**:\n   - Rajasthan's tourism policies (2001, 2007, 2015, 2020) and eco-tourism policies (2010, 2021).\n   - Schemes like Paying Guest Scheme, Heritage Hotel Scheme, Mewar Complex Yojna, HRIDAY, PRASAD, and Senior Citizen Pilgrimage Scheme.\n\n6. **Tourism Institutes**:\n   - Institutions like Rajasthan Tourism Development Corporation (RTDC), Rajasthan Institute of Tourism and Travel Management (RITTMAN), and State Fair Authority.\n   - Training institutes and information centers for tourism development.\n\n7. **UNESCO and Geo-Heritage**:\n   - UNESCO's role in promoting heritage conservation.\n   - Rajasthan's UNESCO-recognized sites, including Jantar Mantar, Keoladeo National Park, Kalbelia Dance, and six forts.\n   - Geo-heritage sites in Rajasthan, such as Akal Wood Fossil Park and Ramgarh Meteorite Crater.\n\n8. **Water Conservation**:\n   - Traditional and modern water conservation techniques like Nadi, Toba, Bawdi, Khadeen, and drip irrigation.\n   - Emphasis on sustainable water management practices."
+    },
+    {
+      "title": "Water Conservation",
+      "node_id": "0034",
+      "start_index": 253,
+      "end_index": 258,
+      "summary": "The partial document focuses on the geography of Rajasthan, specifically addressing water conservation and livestock. Key points include:\n\n1. **Water Conservation**:\n   - Traditional techniques like Nadi, Toba, Bawdi (stepwells), Jhalra, Khadeen, Beri/Kui, Tanka/Kund, Johad, ponds, and lakes for water storage and management.\n   - Modern techniques such as dam projects and sprinkler/drip irrigation, inspired by Israel, implemented in areas like the Narmada canal.\n   - Major water conservation schemes, including Swajal Dhara Project (2002), Jal Swavlamban Yojana (2016-2018), Rajiv Gandhi Water Harvesting Scheme (2019-2023), and Atal Ground Water Scheme (2020), aimed at improving water levels, groundwater management, and agricultural productivity.\n   - State Water Policy (2010) prioritizing water availability for drinking and agriculture.\n   - Groundwater assessment (2022) categorizing water blocks in Rajasthan based on usage levels.\n\n2. **Livestock**:\n   - Livestock as a significant contributor to Rajasthan's economy, forming 48.58% of agriculture-related sectors and contributing 10.99% to the state's GDP.\n   - Overview of agriculture-related areas, including agricultural crops, livestock, forestry, and fishing."
+    },
+    {
+      "title": "Live Stock",
+      "node_id": "0035",
+      "start_index": 258,
+      "end_index": 266,
+      "summary": "The partial document provides detailed notes on Rajasthan's geography with a focus on livestock and animal husbandry. It covers the following main points:\n\n1. **Introduction**: Highlights the significance of livestock in Rajasthan's economy, its contribution to agriculture, and the state's GDP.\n\n2. **Animal Census**: Details about the livestock census conducted every five years, including historical and recent data, livestock density, and trends in animal population.\n\n3. **Major Breeds of Animals**: Lists various breeds of goats, cows, buffaloes, sheep, camels, and horses found in Rajasthan, along with their specific areas and unique features.\n\n4. **Animal Fairs**: Describes famous animal fairs in Rajasthan, their locations, and the cattle breeds associated with each fair.\n\n5. **Animal Breeding and Research Centers**: Provides information on key research and breeding centers for camels, sheep, buffaloes, goats, and pigs across Rajasthan.\n\n6. **Animal-Related Schemes**: Outlines major government schemes aimed at animal development, including Gopal Scheme, Kaamdhenu Scheme, ADMAS, Rajiv Gandhi Agriculture and Animal Husbandry Development, Mukhymantri Livestock Free Drug Scheme, Avika Kavach Yojna, and Bhamashah Animal Insurance Scheme, along with their objectives and benefits.",
+      "nodes": [
+        {
+          "title": "Major Schemes and Institute related to Animal Development",
+          "node_id": "0036",
+          "start_index": 266,
+          "end_index": 266,
+          "summary": "The partial document provides an overview of major schemes and institutes related to animal development in Rajasthan. It includes details such as the launch dates, objectives, and benefits of various schemes. Key schemes mentioned are:\n\n1. **Gopal Scheme** (1990) - Focuses on improving animal breeds and providing employment to rural youth.\n2. **Kaamdhenu Scheme** (1997-1998) - Establishes animal breeding farms using bovine techniques.\n3. **ADMAS Scheme** (1999) - Aims to make cows and buffaloes disease-free through ICAR.\n4. **Rajiv Gandhi Agriculture and Animal Husbandry Development** (2010) - Aligns with animal development policy objectives.\n5. **Mukhymantri Livestock Free Drug Scheme** (2012) - Provides free essential medicines for animal development.\n6. **Avika Kavach Yojna** (2004, 2009, 2018) - Offers sheep insurance with subsidies for SC/ST, BPL, and other breeders.\n7. **Bhamashah Animal Insurance Scheme** - Provides subsidized insurance for livestock with varying coverage amounts for cows, buffaloes, sheep, goats, and pigs.\n\nThe document highlights the state's efforts to enhance livestock development, improve breeds, ensure animal health, and provide financial support to livestock rearers.",
+          "nodes": [
+            {
+              "title": "Gopal Scheme",
+              "node_id": "0037",
+              "start_index": 266,
+              "end_index": 266,
+              "summary": "The partial document provides an overview of major schemes and institutes related to animal development in Rajasthan. It includes details such as the start dates, objectives, and benefits of various schemes. Key schemes mentioned are:\n\n1. **Gopal Scheme** (1990) - Focuses on improving animal breeds and providing employment to rural youth.\n2. **Kaamdhenu Scheme** (1997-1998) - Establishes animal breeding farms using bovine techniques.\n3. **ADMAS Scheme** (1999) - Aims to make cow and buffalo breeds disease-free through ICAR.\n4. **Rajiv Gandhi Agriculture and Animal Husbandry Development** (2010) - Implements objectives of the animal development policy.\n5. **Mukhymantri Livestock Free Drug Scheme** (2012) - Provides free essential medicines for animal development.\n6. **Avika Kavach Yojna** (2004, 2009, 2018) - Offers sheep insurance with subsidies for SC/ST, BPL, and other breeders.\n7. **Bhamashah Animal Insurance Scheme** - Provides subsidized insurance for livestock with varying coverage amounts for cows, buffaloes, sheep, goats, and pigs."
+            },
+            {
+              "title": "Kaamdhenu Scheme",
+              "node_id": "0038",
+              "start_index": 266,
+              "end_index": 266,
+              "summary": "The partial document provides an overview of major schemes and institutes related to animal development in Rajasthan. It includes details about the following schemes:\n\n1. **Gopal Scheme (1990)** - Focuses on improving animal breeds and providing employment to rural youth.\n2. **Kaamdhenu Scheme (1997-1998)** - Aims to establish animal breeding farms using bovine-related techniques.\n3. **ADMAS Scheme (1999)** - Targets disease-free breeds of cows and buffaloes through ICAR.\n4. **Rajiv Gandhi Agriculture and Animal Husbandry Development (2010)** - Implements objectives of the animal development policy.\n5. **Mukhymantri Livestock Free Drug Scheme (2012)** - Provides free essential medicines for animal development.\n6. **Avika Kavach Yojna (2004, 2009, 2018)** - Offers sheep insurance with subsidies for SC/ST, BPL, and other livestock breeders.\n7. **Bhamashah Animal Insurance Scheme** - Provides subsidized insurance for livestock (cows, buffaloes, sheep, goats, pigs) with varying subsidy rates for different groups."
+            },
+            {
+              "title": "ADMAS (Animal Diseases Monitoring and Surveillance) Scheme",
+              "node_id": "0039",
+              "start_index": 266,
+              "end_index": 266,
+              "summary": "The partial document provides an overview of major schemes and institutes related to animal development in Rajasthan. It includes details such as the start dates, objectives, and benefits of various schemes. Key schemes mentioned are:\n\n1. **Gopal Scheme** (1990) - Focuses on improving animal breeds and providing employment to rural youth.\n2. **Kaamdhenu Scheme** (1997-1998) - Establishes animal breeding farms using bovine techniques.\n3. **ADMAS Scheme** (1999) - Aims to make cow and buffalo breeds disease-free through ICAR.\n4. **Rajiv Gandhi Agriculture and Animal Husbandry Development** (2010) - Aligns with animal development policy objectives.\n5. **Mukhymantri Livestock Free Drug Scheme** (2012) - Provides free essential medicines for animal development.\n6. **Avika Kavach Yojna** (2004, 2009, 2018) - Offers sheep insurance with subsidies for SC/ST, BPL, and other breeders.\n7. **Bhamashah Animal Insurance Scheme** - Provides subsidized insurance for livestock with varying coverage amounts for cows, buffaloes, sheep, goats, and pigs."
+            },
+            {
+              "title": "Rajiv Gandhi Agriculture and Animal Husbandry Development",
+              "node_id": "0040",
+              "start_index": 266,
+              "end_index": 266,
+              "summary": "The partial document provides an overview of major schemes and institutes related to animal development in Rajasthan. It includes details such as the start dates, objectives, and benefits of various schemes. Key schemes mentioned are:\n\n1. **Gopal Scheme** (1990) - Focuses on improving animal breeds and providing employment to rural youth.\n2. **Kaamdhenu Scheme** (1997-1998) - Establishes animal breeding farms using bovine techniques.\n3. **ADMAS Scheme** (1999) - Aims to make cow and buffalo breeds disease-free through ICAR.\n4. **Rajiv Gandhi Agriculture and Animal Husbandry Development** (2010) - Aligns with animal development policy objectives.\n5. **Mukhymantri Livestock Free Drug Scheme** (2012) - Provides free essential medicines for animal development.\n6. **Avika Kavach Yojna** (2004, 2009, 2018) - Offers sheep insurance with subsidies for SC/ST, BPL, and other breeders.\n7. **Bhamashah Animal Insurance Scheme** - Provides subsidized insurance for livestock with varying coverage amounts for cows, buffaloes, sheep, goats, and pigs."
+            },
+            {
+              "title": "Mukhymantri Livestock Free Drug Scheme",
+              "node_id": "0041",
+              "start_index": 266,
+              "end_index": 266,
+              "summary": "The partial document provides an overview of major schemes and institutes related to animal development in Rajasthan. It includes details such as the start dates, objectives, and benefits of various schemes. Key schemes mentioned are:\n\n1. **Gopal Scheme** (1990) - Focuses on improving animal breeds and providing employment to rural youth.\n2. **Kaamdhenu Scheme** (1997-1998) - Establishes animal breeding farms using bovine techniques.\n3. **ADMAS Scheme** (1999) - Aims to make cow and buffalo breeds disease-free through ICAR.\n4. **Rajiv Gandhi Agriculture and Animal Husbandry Development** (2010) - Implements objectives of the animal development policy.\n5. **Mukhymantri Livestock Free Drug Scheme** (2012) - Provides free essential medicines for animal development.\n6. **Avika Kavach Yojna** (2004, 2009, 2018) - Offers sheep insurance with subsidies for SC/ST, BPL, and other breeders.\n7. **Bhamashah Animal Insurance Scheme** - Provides subsidized insurance for livestock with varying coverage amounts for cows, buffaloes, sheep, goats, and pigs."
+            },
+            {
+              "title": "Avika Kavach Yojna",
+              "node_id": "0042",
+              "start_index": 266,
+              "end_index": 266,
+              "summary": "The partial document provides an overview of major schemes and institutes related to animal development in Rajasthan. It includes details such as the start dates, objectives, and benefits of various schemes. Key schemes mentioned are:\n\n1. **Gopal Scheme** (1990) - Focuses on improving animal breeds and providing employment to rural youth.\n2. **Kaamdhenu Scheme** (1997-1998) - Establishes animal breeding farms using bovine techniques.\n3. **ADMAS Scheme** (1999) - Aims to make cow and buffalo breeds disease-free through ICAR.\n4. **Rajiv Gandhi Agriculture and Animal Husbandry Development** (2010) - Aligns with animal development policy objectives.\n5. **Mukhymantri Livestock Free Drug Scheme** (2012) - Provides free essential medicines for animal development.\n6. **Avika Kavach Yojna** (2004, 2009, 2018) - Offers sheep insurance with subsidies for SC/ST, BPL, and other breeders.\n7. **Bhamashah Animal Insurance Scheme** - Provides subsidized insurance for livestock with varying coverage amounts for cows, buffaloes, sheep, goats, and pigs."
+            },
+            {
+              "title": "Bhamashah Animal Insurance Scheme",
+              "node_id": "0043",
+              "start_index": 266,
+              "end_index": 267,
+              "summary": "The partial document provides detailed notes on various schemes and institutions related to animal development in Rajasthan. It covers the objectives, launch dates, and benefits of major schemes such as the Gopal Scheme, Kaamdhenu Scheme, ADMAS, Rajiv Gandhi Agriculture and Animal Husbandry Development, Mukhymantri Livestock Free Drug Scheme, Avika Kavach Yojna, Bhamashah Animal Insurance Scheme, Kamdhenu Insurance Scheme, Gaushala Biogas Partnership Scheme, Chief Minister Milk Producer Sambal Yojana, Nandi Gaushala Public Participation Scheme, and Chief Minister Mangala Animal Insurance Scheme. Additionally, it highlights important facts like the Animal Husbandry Development Fund, Camel Conservation Mission, Rajasthan Animal Development Board, Rajasthan University of Veterinary and Animal Sciences, Himkart Veerya Bank, and Cow Urine Refinery. The document emphasizes efforts to improve livestock breeds, provide subsidies, ensure animal health, promote self-reliance, and support rural and economically weaker sections."
+            },
+            {
+              "title": "Kamdhenu Insurance Scheme",
+              "node_id": "0044",
+              "start_index": 267,
+              "end_index": 267,
+              "summary": "The partial document provides detailed notes on various animal husbandry and livestock-related schemes and initiatives in Rajasthan. Key points include:\n\n1. **Insurance Schemes**:\n   - Kamdhenu Insurance Scheme (2023): Free insurance for milk animals (cow, buffalo) with a limit of two animals per family.\n   - Chief Minister Mangala Animal Insurance Scheme: Insurance coverage for milk cows, buffaloes, sheep, goats, and camels with increased grant amounts.\n\n2. **Biogas and Dairy Development**:\n   - Gaushala Biogas Partnership Scheme (2018): Grants for biogas plant installation in cowsheds to promote self-reliance.\n   - Chief Minister Milk Producer Sambal Yojana (2019): Subsidies on milk delivered to Saras Dairy.\n\n3. **Public Participation and Conservation**:\n   - Nandi Gaushala Public Participation Scheme (2019): Establishment of Nandi Gaushalas with government assistance.\n   - Camel Conservation and Development Mission: Financial support for rearing newborn camels.\n\n4. **Animal Husbandry Development**:\n   - Animal Husbandry Development Fund: Rs. 250 crore allocation.\n   - Establishment of Rajasthan Animal Development Board (1998) and Rajasthan University of Veterinary and Animal Sciences (2010).\n\n5. **Other Initiatives**:\n   - Himkart Veerya Bank (2007) in Jaipur.\n   - Cow Urine Refinery in Pathmeda (Jalore)."
+            },
+            {
+              "title": "Gaushala Biogas Partnership Scheme",
+              "node_id": "0045",
+              "start_index": 267,
+              "end_index": 267,
+              "summary": "The partial document provides detailed notes on various animal husbandry and livestock-related schemes and initiatives in Rajasthan. Key points include:\n\n1. **Insurance Schemes**:\n   - Kamdhenu Insurance Scheme for milk animals (cow, buffalo) with free insurance for up to two animals per family.\n   - Chief Minister Mangala Animal Insurance Scheme covering milk cows, buffaloes, sheep, goats, and camels with increased grant amounts.\n\n2. **Biogas and Self-Reliance Initiatives**:\n   - Gaushala Biogas Partnership Scheme to install biogas plants in cowsheds with grants up to 50% or Rs. 40 lakhs.\n\n3. **Milk Production Support**:\n   - Chief Minister Milk Producer Sambal Yojana providing subsidies on milk delivered to Saras Dairy.\n\n4. **Public Participation and Conservation**:\n   - Nandi Gaushala Public Participation Scheme with 90:10 government assistance and establishment of 16 Nandi Gaushalas.\n   - Camel Conservation and Development Mission with financial support for rearing newborn camels.\n\n5. **Animal Husbandry Development**:\n   - Animal Husbandry Development Fund of Rs. 250 crore.\n   - Establishment of Rajasthan Animal Development Board (1998), Rajasthan University of Veterinary and Animal Sciences (2010), and Himkart Veerya Bank (2007).\n\n6. **Other Initiatives**:\n   - Cow Urine Refinery in Pathmeda (Jalore) for innovative uses of cow by-products."
+            },
+            {
+              "title": "Chief Minister Milk Producer Sambal Yojana",
+              "node_id": "0046",
+              "start_index": 267,
+              "end_index": 267,
+              "summary": "The partial document provides detailed notes on various animal husbandry and livestock-related schemes and initiatives in Rajasthan. Key points include:\n\n1. **Insurance Schemes**:\n   - Kamdhenu Insurance Scheme: Free insurance for milk animals (cow, buffalo) with a maximum of two animals per family.\n   - Chief Minister Mangala Animal Insurance Scheme: Insurance coverage for milk cows, buffaloes, sheep, goats, and camels with increased grant amounts.\n\n2. **Biogas and Dairy Development**:\n   - Gaushala Biogas Partnership Scheme: Grants for biogas plant installation in cowsheds to promote self-reliance.\n   - Chief Minister Milk Producer Sambal Yojana: Subsidies on milk delivered to Saras Dairy.\n\n3. **Public Participation and Conservation**:\n   - Nandi Gaushala Public Participation Scheme: Establishment of Nandi Gaushalas with government assistance.\n   - Camel Conservation and Development Mission: Financial support for rearing newborn camels.\n\n4. **Animal Husbandry Development**:\n   - Animal Husbandry Development Fund: Allocation of Rs. 250 crore.\n   - Establishment of Rajasthan Animal Development Board and Rajasthan University of Veterinary and Animal Sciences.\n\n5. **Other Initiatives**:\n   - Himkart Veerya Bank in Jaipur.\n   - Cow Urine Refinery in Pathmeda, Jalore.\n\nThe document highlights efforts to promote livestock welfare, dairy production, and sustainable practices in Rajasthan."
+            },
+            {
+              "title": "Nandi Gaushala Public Participation Scheme",
+              "node_id": "0047",
+              "start_index": 267,
+              "end_index": 267,
+              "summary": "The partial document provides detailed notes on various animal husbandry and livestock-related schemes and initiatives in Rajasthan. Key points include:\n\n1. **Insurance Schemes**:\n   - Kamdhenu Insurance Scheme (2023): Free insurance for milk animals (cow, buffalo) with a limit of two animals per family.\n   - Chief Minister Mangala Animal Insurance Scheme: Insurance coverage for milk cows, buffaloes, sheep, goats, and camels with increased grant amounts.\n\n2. **Biogas and Dairy Development**:\n   - Gaushala Biogas Partnership Scheme (2018): Grants for biogas plant installation in cowsheds to promote self-reliance.\n   - Chief Minister Milk Producer Sambal Yojana (2019): Subsidies on milk delivered to Saras Dairy.\n\n3. **Public Participation and Conservation**:\n   - Nandi Gaushala Public Participation Scheme (2019): Establishment of Nandi Gaushalas with government assistance.\n   - Camel Conservation and Development Mission: Financial support for rearing newborn camels.\n\n4. **Animal Husbandry Development**:\n   - Animal Husbandry Development Fund: Rs. 250 crore allocation.\n   - Establishment of Rajasthan Animal Development Board (1998) and Rajasthan University of Veterinary and Animal Sciences (2010).\n\n5. **Other Initiatives**:\n   - Himkart Veerya Bank (2007) in Jaipur.\n   - Cow Urine Refinery in Pathmeda (Jalore)."
+            },
+            {
+              "title": "Chief Minister Mangala Animal Insurance Scheme",
+              "node_id": "0048",
+              "start_index": 267,
+              "end_index": 267,
+              "summary": "The partial document provides detailed notes on various animal husbandry and livestock-related schemes and initiatives in Rajasthan. Key points include:\n\n1. **Insurance Schemes**:\n   - Kamdhenu Insurance Scheme (2023): Free insurance for milk animals (cow, buffalo) with a limit of two animals per family.\n   - Chief Minister Mangala Animal Insurance Scheme: Insurance coverage for milk cows, buffaloes, sheep, goats, and camels with increased grant amounts.\n\n2. **Biogas and Dairy Development**:\n   - Gaushala Biogas Partnership Scheme (2018): Grants for biogas plant installation in cowsheds to promote self-reliance.\n   - Chief Minister Milk Producer Sambal Yojana (2019): Subsidies on milk delivered to Saras Dairy.\n\n3. **Public Participation and Conservation**:\n   - Nandi Gaushala Public Participation Scheme (2019): Establishment of Nandi Gaushalas with government assistance.\n   - Camel Conservation and Development Mission: Financial support for rearing newborn camels.\n\n4. **Animal Husbandry Development**:\n   - Animal Husbandry Development Fund: Rs. 250 crore allocation.\n   - Establishment of Rajasthan Animal Development Board (1998) and Rajasthan University of Veterinary and Animal Sciences (2010).\n\n5. **Other Initiatives**:\n   - Himkart Veerya Bank (2007) in Jaipur.\n   - Cow Urine Refinery in Pathmeda (Jalore)."
+            }
+          ]
+        },
+        {
+          "title": "Other Important Facts",
+          "node_id": "0049",
+          "start_index": 267,
+          "end_index": 267,
+          "summary": "The partial document provides detailed notes on various animal husbandry and livestock-related schemes and initiatives in Rajasthan. Key points include:\n\n1. **Insurance Schemes**:\n   - Kamdhenu Insurance Scheme (2023): Free insurance for milk animals (cow, buffalo) with a limit of two animals per family.\n   - Chief Minister Mangala Animal Insurance Scheme: Insurance coverage for milk cows, buffaloes, sheep, goats, and camels with increased grant amounts.\n\n2. **Biogas and Dairy Development**:\n   - Gaushala Biogas Partnership Scheme (2018): Grants for biogas plant installation in cowsheds to promote self-reliance.\n   - Chief Minister Milk Producer Sambal Yojana (2019): Subsidies on milk delivered to Saras Dairy.\n\n3. **Public Participation and Conservation**:\n   - Nandi Gaushala Public Participation Scheme (2019): Establishment of Nandi Gaushalas with government assistance.\n   - Camel Conservation and Development Mission: Financial support for rearing newborn camels.\n\n4. **Animal Husbandry Development**:\n   - Animal Husbandry Development Fund: Rs. 250 crore allocation.\n   - Establishment of Rajasthan Animal Development Board (1998) and Rajasthan University of Veterinary and Animal Sciences (2010).\n\n5. **Other Initiatives**:\n   - Himkart Veerya Bank (2007) in Jaipur.\n   - Cow Urine Refinery in Pathmeda (Jalore)."
+        }
+      ]
+    }
+  ]
+}
