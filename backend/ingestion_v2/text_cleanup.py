@@ -88,17 +88,18 @@ GENERIC_PATTERNS: tuple[CleanupPattern, ...] = (
 # See the raw .txt for the header/footer that repeats on every page.
 SPRINGBOARD_RAJASTHAN_PATTERNS: tuple[CleanupPattern, ...] = (
     # 2-line address + phone block (header/footer on nearly every page).
+    # "Keshav\s*Vihar" uses \s* (not \s+) because some PDF extractions drop
+    # the space producing "KeshavVihar" — we strip both variants.
     CleanupPattern(
         re.compile(
-            r"A-1\s+Keshav\s+Vihar[^\n]*\n[^\n]*30201\d[^\n]*",
+            r"A-1\s+Keshav\s*Vihar[^\n]*\n[^\n]*30201\d[^\n]*",
             re.IGNORECASE,
         ),
         "address_block",
     ),
-    # Single-line fallback if the 2-line pattern misses one line (e.g. after
-    # line-wrap differences between PDF exports).
+    # Single-line fallbacks — catch whichever half survives the 2-line regex.
     CleanupPattern(
-        re.compile(r"A-1\s+Keshav\s+Vihar[^\n]*", re.IGNORECASE), "address_line"
+        re.compile(r"A-1\s+Keshav\s*Vihar[^\n]*", re.IGNORECASE), "address_line"
     ),
     CleanupPattern(
         re.compile(r"Jaipur-\s*302018[^\n]*", re.IGNORECASE), "address_line"
@@ -112,7 +113,15 @@ SPRINGBOARD_RAJASTHAN_PATTERNS: tuple[CleanupPattern, ...] = (
         ),
         "page_marker",
     ),
-    # "Raj. Geo.Notes (RAS Pre)" book footer.
+    # Book-level repeating headers.
+    CleanupPattern(
+        re.compile(
+            r"^\s*Rajasthan\s+Geography\s+Notes\s*$",
+            re.IGNORECASE | re.MULTILINE,
+        ),
+        "book_header",
+    ),
+    # "Raj. Geo.Notes (RAS Pre)" right-rail label.
     CleanupPattern(
         re.compile(r"Raj\.\s*Geo\.?\s*Notes\s*\(RAS\s*Pre\)", re.IGNORECASE),
         "book_footer",
