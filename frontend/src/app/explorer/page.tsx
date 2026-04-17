@@ -1,6 +1,7 @@
 import { readFile } from "fs/promises";
-import { join } from "path";
-import type { ManifestEntry } from "@/lib/types";
+import { join, resolve } from "path";
+import type { BookData, ManifestEntry } from "@/lib/types";
+import { readSkillFolder } from "@/lib/skill-folder-reader";
 import { ExplorerClient } from "./ExplorerClient";
 
 export const metadata = {
@@ -13,5 +14,26 @@ export default async function ExplorerPage() {
   const raw = await readFile(manifestPath, "utf-8");
   const manifest: ManifestEntry[] = JSON.parse(raw);
 
-  return <ExplorerClient manifest={manifest} />;
+  // Skill folder paths in the manifest are relative to repo root. The
+  // Next.js dev/build cwd is the frontend/ directory, so go up one level.
+  const repoRoot = resolve(process.cwd(), "..");
+
+  const preloadedEntries = await Promise.all(
+    manifest
+      .filter((entry): entry is ManifestEntry & { skill_folder: string } =>
+        Boolean(entry.skill_folder)
+      )
+      .map(async (entry) => {
+        const absoluteFolder = resolve(repoRoot, entry.skill_folder);
+        const book = await readSkillFolder(absoluteFolder);
+        return [entry.slug, book] as const;
+      })
+  );
+
+  const preloadedBooks: Record<string, BookData> =
+    Object.fromEntries(preloadedEntries);
+
+  return (
+    <ExplorerClient manifest={manifest} preloadedBooks={preloadedBooks} />
+  );
 }

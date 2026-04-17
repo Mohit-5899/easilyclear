@@ -11,13 +11,19 @@ import { InspectorDrawer } from "./components/InspectorDrawer";
 
 interface ExplorerClientProps {
   manifest: ManifestEntry[];
+  preloadedBooks?: Record<string, BookData>;
 }
 
-export function ExplorerClient({ manifest }: ExplorerClientProps) {
+export function ExplorerClient({
+  manifest,
+  preloadedBooks = {},
+}: ExplorerClientProps) {
   const [selectedSlug, setSelectedSlug] = useState<string | null>(
     manifest[0]?.slug ?? null
   );
-  const [bookData, setBookData] = useState<BookData | null>(null);
+  const [bookData, setBookData] = useState<BookData | null>(
+    manifest[0]?.slug ? preloadedBooks[manifest[0].slug] ?? null : null
+  );
   const [loading, setLoading] = useState(false);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const viewportRef = useRef<ViewportApi | null>(null);
@@ -27,9 +33,24 @@ export function ExplorerClient({ manifest }: ExplorerClientProps) {
     const entry = manifest.find((m) => m.slug === selectedSlug);
     if (!entry) return;
 
-    setLoading(true);
     setSelectedNodeId(null);
 
+    // Preloaded skill-folder books: use directly, no fetch.
+    const preloaded = preloadedBooks[selectedSlug];
+    if (preloaded) {
+      setBookData(preloaded);
+      setLoading(false);
+      return;
+    }
+
+    // Fall back to JSON fetch for legacy manifest entries.
+    if (!entry.file) {
+      setBookData(null);
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
     fetch(`/data/${entry.file}`)
       .then((res) => res.json())
       .then((data: BookData) => {
@@ -37,7 +58,7 @@ export function ExplorerClient({ manifest }: ExplorerClientProps) {
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [selectedSlug, manifest]);
+  }, [selectedSlug, manifest, preloadedBooks]);
 
   const registerViewport = useCallback((api: ViewportApi) => {
     viewportRef.current = api;
