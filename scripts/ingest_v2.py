@@ -57,6 +57,7 @@ logging.basicConfig(
 
 from ingestion.pdf_downloader import download_pdf  # noqa: E402
 from ingestion_v2.pipeline import run_pipeline  # noqa: E402
+from ingestion_v2.text_cleanup import BRANDING_BUNDLES  # noqa: E402
 
 
 def _parse_args() -> argparse.Namespace:
@@ -81,11 +82,21 @@ def _parse_args() -> argparse.Namespace:
         default=None,
         help="Override output root (default: <repo>/database/skills).",
     )
+    p.add_argument(
+        "--branding",
+        default=None,
+        choices=sorted(BRANDING_BUNDLES.keys()),
+        help=(
+            "Name of a source-specific branding pattern bundle to strip "
+            "(in addition to the always-on generic patterns). E.g. "
+            "'springboard_rajasthan' for the Springboard RAS Pre notes."
+        ),
+    )
     return p.parse_args()
 
 
-async def _resolve_pdf(source: str) -> Path:
-    """Turn a --source value into a local PDF path.
+async def _resolve_source(source: str) -> Path:
+    """Turn a --source value into a local file path (.pdf or .txt).
 
     HTTP(S) + ZIP URLs are routed through the V1 downloader (merges zipped
     chapter PDFs into a single file). file:// URIs and bare paths are used
@@ -115,9 +126,9 @@ async def _resolve_pdf(source: str) -> Path:
 async def _main() -> int:
     args = _parse_args()
 
-    pdf_path = await _resolve_pdf(args.source)
+    pdf_path = await _resolve_source(args.source)
     if not pdf_path.exists():
-        logging.error("PDF not found at %s", pdf_path)
+        logging.error("Source file not found at %s", pdf_path)
         return 2
 
     exam_coverage = [
@@ -133,12 +144,22 @@ async def _main() -> int:
 
     output_root = Path(args.output_root).resolve() if args.output_root else None
 
+    source_patterns = (
+        list(BRANDING_BUNDLES[args.branding]) if args.branding else []
+    )
+    if source_patterns:
+        logging.info(
+            "using branding bundle '%s' (%d extra patterns)",
+            args.branding, len(source_patterns),
+        )
+
     result = await run_pipeline(
         pdf_path=pdf_path,
         subject=args.subject,
         book_slug=args.book_slug,
         book_metadata=book_metadata,
         output_root=output_root,
+        source_patterns=source_patterns,
     )
 
     print("=" * 70)

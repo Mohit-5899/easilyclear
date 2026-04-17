@@ -22,6 +22,7 @@ from .emit import emit_skill_folder
 from .extract import ExtractedDoc, extract_document
 from .multi_agent import ProposedTree, decompose
 from .pre_structure import build_draft
+from .text_cleanup import CleanupPattern
 from .validation import ValidationResult, validate_coverage
 
 
@@ -64,6 +65,7 @@ async def run_pipeline(
     book_metadata: dict[str, Any],
     output_root: Path | None = None,
     settings: Settings | None = None,
+    source_patterns: list[CleanupPattern] | None = None,
 ) -> PipelineResult:
     """Run the full V2 ingestion pipeline end-to-end.
 
@@ -91,9 +93,11 @@ async def run_pipeline(
 
     logger.info("pipeline: starting (pdf=%s, model=%s)", pdf_path, model)
 
-    # Stage 1 — Extraction
+    # Stage 1 — Extraction (with optional source-specific branding cleanup)
     logger.info("pipeline: stage 1 — extracting paragraphs")
-    extracted: ExtractedDoc = extract_document(pdf_path)
+    extracted: ExtractedDoc = extract_document(
+        pdf_path, source_patterns=source_patterns or []
+    )
     logger.info(
         "pipeline: extracted %d paragraphs across %d pages (%d bookmarks)",
         len(extracted.paragraphs),

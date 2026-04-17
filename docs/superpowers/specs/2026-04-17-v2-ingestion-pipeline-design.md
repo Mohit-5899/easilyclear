@@ -344,3 +344,38 @@ Replaces §9 items 1-8 with:
 - Delete `content_writer_system.md` (unused)
 - `fill_content` becomes a small pure function — no optional LLM branch
 - Run review pass before declaring done
+
+### A.5 Extraction-time branding cleanup
+
+**Problem:** source PDFs/TXTs carry publisher branding that would end up verbatim in skill bodies if we don't strip it. Springboard's notes repeat a Jaipur address + phone block on every page, a "SPRINGBOARD ACADEMY N" page marker, and a "Raj. Geo.Notes (RAS Pre)" footer. Generic cleanup (URLs, coaching names) doesn't cover these.
+
+**Design:** two-layer regex cleanup applied at the full-document level in `extract.py`, before paragraph splitting:
+
+**Layer G — Generic** (reusable across books):
+- URLs, bare domains, emails
+- Coaching institute names (Vedantu, Utkarsh, Byju's, etc. — plus "Springboard Academy")
+- Social handles, `Downloaded from ...`, `Page N of M` pagination, `©` copyright lines, Telegram/WhatsApp join solicitations
+
+**Layer S — Source-specific** (opt-in per book):
+- Passed into `extract_document()` as a `branding_patterns: list[re.Pattern]` parameter
+- For Springboard Rajasthan Geography, the patterns include:
+  - The 2-line Keshav Vihar address block (multi-line regex)
+  - `^\s*SPRINGBOARD ACADEMY \d+\s*$` page marker
+  - `Raj. Geo.Notes (RAS Pre)` footer
+  - Bare phone-number trios
+
+**Flow change:**
+```
+raw_text = read(file)                       # now supports .pdf AND .txt
+cleaned = clean_text(raw_text, generic_patterns + source_specific)
+paragraphs = split_paragraphs(cleaned)
+return ExtractedDoc(paragraphs=..., ...)
+```
+
+**Audit trail:** cleanup returns `StrippedFragments(count_by_category, sample_matches[:5])` logged at pipeline start so admin can spot-check what was removed.
+
+**Extension for future books:** `scripts/ingest_v2.py` gains a `--branding-patterns-file` flag pointing at a JSON list of regex-label pairs, so per-book pattern sets live beside ingest scripts, not hardcoded.
+
+### A.6 Plain-text input support
+
+Extraction accepts `.txt` input alongside `.pdf`. For .txt, we synthesize a single-page document (no layout info available); for .pdf, we keep the existing per-page extraction. Bookmarks from .pdf still populate `ExtractedDoc.bookmarks`; .txt has empty bookmarks.
