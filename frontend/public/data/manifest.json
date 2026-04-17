@@ -1,20 +1,8 @@
 [
   {
-    "slug": "ncert_class10_contemporary_india_2_v2",
-    "name": "Contemporary India II (NCERT Class 10 Geography) — V2",
-    "scope": "pan_india",
-    "skill_folder": "database/skills/geography/ncert_class10_contemporary_india_2_v2"
-  },
-  {
-    "slug": "ncert_class10_contemporary_india_2",
-    "name": "Contemporary India II (NCERT Class 10 Geography)",
-    "scope": "pan_india",
-    "file": "ncert_class10_contemporary_india_2.json"
-  },
-  {
-    "slug": "springboard_rajasthan_geography_ras_pre_UNOFFICIAL",
-    "name": "Springboard Academy — Rajasthan Geography Notes (RAS Pre)",
+    "slug": "springboard_rajasthan_geography",
+    "name": "Springboard Academy — Rajasthan Geography",
     "scope": "rajasthan",
-    "file": "springboard_rajasthan_geography_ras_pre_UNOFFICIAL.json"
+    "skill_folder": "database/skills/geography/springboard_rajasthan_geography"
   }
 ]

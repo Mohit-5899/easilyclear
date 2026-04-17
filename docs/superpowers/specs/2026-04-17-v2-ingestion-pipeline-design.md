@@ -1,7 +1,7 @@
 # V2 Ingestion Pipeline + Explorer Update — Design Spec
 
 **Date:** 2026-04-17
-**Status:** Approved (pending final user review)
+**Status:** Approved, amended 2026-04-17 (see Addendum A at bottom)
 **MVP scope:** Single book (Springboard Rajasthan Geography), end-to-end
 
 ---
@@ -293,3 +293,54 @@ docs/superpowers/
 ## 11. Open Questions (answer before planning)
 
 None — design approved pending user final review.
+
+---
+
+## Addendum A — 2026-04-17: Source-preservation + Rajasthan-only scope
+
+After V2.0 smoke test on NCERT, the following changes were requested and approved before any student-facing features are built:
+
+### A.1 Source preservation (critical)
+
+Stage 7 (content filling) **no longer calls Gemma** to write skill bodies. LLM-generated summaries are lossy for factual recall — numbers, dates, and specific terms get paraphrased. Instead:
+
+- For each leaf skill: body = verbatim concatenation of referenced source paragraphs, separated by blank lines
+- Only mechanical cleanup is applied: whitespace normalization, rejoining line-wrapped sentences, collapsing multiple blank lines. **No semantic rewriting.**
+- Internal nodes (chapters): body is a deterministically generated Contents outline listing child titles. No LLM call.
+- `content_writer_system.md` prompt file is deprecated and deleted.
+- `fill_content()` signature simplified — no `llm`, `model`, or `max_tokens` params needed.
+
+**Rationale:** downstream LLMs (mock-test generator, tutor chat) will use this content. They need the author's original language + facts, not Gemma's second-hand summary. Preserves the textbook's authority.
+
+### A.2 Subject scope reset (single book, Rajasthan only)
+
+The explorer is reset to show only one book: the new Springboard Rajasthan Geography ingestion. All previous books are removed from the explorer surface:
+
+- `database/textbooks/ncert_class10_contemporary_india_2.json` → deleted
+- `database/textbooks/unofficial/springboard_rajasthan_geography_ras_pre_UNOFFICIAL.json` → deleted
+- `database/skills/geography/ncert_class10_contemporary_india_2_v2/` → deleted
+- `frontend/public/data/*.json` stale copies → deleted
+- `frontend/public/data/manifest.json` → contains only the new Rajasthan book
+
+**Rationale:** pan-India NCERT content doesn't serve Rajasthan exam aspirants (the target user). Keeping it in the explorer muddies the product story. Cleanup also removes dead code paths for JSON-backed books if they're no longer used.
+
+### A.3 Amended acceptance criteria
+
+Replaces §9 items 1-8 with:
+
+1. Skill folder exists at `database/skills/geography/springboard_rajasthan_geography/`
+2. At least 3 chapters (depth 1) with at least 1 leaf each
+3. Every leaf `.md` body is verbatim source text — no LLM paraphrase. Spot check: diff 3 random leaves against the source PDF; body text should appear in the PDF.
+4. Coverage ≥ 95% (higher threshold because no summary loss)
+5. End-to-end runtime ≤ 12 minutes
+6. Explorer loads Springboard skill folder — radial canvas + inspector render the content
+7. No NCERT content visible in explorer; manifest has exactly one entry
+8. Build passes; tsc clean
+9. No duplicate code paths — removed LLM-calling branches in content fill, deleted unused prompt
+
+### A.4 Code-quality constraints
+
+- Zero code duplication: remove, don't parallel-track
+- Delete `content_writer_system.md` (unused)
+- `fill_content` becomes a small pure function — no optional LLM branch
+- Run review pass before declaring done

@@ -141,11 +141,11 @@ async def run_pipeline(
             validation.unreferenced[:10],
         )
 
-    # Stage 7 — Content filling (6 is the dedup no-op)
-    logger.info("pipeline: stage 7 — filling content")
-    filled: FilledTree = await fill_content(
-        llm, tree=proposed, extracted=extracted, model=model
-    )
+    # Stage 7 — Content assembly (deterministic, source-preserving; no LLM)
+    # See spec Addendum A.1 — leaves get verbatim paragraphs, internal nodes
+    # get a Contents outline. No summarization.
+    logger.info("pipeline: stage 7 — assembling source-preserved content")
+    filled: FilledTree = fill_content(tree=proposed, extracted=extracted)
 
     # Stage 8 — Emit
     logger.info("pipeline: stage 8 — emitting skill folder")
