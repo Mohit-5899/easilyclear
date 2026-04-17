@@ -37,12 +37,28 @@ _PROMPT_DIR = Path(__file__).resolve().parent.parent / "prompts_v2"
 
 
 class ProposedNode(BaseModel):
-    """One node in the proposed skill tree. Recursive via `children`."""
+    """One node in the proposed skill tree. Recursive via `children`.
+
+    Leaf paragraphs are referenced as an inclusive ``[start, end]`` range.
+    The Proposer emits ranges (not lists) so a tree over thousands of
+    paragraphs fits in the model's output-token budget. A computed
+    ``paragraph_refs`` property expands the range for downstream consumers.
+    """
 
     title: str
     description: str
-    paragraph_refs: list[int] = Field(default_factory=list)
+    paragraph_start: int | None = None
+    paragraph_end: int | None = None
     children: list["ProposedNode"] = Field(default_factory=list)
+
+    @property
+    def paragraph_refs(self) -> list[int]:
+        """Expand the inclusive range into an explicit ID list."""
+        if self.paragraph_start is None or self.paragraph_end is None:
+            return []
+        if self.paragraph_end < self.paragraph_start:
+            return []
+        return list(range(self.paragraph_start, self.paragraph_end + 1))
 
 
 ProposedNode.model_rebuild()

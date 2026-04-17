@@ -379,3 +379,22 @@ return ExtractedDoc(paragraphs=..., ...)
 ### A.6 Plain-text input support
 
 Extraction accepts `.txt` input alongside `.pdf`. For .txt, we synthesize a single-page document (no layout info available); for .pdf, we keep the existing per-page extraction. Bookmarks from .pdf still populate `ExtractedDoc.bookmarks`; .txt has empty bookmarks.
+
+### A.7 Proposer output scaling — paragraph ranges
+
+**Problem discovered in Springboard smoke test:** 2237 paragraphs × explicit `paragraph_refs: list[int]` per leaf = ~15KB of integers in the Proposer's JSON output, which exceeded the 16K output-token ceiling. Both attempts returned truncated JSON (unbalanced braces); pipeline crashed.
+
+**Fix:** replace explicit ref lists with inclusive ranges.
+
+Old schema: `{"paragraph_refs": [42, 43, 44, 45, ..., 67]}`
+New schema: `{"paragraph_start": 42, "paragraph_end": 67}`
+
+Output size becomes O(#leaves × 2 ints) instead of O(#paragraphs). For 2237 paragraphs × ~40 leaves = ~80 ints of refs (<500 bytes), down from ~15KB.
+
+**Constraint:** each leaf's range must be contiguous and non-overlapping with siblings. Enforced via updated Proposer system prompt.
+
+**Downstream compatibility:** `ProposedNode.paragraph_refs` becomes a computed property that expands the range. Existing consumers (validation, content_fill) continue using `.paragraph_refs` without changes.
+
+### A.8 Coverage threshold raised to 95%
+
+Per Addendum A.1 source-preservation, missing paragraphs now mean missing content in the student's study material (no LLM rewrite to compensate). Threshold raised from 0.80 to 0.95 to flag trees that drop too much.

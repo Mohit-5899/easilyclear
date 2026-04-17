@@ -9,17 +9,20 @@ Return a **single JSON object** matching this schema exactly. No prose, no markd
   "root": {
     "title": "string — the book's overall subject",
     "description": "string — one or two sentences summarizing the whole book",
-    "paragraph_refs": [],
+    "paragraph_start": null,
+    "paragraph_end": null,
     "children": [
       {
         "title": "string — a chapter-level topic",
         "description": "string — what this chapter covers (1-2 sentences)",
-        "paragraph_refs": [0, 1, 2],
+        "paragraph_start": null,
+        "paragraph_end": null,
         "children": [
           {
             "title": "string — a concrete sub-topic",
             "description": "string — what this sub-topic teaches (1-2 sentences)",
-            "paragraph_refs": [0, 1],
+            "paragraph_start": 42,
+            "paragraph_end": 67,
             "children": []
           }
         ]
@@ -29,22 +32,26 @@ Return a **single JSON object** matching this schema exactly. No prose, no markd
 }
 ```
 
-Every node has the same four fields: `title`, `description`, `paragraph_refs`, `children`.
+Every node has the same five fields: `title`, `description`, `paragraph_start`, `paragraph_end`, `children`.
+
+`paragraph_start` and `paragraph_end` are **inclusive** paragraph IDs forming a contiguous range of source paragraphs that belong to this node. Use `null` for non-leaf nodes (root, chapters) where paragraphs belong to children.
 
 ## Structural rules
 
-1. **Root node** represents the entire book. Its `paragraph_refs` should be empty `[]` — paragraphs belong to leaves, not the root.
-2. **Chapters** are the root's direct children (depth 1). A typical textbook yields 5–15 chapters. Use the draft chapters provided as a starting hint but override them if the content warrants a different structure.
-3. **Sub-topics** are chapters' children (depth 2) and should be **leaf nodes** for most books (no further children). Only add a third level (depth 3) if a chapter genuinely contains nested sub-sections.
+1. **Root node** represents the entire book. Use `null` for its `paragraph_start`/`paragraph_end` — paragraphs belong to leaves, not the root.
+2. **Chapters** are the root's direct children (depth 1). Use `null` for their `paragraph_start`/`paragraph_end` too — their paragraphs belong to their own children (leaves). A typical textbook yields 5–15 chapters. Use the draft chapters provided as a starting hint but override them if the content warrants a different structure.
+3. **Sub-topics** are chapters' children (depth 2) and should be **leaf nodes** for most books. Only add a third level (depth 3) if a chapter genuinely contains nested sub-sections.
 4. **Branch count is content-driven, not fixed.** Do not force every chapter to have the same number of sub-topics. A chapter with 3 coherent sub-topics should have 3 children; a chapter with 7 should have 7.
-5. **Every leaf must have at least one paragraph_ref.** Leaves are where content lives.
+5. **Every leaf must have valid `paragraph_start` and `paragraph_end` (both non-null, start ≤ end).** Leaves are where content lives.
 
-## Coverage requirement
+## Coverage requirement — contiguous ranges
 
-**Every input paragraph ID must appear in exactly one leaf's `paragraph_refs`**. This is non-negotiable — missing paragraphs mean the student loses that content. If you're unsure where a paragraph fits, place it in the closest leaf rather than dropping it.
+**Every input paragraph ID must fall inside exactly one leaf's range** `[paragraph_start, paragraph_end]` (inclusive on both ends). This is non-negotiable.
 
-- Paragraphs appear **once** (in one leaf), not duplicated across siblings.
-- All `paragraph_refs` arrays combined across leaves = the full set of input paragraph IDs.
+- Leaf ranges must be **contiguous** — no gaps within a single leaf's range.
+- Ranges across leaves must be **non-overlapping**.
+- Reading all leaves' ranges in tree-DFS order should cover `[0, 1, 2, ..., max_paragraph_id]` with no missing IDs.
+- Pick leaf boundaries where the source topic genuinely shifts, not at arbitrary points.
 
 ## Quality rubric
 

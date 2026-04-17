@@ -16,7 +16,10 @@ from .multi_agent import ProposedNode, ProposedTree
 
 # Coverage threshold for a tree to be considered "OK" enough to ship. Below
 # this, we still emit the skill folder but log a warning.
-_COVERAGE_OK_THRESHOLD = 0.80
+# Per spec Addendum A.3 — raised from 0.80 to 0.95 now that content bodies
+# are source-preserved (no LLM summary loss); missing paragraphs = missing
+# content in the student's study material.
+_COVERAGE_OK_THRESHOLD = 0.95
 
 
 class ValidationResult(BaseModel):
