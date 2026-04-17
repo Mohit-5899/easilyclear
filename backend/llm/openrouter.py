@@ -36,14 +36,18 @@ class OpenRouterClient:
         temperature: float,
         max_tokens: int,
         stream: bool,
+        response_format: dict | None = None,
     ) -> dict:
-        return {
+        payload: dict = {
             "model": model,
             "messages": [m.model_dump() for m in messages],
             "temperature": temperature,
             "max_tokens": max_tokens,
             "stream": stream,
         }
+        if response_format is not None:
+            payload["response_format"] = response_format
+        return payload
 
     async def complete(
         self,
@@ -52,8 +56,16 @@ class OpenRouterClient:
         model: str,
         temperature: float = 0.3,
         max_tokens: int = 1024,
+        response_format: dict | None = None,
     ) -> LLMResponse:
-        payload = self._build_payload(messages, model, temperature, max_tokens, stream=False)
+        payload = self._build_payload(
+            messages,
+            model,
+            temperature,
+            max_tokens,
+            stream=False,
+            response_format=response_format,
+        )
         async with httpx.AsyncClient(timeout=self._timeout) as client:
             resp = await client.post(
                 f"{self._base_url}/chat/completions",
