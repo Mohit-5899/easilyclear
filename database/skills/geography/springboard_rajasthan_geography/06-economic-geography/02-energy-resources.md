@@ -1,14 +1,14 @@
 ---
-content_hash: sha256:c055d36e29e2cde7b79b38e5aa74f8ecd212fe2808e2bd8ae87e406885435b0b
+content_hash: sha256:081175ed70b9c0180f681649aada514367bf3df1fb7d023a2a271453eb07cec8
 depth: 2
-description: Covers metallic and non-metallic minerals, energy resources (thermal,
-  nuclear, solar, wind, and biomass).
-ingested_at: '2026-04-17T17:58:09Z'
+description: Conventional (thermal, hydro) and non-conventional (solar, wind, biomass)
+  energy.
+ingested_at: '2026-04-17T18:04:41Z'
 ingestion_version: v2
-name: Minerals and Energy
-node_id: geography/springboard_rajasthan_geography/04-natural-resources-and-environment/02-minerals-and-energy
+name: Energy Resources
+node_id: geography/springboard_rajasthan_geography/06-economic-geography/02-energy-resources
 order: 2
-parent: geography/springboard_rajasthan_geography/04-natural-resources-and-environment
+parent: geography/springboard_rajasthan_geography/06-economic-geography
 related_skills: []
 source_book: springboard_rajasthan_geography
 source_pages:
@@ -17,255 +17,11 @@ subject: geography
 superseded_by: null
 ---
 
-Minerals Metallic - Non-Metallic Minerals A. View of Minerals B. Minerals Rockss C. Classification of Minerals D. Minerals Production E. Use of Minerals F. Mineral Policies G. Mineral Institute
-
-A. View of Minerals :-
-
-(a) (b) (c) (d) Mineral Mineral Mineral Mineral Rank of Variety Storage Production Income Rajasthan 1 5 2 2
-
-a. Mineral Variety:-
-
- The highest mineral diversity in the country is found in Rajasthan.
-
- For this reason Rajasthan is called the museum of minerals. b. Mineral Storage:-
-
- The maximum mineral storage in Rajasthan is found in Aravali.
-
- That's why Aravali is called "Storehouse of Minerals".
-
- Total 81 type minerals are available in Rajasthan State.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-c. Mineral Production :-
-
- Rajasthan produces 22% of the total production of minerals in India.
-
- In which metallic is 15% and non-metallic is 25%.
-
- Rajasthan ranks 1st in the production of non-metallic minerals.
-
- Note:- Rajasthan produces a total of 57 types of minerals. d. Mineral Income :-
-
- Rajasthan is a backward state from the point of view of mineral income because the production of metallic minerals is less here. B. Mineral Rocks :-
-
-1. Sedimentary Rocks - Most of the non-metallic and energy minerals are found here. Example - 1. Petroleum, 2. Natural Gas 3. Coal 2. Dharwad Rocks - Due to the abundance of metallic minerals, more income is obtained from these rocks. Example - Copper, Iron, Ore, Lead-Zinc, Silver
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-3. Vindhya Rocks – Example - 1. Kota stone 2. Sand stone 3. Red stone 4. Limestone. C. Classification of Minerals :-
-
-Classification of Minerals
-
-Metallic Non-Metallic
-
-1- Asbestos Ferrous Non-Ferrous Metal Metals 2- Gypsum 3- Clay 1. Sleep 4- Stone K – Cobalt 2. Silver 5- Energy minerals K – Chromite L – Iron ore 3. Platinum  Coal
-
-M – Manganese 4. Lead-zinc (Twin Mineral)  Petroleum
-
-N – Nickel 5. Tin  Natural Gas
-
-T – Tungsten 6. Copper
-
-T - Titanium 7. Bauxite 8. Aluminum 9. Magnesium 10. Mercury
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-D. Minerals Production :-
-
-I. Aravali Mineral Belt :-
-
-(a) Copper - Its storage is in Jhunjhunu, Sikar, Neem Ka Thana, Alwar, Udaipur and Chittorgarh. Production Area :- 1- Jhunjhunu :–  Kolhan  Chandmari  Madan- Kudan 2- Neem Ka Thana :-  Banno Ki Dhani  Khetri 3- Alwar :-  Kho- Dariba 4- Udaipur :-  Anjani – Salumbar 5- Chittorgarh :-  Bhagal - Wari Region 6- Bhilwara :-  Pur-Dariba  Banera  Devtalai region 7- Churu :-  Bidasar 8- Ajmer :-  Hanotiya 9- Kekri  Sawar
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
- Its deposits in Jaipur, Dausa, Jhunjhunu, Udaipur and Bhilwara. Production Area :- 1. Jaipur –  Morija – Banola 2. Dausa –  Neemla – Raisela 3. Jhunjhunu –  Dabla – Singhana
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-4. Udaipur –  Nathara Ki Pal  Thur Hunder 5. Bhilwara –  Tiranga Region 6. Karauli-  Dedrauli,  Khohra,  Leeloti
-
-(c) Lead-Zinc and Silver :-
-
- It is found in Udaipur, Rajsamand, Bhilwara, Sawai Madhopur and Alwar. Production Area :- 1. Udaipur –  Jawar – Debari 2. Rajsamand –  Rajpura Dariba 3. Bhilwara –  Gulabpura - Agucha,  Rampura – Agucha 4. Sawai Madhopur –  Chauth Ka Barwara 5. Alwar –  Gudha-Kishoridaspura
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-II. Minerals of Vangad Belt :-
-
-(a) Gold –  G.S.I (Geographical Survey of India) the latest gold deposits in Rajasthan have been discovered in Banswara (Ghotia Amba) and Udaipur. Production Area :- 1- Banswara -  Anandpura - Bhukia  Jagpura – Bhukia Note:- Latest gold deposits have been found in 'Ghotia Amba' of Banswara. (b) Manganese –  Its storage is mainly in Banswara, Dungarpur and Udaipur. Production Area :- 1 Banswara –  Leelavani  Kalakhunta  Talwara  Tambresa  Itala 2 Udaipur :-  Badi Sar  Chhoti Sar 3 Rajsamand :-  Negadiya (c) Fluorite/Fluorspar :–  Its storage is mainly in Dungarpur. Production Area :- 1 Dungarpur –  Mando ki Pal. A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-(d) Diamond :–  Its storage is mainly in Pratapgarh. Production Area :-  Pratapgarh - Kesarpura.
-
-III. Clay Minerals :-
-
-1. Ball Clay/Bikaner Clay – Bikaner 2. Fire Clay – Bikaner 3. China-Clay/Ceramic - Bikaner, Sikar 4. Bleaching Clay/Fullers Earth/Multani Mitti – I - Barmer, II - Bikaner Note:-
-
- Production of silica sand – I - Bundi (Badodia), II – Jaipur.  It is used in the glass industry.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-IV. Stone Minerals :-
-
-Building Stone - Jodhpur
-
-Sandstone - Bharatpur (Bansi-Paharpur)
-
-Red Stone/Dholpur Marble- Highest production Stone - Karauli- from Rajsamand Dholpur
-
-Granite Stone - Jalore, Sanchore, Sirohi and Barmer Kota Stone - Kota and Chittorgarh
-
-Note :- (i) Highest Production of Marble :-  Maximum production of marble is done from Rajsamand, because maximum production units of marble are operated in Rajsamand. Other varieties of marble are obtained from the following places.  White Marble - Makrana (Nagaur)  Black Marble - Bhainslana (Jaipur Rural)  Yellow Marble - Pithala (Jaisalmer)  Green Marble - Rishabhdev (Udaipur)  Pink Marble - Rishabhdev and Babarmal (Udaipur)  Satrangi Marble - Padarla (Pali)  Badami Marble - Jodhpur
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
- Maximum Production is done from Jodhpur.  Major varieties and production areas of limestone
-
-Cement Grade Limestone Chemical Grade Limestone Steel Grade Limestone Chittorgarh Jodhpur Jaisalmer (Sonu) V. Potash :- (Best Variety)
-
- Its main storage and production areas :– 1 Hanumangarh 2 Sri Ganganagar 3 Bikaner and 4 Churu 5 Karauli
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-VI. Minerals of Aravali Region :-  The major mineral producing places in this region are Udaipur, Ajmer and Sikar.  From where the following minerals are produced -
-
-Asbestos - Rishabhdev Gheya Stone / Soap Stone - Devpura Saloj Rock-Phosphate – Jhamar-Kotra
-
-Note:- Udaipur produces maximum minerals in Rajasthan. VII. Minerals in Nagaur Region :- G - Gypsum T - Tungsten
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-1. Gypsum Producing Area - Bikaner produces maximum gypsum in Rajasthan Pokaran, Chandan.
-
-Goth-Manglod, Bhadwasi
-
-2. Tungsten Producing Area - Nagaur, Pali and Sirohi are the reserves of Tungsten. Production Area :- (i) Nagaur :- Degana (Revat Hills) Note:-  Degana (Nagaur) is the largest mine of tungsten in the country.  Which are currently closed.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-(ii) Pali:- Nana-Karab (iii) Sirohi:- Balda and Abu-Revdar VIII. Monopoly Minerals :-
-
- According to the Economic Review 2020 - 2021,  only minerals produced from Rajasthan :– 1 Lead 2 Zinc 3 Wallestenite 4 Selenite (Gypsum).
-
- Tamada/Garnet/Blood Gems
-
- Emerald/Green Fire  Ochre
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-1 Jaspar – Jodhpur 2 Tamda/Garnet/Blood Gems – I. Tonk - Rajmahal, Janakpur and II - Ajmer – Sarwar 3 Wollastonite - Sirohi (Bell's Maggra) 4 Ochre - Chittorgarh 5 Panna/Green Fire - Rajsamand (Production from Kala Guman mine between Amet- Devgarh.
-
-IX. Atomic/Atomic Energy Minerals:-
-
- Uranium storage areas in Rajasthan are Udaipur, Sikar and Baran. Production Area :- 1 Udaipur :–  Umra 2 Sikar :-  Khandela hill  Rohilla region 3 Baran :-  Ramgarh 2. Thorium :–
-
- Thorium storage areas in Rajasthan are Pali and Bhilwara. Production Area - 1. Pali :–  Bhadravan 2. Bhilwara :–  Sardarpura
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
- Mica is an example of Metallic minerals, which is deposit in rajasthan in three Belt & Region  The storage and production of mica is maximum in Bhilwara. Production Area :- 1. Bhilwara (Danta - Bhunas), 2. Ajmer 3. Rajsamand.  Mica has been called the "Sick Child of Minerals" because only 50% of mica production comes from the country's 20 largest mines. XI. Bentonite, Bauxite, Beryllium Minerals :-
-
-(a) Bentonite :- 1. Barmer 2. Bikaner (b) Bauxite :- 1. Kota (c) Beryllium :- 1. Gujarwara – Jaipur 2. Bandar- Sindary – Ajmer 3. Shikarbari – Udaipur Production Area – 1. Jaipur – Gujarwada 2. Ajmer - Bandar – Sindri 3. Udaipur - Shikarbari XII. Energy Minerals :- a. Petroleum These minerals are found in sedimentary rocks. b. Natural Gas Whose formation time period is the Tertiary Period. c. Coal
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-a. Petroleum :-  Most of the petroleum is stored and produced in Barmer.  Petroleum reserves are in 4 basins and 14 districts in Rajasthan.  Petroleum Basin :- 1. Barmer - Sanchore Basin :–  It extends into Barmer and Jalore (partialy).  This basin has the largest reserves of petroleum.  This area is also the first in petroleum production.  Main Authority of this basin :- 1. Cairn energy( Vedanta Ltd.) 2. ONGC (Oil Natural Gas Corporation) 2. Rajasthan Shelf :–  Its extension is in Jaisalmer.  Main Authority :- 1. ONGC (Oil Natural Gas Corporation) 2. PDVSA 3. Bikaner-Nagaur Basin :-  It extends into Bikaner, Nagaur, Ganganagar, Hanumangarh and Churu.  Main Authority :- 1. Oil India Ltd. 4. Vindhya Basin :–  It is spread in Kota, Bundi, Baran, Jhalawar, Chittorgarh and Bhilwara.  Main Authority of this basin :- 1. Cairn energy( Vedanta Ltd.) 2. ONGC (Oil Natural Gas Corporation)
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
- Petroleum Production Area :– Ist Barmer :- 1. Nagana - Mangala (Jogsar Village) 2. Gudha Malani - Raageshwari 3. Koslu - Saraswati 4. Bytu - Aishwarya Note:- 1. Other Petroleum Wells in Barmer :- 1. Bhagyam 2. Vijaya 3. Shakti 4. Kameshwari 2. Mangala (Barmer) :-  This is the first petroleum well of Rajasthan.  From where production is taking place since August 29, 2009.  At present Rajasthan has the largest production area. nd II Jaisalmer – 1. Baghewala 2. Sadhewala 3. Tanot 4. Chinewala IIIrd Bikaner :- 1. Tuvariwala 2. Poonam Field :-  It has been discovered by OIL (Oil India Limited).  Which is located in Bikaner - Nagaur basin.  Its production capacity is - 30000 barrels/day. Note:-  Highest production of petroleum in the country  1st Bombay High (Offshore Area) - 40-45 percent production.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
- 2nd Rajasthan - 22-23 percent production. The petroleum production capacity of Rajasthan is 1.60 lakh - 1.70 lakh barrels/day. b. Natural Gas –
-
- Its maximum storage and production in Rajasthan is in Barmer. Production Area:- 1st Jaisalmer :–  Dandewala  Gumanewala  Ramgarh  Tanot  Manihari  Tiba and  Ghotaru 2nd Barmer –  Gudamalani  Raageshwari c. Coal –
-
- Barmer has the highest storage and production of coal in Rajasthan.  Types of coal on the basis of time of fromations. Coal
-
-Gondwanaland Period – 98% Tertiary Period - 2% Note:-  Tertiary coal is stored in Rajasthan.  While the country has maximum coal reserves of Gondwanaland period.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
- Types of coal according to carbon content :- Coal - Carbon Quantity - Color of Coal Anthracite - 95% - Black – Shining Bituminous - 60 – 70% - Black – Brown Lignite - 50 – 60% - Brown Peat - 50% - Light Brown Note:-  Most of the Bituminous coal is found in India and the most lignite coal is found in Rajasthan.  Best Coal :-  It has high carbon content.  Due to this the temperature is higher while the amount of smoke and ash is less.  This coal burns with a blue flame. Coal Production Area :-
-
-1st Barmer :–  Kpurdi  Jalipa  Giral  Bhadres nd 2 Bikaner :-  Beethnok  Barsingsar  Palana  Gudha Note :- Palana :- It is situated in Bikaner district from where best lignite is produced. 3rd Nagaur –  Merta City  Igyar  Mata-Sukh  Kasnau Region.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-Note:- Highest lignite coal production in India – 1st - Tamil Nadu 2nd – Gujarat 3rd - Rajasthan (22%) E. Mineral Policies :-
-
-1st - 1978 2nd - 1991 3rd - 1994 4th - 2011
-
-5th - 4 twu 2015 Purpose:- Latest mineral based industries will be established in tribal and backward areas. Provision :-
-
-1. Scientific exploitation of minerals. 2. 31 Major Minerals and Minor Minerals Mining leases will be issued in a minimum of four hectares. 3. Sand stone mining leases will be issued in minimum one hectare. 4. Gravel mining leases will be issued from minimum 5 hectares to maximum 50 hectares. 5. Illegal mining will be punishable with a sentence of 5 years and a fine of Rs. 5,00,000. 6. The lock-in period of lottery minerals will be one year. 7. Period of mining license increased from 15 years to 30 years. 8. Settlement committee will be constituted to resolve disputes in illegal mining areas. 9. In the latest mineral policy, the provision of minerals directory was kept. In which the storage and production areas of minerals will be shown. 10. To increase the contribution of minerals in the GDP of the State.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-Note:- i. Marble and Granite Policy - 2002 ii. M - Sand policy -  Released in January 2021.  Objective: To give industry status to D-Sand and to protect the environment.  The sand will be obtained from granite. The use of which has been made mandatory for 25% in the construction of government buildings. Which can be increased to 50%. iii Vision - 2020 - It was launched on 15th August, 1999 in the mineral sector. Provisions:-
-
- Scientific/sustainable exploitation of minerals.  Providing basic facilities in the mining sector.  To increase the contribution of minerals in GDP.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-G. Minerals Institute :- 1. RSMML (Rajasthan State Mines and Minerals Limited) :-  Establishment :- 1974  Headquarters :- Udaipur 2. Hindustan Zinc Limited :-  Establishment :- 1966  Headquarters :- Debari (Udaipur) Note :-  Zinc Smelter Plant was established in 2005 at Chanderia (Chittorgarh). 3. Hindustan Copper Limited :-  Establishment :- 1967  Headquarters :- Khetri (Jhunjhunu) Note:- Projects of Hindustan Copper Limited :- 1. Khetri Copper Project – Neem Ka Thana 2. Chandmari Copper Project – Jhunjhunu 3. Kho-Dariba Copper Project :- Alwar 4. Petroleum Refinery :-  Location :- Pachpadra  Budget :- Rs. 43,129 crores  Cooperation :- HPCL : State Government (74% : 26%)  Capacity :- 9 MMTPA (Million Metric Tonne Per Annum)  Features :- i. This is the first refinery of Rajasthan and 26th refinery of the country. ii. The standard of this refinery is BS-VI. iii. A petro-chemical complex will be set up along with the refinery.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 (1) Forest Policies (2) Forest Census (3) Classification of forest (4) Important Forest and Grasses of Rajasthan (5) Afforestation Programmes (6) Forestry and Environment Award (7) Major Acts and Important Days (8) Other Important Facts
 
 (1) Forest Policies :-  National Forest Policies 1. 1894 - First Forest Policy 2. 1952 - Independent India's first forest policy 3. 1988 - Latest Forest Policy :-  According to the latest forest policy, the target of forests. Objective
 
 Geographical Area Mountain Area Plain Area 33% 60% 20%
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  State Forest Policies :- 1st - 18 FEB. 2010 2nd - 5 June2023 Note:-  State forest policy - 18 Feb. 2010  According to the state forest policy, there should be forests on 20% of the total geographical area.  State Eco-tourism policy – 2020 (First- 4 February, 2020) (2) Forest Census :-
 
@@ -280,10 +36,6 @@ Forest Covered Tree Covered वनावरण वृक्षावरण
  According to the 17th forest report, the Maximum Forest expansion in the state – Maximum Forest
 
 Area Percent 2 1. Udaipur - 2753 KM 1. Udaipur - 23.49% 2. Alwar - 1196 KM2 2. Pratapgarh - 23.24% 3. Pratapgarh - 1034 KM2 3. Sirohi - 17.49% 4. Baran - 1010 KM2 4. Karoli - 15.28%
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  According to the 17th forest report, the Minimum Forest cover in the state –
 
@@ -301,10 +53,6 @@ Percent Area 9.60%  32864 KM2 (2021-22)  32869 KM2 (2022-23)  32921 KM2
 
 (a) Legal / Administrative (b) Geographical Classification Classification
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 (a) Legal/ Administrative Classification :-  Under the State Forest Act 1953, the forests are divided into 3 parts on Administrative basis.
 
 Legal / Administrative Classification
@@ -312,10 +60,6 @@ Legal / Administrative Classification
 Area (i) Reserved Forest (ii) Protected Forest (iii) Unclassified Forest 37.05% 56.43% 6.52%
 
 (i) Reserved Forest :-  Forest woods cutting, Cattle Grazing & Hunting are Completely banned.  These forests are most spread in Udaipur. (ii) Protected Forest :-  There is limited exemption on wood cutting and Cattle Grazing in these forests.  These forests are most spread in Baran. (iii) Unclassified Forest :-  There is no restriction on wood cutting and Cattle Grazing in these forests.  These forests are most spread in Bikaner.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 (B) Geographical Classification:-
 
@@ -325,35 +69,19 @@ Rajasthan Geography Notes
 
 (i) (ii) (iii) (iv) (v) Tropical Tropical Tropical Tropical Sub-Tropical Thorny/Xerophyte Dhok Forest Dry Deciduous Teak Forest Evergreen Forest Forest Forest
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 (i) Tropical Thorny/Xerophyte Forest :-  Rainfall – 0 – 30 cm.  Forest Area – 6%  Extension- Arid desert areas (Jaisalmer, Bikaner, Barmer, Balotra and Jodhpur)  Main Forests - Cactus, Aloevera, Thorny bush  Importance - In preventing desertification. (ii) Tropical Dhok Forest :-  Rainfall – 30 – 60 cm.  Forest Area – 58%  Extension – Semi-arid desert region (Luni-Basin, Nagaur, Shekhawati, Karauli and Sawai Madhopur)  Main forests - Khejri, Rohida, Acacia/Babool, Ber and Kair.  Importance - Fuel wood is obtained. (iii) Tropical Dry Deciduous Forest :-  Rainfall – 50 – 80 cm.  Forest Area – 28%  Extension - Alwar, Bharatpur, Karauli, Dholpur, Udaipur, Chittorgarh, Bhilwara and Rajsamand  Main forests - Sal, teak, rosewood (Shisham), Mango and Sandalwood.  Importance - The economic importance of these forests is highest. Example- In the form of Timber. (iv) Tropical Teak Forest  Rainfall – 75 – 110 cm.  Forest Area – 7%  Extension- Banswara, Dungarpur, Pratapgarh, Kota and Jhalawar.  Main Forests – Gular, Mahua and Tendu.  Importance - Useful in industrial sector. (v) Sub-Tropical Evergreen Forest:-  Rainfall – 150 cm.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Forest area - 1%  Extension- Mount Abu  Main Forests – Dicliptera abu ansis (Ambarstari), Jamun and Bamboo.  Importance - Most biodiversity is found in these forests. (4) Important Forest and Grass- (i) Khejdri -  Scientific Name - Prosopis Cineraria (Maximum – Western Rajasthan)  Other Names :–  State Tree (1983AD.)  Proud of State  Shami tree  Kalpvraksh of state  Jaanti (Local Language)  Note:- Khejdi is worshiped on the occasion of Vijayadashami/Dussehra. (ii) Rohida –  Scientific Name – Tecomella Undulata (Maximum – Western Rajasthan)  Other Name :-  State flower (1983)  Teak of Desert. (iii) Mehua –  Scientific Name - Maduca longifolia (Maximum – Dungarpur)  It is called the "Kalpavriksha of Tribes".  Mahua flower is used in making liquor. (iv) Palash/Dhak/Khakra :–  Scientific Name - Butea monosperma (Maximum - Rajsamand)  It is also known as 'The Flame of Forest' (v) Dicliptera Abu ansis/Ambertari :-  It is a medicinal plant found only in Mount Abu in the world.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 (vi) Khair- (Maximim – Udaipur, Chittorgarh)  In Udaipur, Chittorgarh, "Katha" is prepared by the Kathori tribe from the bark of this tree. (vii) Mulberry/Shahtoot – (Maximum – Udaipur)  Silk is produced from the silkworm on this tree.  This rearing is called Sericulture. (viii) Tendu – (Maximum – Pratpgrah, Chittorgarh and Hadoti)  It's leaves are used for making Bidis.  It's leaves are called "Timru".  The Timru tree was nationalized in 1974. (ix) Jamun (Blackberry) - (Maximum - Mount Abu, Ajmer)  Useful in treatment of Diabetes. (x) Teak – (Maximum – Banswara)  It's wood is mainly used for making furniture.
 
-(a) Sewan/Leelon Grass-  Scientific Name - Lasiurus Scindicus (Maximum – Jaisalmer)  Useful as animal feed.  It is also called as the shelter of Godavan. (b) Dhaman –  Scientific Name – Cenchrus Setigerus (Maximum - Jaisalmer)  Useful for milch animals. (c) Bamboo –  Scientific Name - Bambusa Vulgaris, (Maximum- Banswara)  This is the longest grass which is also called "Green Gold" of the tribes. (d) Khas Grass  Maximum - Bharatpur, Sawai Madhopur, Tonk and Ajmer)  It is a fragrant grass. A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+(a) Sewan/Leelon Grass-  Scientific Name - Lasiurus Scindicus (Maximum – Jaisalmer)  Useful as animal feed.  It is also called as the shelter of Godavan. (b) Dhaman –  Scientific Name – Cenchrus Setigerus (Maximum - Jaisalmer)  Useful for milch animals. (c) Bamboo –  Scientific Name - Bambusa Vulgaris, (Maximum- Banswara)  This is the longest grass which is also called "Green Gold" of the tribes. (d) Khas Grass  Maximum - Bharatpur, Sawai Madhopur, Tonk and Ajmer)  It is a fragrant grass.
 
  Which is useful in making syrup and making perfume. (e) Bur Grass  Maximum - Bikaner  It is a fragrant grass. (f) Mochia Grass  Maximum - Churu  It is found in Talchhapar Sanctuary. (5) Afforestation Programmes Note:- (1) Desert Afforestation programme Desert Development Programme  Started - 1977-78  Started - 1977-78  District – 16  District – 10  Financial Cooperation :–  Financial Cooperation :–Centre : State = 75 : 25 Centre : State (2) State Forest Action Plan (SEAP) 75 : 25  Started - 1996-2010 (20 Years Programme) (3) Aravali Afforestation Plan  Started - 1992  Financial Cooperation – Japan (4) Rajasthan Forest and Biodiversity project  Assistance - Japan International Cooperation Agency (JICA)  Started - 2003  Objective – (1) To increase forests and biodiversity. (2) Soil and underground water conservation. (3) Poverty Alleviation and Livelihood Programme Phase
 
 Phase – I 2003-2010 (8 years) Phase – II 2011-2019 (8 years)
 
-18 Districts 15 Districts (10 Desert & 5 Non Desert District) A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+18 Districts 15 Districts (10 Desert & 5 Non Desert District)
 
 Note:- Jaipur, Sirohi, Banswara, Dungarpur and Bhilwara have been included in Phase-II in non-desert districts. (5) Harit Rajasthan Yojna – (Duration = 2009-2014)  This is a Five year forestry plan . (6) Van Dhan Yojna – 12 Aug. 2015  Objective (1) To reduce the dependency on forest for those people who live near the forest. (2) To provide employment opportunity (3) To conserve wild Animals (6) Forest Conservation 'Awards' 1. Amrita Devi Bishnoi Award  Started – 1994  Objective - Given for excellence in (i) Afforestation (ii) Forest conservation (iii) Willd life conservation
 
@@ -363,19 +91,11 @@ Individual Individual Institutional Forest Protection Wildlife Protection Forest
 
 Om Singh Rajawat Satnam Singh Rajawat 1. Wonder Cement Company (2018) (2018) RK Nagar (Chittorgarh) 2. Forest Protection and Management Committee – Udaipur (Patiya) 3. Manav Utthan Sewa Samiti – Hanumangarh (Talwada)
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 (1) Individual Forest Protection  Amount- 50 Thousand  2018 - Om Singh Rajawat  2019 - Narayan Lal Kumawat  2020 - Shyam Sundar Paliwal (Rajsamand)  2021 - Abhilasha (Sikar)  2022 - 1. Bacchu Singh Verma (Bharatpur) 2. Pawan Kumar Jain (Kota) (2) Individual Wildlife Protection
 
  Amount - 50 thousand  2018 - Satnam Singh Rajawat  2020 - Gajendra Singh Manjhi (Nagaur)  2021 - Padam Singh Rathore (Udaipur)  2022 - 1. Mohit Sharma (Jaipur) 2. Divya Sharma (Jaipur) (3) Institutional Forest Protection and Management  Amount- 1 lakh  2020 - Sati Ki Chori Forest Protection and Management Committee Udaipur
 
 2. Indira Priyadarshini Vraksh Mitra Puruskar  This Awards are given by Ministry of Environment and forests of Government of India to Individuals and Institutions who have done pioneering and exemplary work in the filed of afforestation and wasteland development.  Amount - 2.5 Lakh 3. Rajeev Gandhi Environmental Conservation Award  Started – 2012 (5 June) 4. Kailash Sankha wildlife Conservation Award  Amount - 50 thousand rupees (for the protection of wildlife))  Kailash Sankhala is known as "Tiger Man of India" 5. Vanpalak Award  This award is given to officers, forest protectors and other workers of forest Department.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 6. Act Related to Forest and Wildlife Conservation (1) Wildife Protection Act – 1972 (2) Tiger Protection Act – 1973 (3) Crocodile Protection Act – 1975 (4) Forest conservation Act – 1980 (1988) (5) Environment conservation Act - 1986 (6) Elephant conservation Act – 1992 (7) Biodiversity Conservation Act – 2002 (8) Dolphin Conservation Act – 2009 (9) Camel Conservation Act – 2014 (10) Godawan Conservation Act – 2014 Note:- Rajasthan State Biodiversity Board was formed on 14 September 2010 in Jaipur.
 
@@ -400,10 +120,6 @@ Rajasthan Geography Notes
 (10) Ist Oct-7th Oct. - Wildlife week
 
  Earth Day - The Planet vs. Plastics  Water Day - Water for peace
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Biodiversity Day - Build Back Biodivesity: From Agreement to action  World Environment Day - Land restoration, desertification and drought Resilience
 
@@ -435,10 +151,6 @@ Other Important Facts
 
 Note – Monkey Valley of Rajasthan – Galta Ji (Jaipur)
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 Wild Life and Conservation
 
  Rajasthan is considered important in India from the point of view of wildlife.
@@ -465,9 +177,7 @@ F. Hunting Prohibition Area and Biosphere
 
 II. Ex-Situ conservation :- Conservation of organisms outside their natural habitat. Example :-
 
-1. Zoo 2. Deer Park 3. Animal Gene Bank 4. Aquarium 5. A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+1. Zoo 2. Deer Park 3. Animal Gene Bank 4. Aquarium 5.
 
 I. In-Situ Conservation :-
 
@@ -505,10 +215,6 @@ A. National Park :- There are total 3 National parks in Rajasthan which are as f
 
  This is the only bird conservation site in the state which is called "Paradise of Birds".
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  In 1981 AD, it has been included in the Ramsar site.
 
  Established – 9 January, 2012
@@ -538,10 +244,6 @@ Largest Smallest 1. National Desert Park - 3162KM2 1. Sariska - 'A' - 3KM2 2. Ke
  Tiger Den Hotel is located in this sanctuary which is operated by RTDC.
 
  The second tiger project of Rajasthan was started here (1978).
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Bhartrihari Temple, Pandupol Temple, Neelkanth Mahadev Temple are located in this sanctuary.
 
@@ -577,10 +279,6 @@ Rajasthan Geography Notes
 
  Fossil Park is located in this sanctuary, where the remains of Jurassic period wood are found.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 5. Jamwaramgarh Wildlife Sanctuary :-
 
  Establishment – 1982
@@ -614,10 +312,6 @@ Rajasthan Geography Notes
  That's why it is also called "the house of birds".
 
 8. Ramsagar Wild Life Sanctuary :-
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Establishment – 1955
 
@@ -661,10 +355,6 @@ Rajasthan Geography Notes
 
  Location - Sawai Madhopur
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 14. Sawai Madhopur Sanctuary :-
 
  Establishment - 1955
@@ -706,10 +396,6 @@ Rajasthan Geography Notes
  Location – Udaipur, Pali and Rajsamand
 
  Special – It is famous for wolves and Ranakpur Jain temple.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 19. Sitamata Wildlife Sanctuary :-
 
@@ -753,10 +439,6 @@ Rajasthan Geography Notes
 
  Special – The Som, Mansi and Wakal rivers flow in this sanctuary.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 23. Jaisamand Wildlife Sanctuary :-
 
  Establishment - 1955
@@ -797,10 +479,6 @@ Rajasthan Geography Notes
 
  Special - It is famous for Gagroni Parrot.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 C. Tiger Project :- There are total 4 tiger projects in Rajasthan which are as follows -
 
 S. Tiger Project Establis Extension Area Covered Area No. hment Km2 1. Ranthambore 1974 Sawai 1411 Ranthambore National Park, Sawai Madhopur, Madhopur Sanctuary, Keladevi Karauli, Bundi, Sanctuary, National Chambal Sanctuary Tonk 2. Sariska 1978 Alwar, Jaipur 1213 Sariska Sanctuary, Sariska - "A" Sanctuary and Jamwaramadh Sanctuary
@@ -833,10 +511,6 @@ S.No. Conservation Reserve - Location
 
 6 Bansyal - Khetri Bagor - Jhunjhunu
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 7 Mansa Mata - Jhunjhunu
 
 9 Sundha Mata - Jalore, Sirohi
@@ -856,10 +530,6 @@ F. Hunting Prohibited Region – 33  There are a total of 33 Prohibition Area
  Smallest – Kanaka Sagar (Bundi)
 
  Other Major Hunting Prohibition Areas:- S.No. Name - Place 1. Jawai Dam - Pali 2. Rotu - Nagaur 3. Gudha Vishnoi - Jodhpur 4. Ramdevra - Jaisalmer 5. Jod Beed - Bikaner 6. Deshnok - Bikaner
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 A. Zoo :- There are total 5 Zoo in Rajasthan.
 
@@ -885,9 +555,7 @@ S.No. Deer Park - Location 1. Ashok – Jaipur 2. Sanjay - Jaipur 3. Amrita Devi
 
  Antelope species of Chinkara are found in Rajasthan.
 
- Nahargarh Sanctuary and National Desert Sanctuary are famous for Chinkara. A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+ Nahargarh Sanctuary and National Desert Sanctuary are famous for Chinkara.
 
  Declared as State Bird in 1981.
 
@@ -910,10 +578,6 @@ Rajasthan Geography Notes
  It is a bird that imitates the human voice.
 
  It is found mostly in Mukundra Hills National Park in Rajasthan.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 (b) Wildlife Mascot :- The Forest Department has declared one wildlife mascot for each district in March, 2016.
 
@@ -955,10 +619,6 @@ SNo. District - Mascot
 
 21. Karauli – Alligator
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 22. Kota - Otters (Udbilao)
 
 23. Nagaur – Flamingo
@@ -991,17 +651,9 @@ Rajasthan Geography Notes
 
  Famous Books of Kailash Sankhala - Tigerland, The Tiger, Return of the Tiger.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Agriculture is know as "Gamble of Monsoon"  The plains are most fertile, where agricultural production is high. For this reason it is called "the heart of agriculture".  Agro climatic region in Rajasthan is - 10 while in India Agro climatic region – 15  Importance of Agriculture :- (1) Contribution in Employment (a) India - 54.6% (b) Rajasthan - 62% (2) Contribution in International Trade (a) Export - Edible Oil (b) Import - Food Grains (3) Contribution in GSVA (Gross State Value Added) At Fixed Prices At Current Prices Year Percent Year Percent 2020 - 2021 30.45 2020 - 2021 30.98 2021 - 2022 28.85 2021 - 2022 30.23
 
 (4) Contribution to Industries - Agro-based industry is about 15 percent, in which the largest industries are Cotton Textiles and Sugar Industry.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Classification of agricultural crops :–
 
@@ -1024,10 +676,6 @@ B. Depending on the usage :- 1. Food Grains –
  Rabi - Wheat , Barley, etc.
 
  Note :- The major food grain crop of Rajasthan is millet whereas the major food grain crop in the country/world is rice.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 2. Pulses / Land Fertile Crops :– crops that grow on agricultural land
 
@@ -1063,29 +711,17 @@ Lubrican Biodiesel t 5. Fibrous Crops –
 
  Example - Cotton, Jute etc.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Crops that are used as drink (drinking).
 
  Example - Tea, Coffee, Tobacco etc.
 
  Names of Major Crops 1. Cotton - White Gold and Bania 2. Opium - Black Gold 3. Hohoba/Jojoba - Yellow gold/Golden of Desert 4. Bamboo - The Green Gold of the Tribals 5. Jowar (Sorgum) - The Bread of the Poor 6. Isabgol - Horse Cumin 7. Jute - Golden Fiber 8. Peanuts - Poor's Almonds 9. Maize - The Queen of Grains  Physical conditions favorable to major agricultural crops S.No. Crop Name Temperature Rainfall Amount Soil 1. Millet 300 - 350 cm. 25 - 50 cm. Sandy Soil 2. Maize 210 - 270 cm. 50 - 80 cm. Red Clay 3. Barley 150 - 200 cm. 50 - 80 cm. Alluvial 4. Wheat 150 - 200 cm. 50 - 100 cm. Alluvial 5. Cotton 210 - 270 cm. 50 - 100 cm. Black Soil 6. Sugarcane 210 - 300 cm. 125 - 150 cm. Alluvial 7. Rice 210 - 280 cm. 150 - 200 cm. Alluvial
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Efforts being made for agricultural development – (1) Agricultural and other revolutions –
 
 S. Name The Product S.No. Name The Product No. 1. Green Food Grains 8. White Revolution / Milk Production Revolution (Wheat, Rice) Operation Flood 2. Yellow Oilseeds 9. Blue Revolution Fish Production Production 3. Red Revolution Meat/Tomato 10. Silver Revolution Egg Production 4. Amrit Kranti Water/River 11. Kali/Krishna Petroleum Linking Project Revolution 5. Round Potato 12. Gray Revolution Cement Revolution Production Production 6. Badami Related to 13. Rainbow Revolution All Food Related Revolution Spices 7. Sunrise Tech Industry 14. Golden Revolution Horticulture Revolution
 
 (2) Agricultural and Forest Research Center S.No. Name - Place 1. Tabiji (Related to algebraic spices) - Dumada – Ajmer (2000) 2. National Research Centre on Reepesed Mustard (NRCRM) - Sewar - Bharatpur (1993) 3. Arid Horticulture Research Center - Beechwal - Bikaner (1993) 4. Plum Research Center - Bikaner 5. Date Research Center - Beechwal – Bikaner 6. Millet Research Center - Barmer 7. Rice Research Center - Banswara 8. Maize Research Center - Banswara 9. Jowar/Sorghum Research Center - Vallabh Nagar – Udaipur 10. Isabgol Research Center - Jodhpur 11. Rajasthan Agricultural Research Center (RARI) - Durgapura - Jaipur (1943) Note :- Sewar, Tabeeji and Beechwal are the research center of ICAR.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 (3) Special commodity/variety of agricultural crops – S.No. Name - Variety 1. Millet - Raj. - 171, Tbth - 2, Tbth - 911, Tbh – 30 2. Wheat - Kalyan Sona-1482, Sonalika, Malvika, Kohinoor, Mangala, Ganga Sunhari, Durgapura-65, Chambal-65, Maxion, Lal Bahadur, Sharbati, HD-3226 3. Barley - Karan, Kailash, Kedar, Jyoti 4. Maize - Mahi Kanchan, Mahi Dhaval, Pusa HM - 4, Pusa HM - 8, Pusa HM - 9, Arun, Kiran, Prabhat 5. Cotton - Narma, Bikaneri Narma, RST-9, PST-9, Veeranar, Varaha Lakshmi 6. Sugarcane - Co-419, Co-449, Co-1007, Co-1111, Co-0238 (Karan - 4)
 
@@ -1094,10 +730,6 @@ Rajasthan Geography Notes
 2. National Micro Irrigation Mission / On Farm Water Mission -  Launched Year - 2005 - 06  Objective - To promote drip and sprinkler irrigation system for effective and proper use of water resources.
 
 3. National Agricultural Development Scheme -  Launched Year - 2007 - 08  Objective - To increase investment under the agriculture sector.  Cooperation - Center: State (60: 40)
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 4. National Bamboo Mission -  Launched Year - 2007 - 08  Objective - To increase the production of bamboo crop.  Note :- Bamboo Mission is operating in 15 districts in the state which includes Karauli, Sawai Madhopur, Udaipur, Chittorgarh, Rajsamand, Bhilwara, Banswara, Dungarpur, Pratapgarh, Sirohi, Baran, Jhalawar, Sriganganagar, Bikaner and Jaisalmer.
 
@@ -1109,10 +741,6 @@ Rajasthan Geography Notes
 
 8. Prime Minister's Agricultural Irrigation Project (Theme-Per Drop More crop)-  Launched Year - 2015 – 16  Funding Pattern - Central Government : State Government (60 : 40)  Objective - To provide water supply for irrigation to every farmer and every farm till 2020 and to adopt drip and sprinkler technology for irrigation.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 9. Pradhan Mantri Fasal Bima Yojana –  Launched Year - January 2016  Theme - One Nation One Scheme  Premium Amount -  Rabi - 1.5 percent  Kharif - 2 percent  Horticulture - 5 percent  In the next 3 years, with the expenditure of Rs.8800 crore on this scheme, the target of covering 50 percent of the farmers.  This scheme is mandatory for KCC (Kisan Credit Card) holders.
 
 10. Pradhan Mantri Kisan Samman Nidhi Yojana -  Launched Year - February 1, 2019  Amount - Rs.6000 (Rs.2000 per 4 months)
@@ -1121,25 +749,13 @@ Rajasthan Geography Notes
 
  Agricultural University – 1. Swami Kesavanand Rajasthan Agricultural University – Bikaner (1987 AD) 2. Maharana Pratap University of Agriculture and Technology – Udaipur (1999) 3. Shri Karan Narendra Agricultural University - Jobner (Jaipur) (2013) 4. Jodhpur Agriculture University - Mandore (Jodhpur) (2013) 5. Agricultural University - Borkheda (Kota) (2013)
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Agricultural Policies – 1. Latest Agriculture Policy of the State - 26 June 2013  Provisions –  The target rate of the latest agriculture policy has been kept at 4%.  Note:- Target rate of agriculture in 12th five year plan is 3.5%.  Doubling the production of food grains in 10 years.  To increase the annual plan expenditure of agriculture from 6 percent to 10 percent. 2. "Organic Agriculture Policy" of Rajasthan -  Launched Year - June 2017  Objective - To do organic farming on 1 lakh hectare of agricultural land.  First organic district of Rajasthan - Dungarpur  First organic village of Rajasthan - Ghati village (Udaipur).  Other Important Facts – 1. K-3(Krishak Kalyan Kosh)/( Farmer Welfare Fund) –  A farmer welfare fund of 1000 crores will be formed (17 Dec. 2019).  This fund will be used to get the farmers a fair price for their products.  Total Fund -75,000 Crores 2. GRAM – Global Rajasthan Agritech Meet –  It is an agricultural investment program, in which investment is made in agriculture, horticulture, animal husbandry, dairy and food processing.  GRAM – I - Jaipur (November 2016)  GRAM – II - Kota (June 2017)  GRAM – III - Udaipur (November 2017) 3. An agricultural year - from 1 July to 30 June.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Center of Agricultural Excellence-
 
 Excellence Center District
 
 1. Dates - Sagra Bhoj Ka (Jaisalmer) 2. Millet - Jodhpur 3. Fig - Sirohi (Proposed) 4. Citrus plants/spice - and medicinal plants- Jhalawar 5. Citrus plants - Kota 6. Vegetable - Bundi 7. Custard Apple - Chittorgarh 8. Guava - 1st- Devdavas - Tonk 2nd- Sawai- Madhopur 9. Apiculture - Tonk (Proposed) 10. Flowers - Sawai- Madhopur 11. Pomegranate - Bassi (Jaipur Rural) 12. Dragon fruit - Bassi (Jaipur Rural) 13. Olive - Bassi (Jaipur Rural) 14. Amla, Mango, Olive - Khaimri (Dholpur)
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 A. General Introduction B. Classification of Industries C. Industrial Development D. Other Important Facts A. General Introduction  Rajasthan is a backward state of the country in terms of industries.
 
@@ -1153,8 +769,6 @@ a. b. c. On the basis of size On the basis of On The Basis of Manufacturing Owne
 
 1- Micro Industries 1 crore 5 crore 2- Small Industries 1 crore to 10 crore 5 – 50 crore 3- Medium Industries 10 to 50 crore 50 – 250 crore
 
-Rajasthan Geography Notes
-
  Cottage Industry :- Low technology based industries whose purpose is to make a living rather than to get profit. (b) On the basis of manufacturing :- On the basis of manufacturing industries are classified on the basis of raw material.
 
 Based of Manufacturing
@@ -1164,8 +778,6 @@ I. II. III. IV. V. Agriculture Mineral based Forest Produce Engineering or Chemi
 I. Agriculture based Industry : – 1.Cotton Textile Industry 2. Sugar Industry 3. Wool Industry 4. Vegetable Ghee and Mustard Oil Industry 5. Dairy Industry 6. Biodiesel 7. Olive Oil Industry 1. Cotton Textile Industry :-  Raw Material - Cotton  First cotton textile mill - The Krishna Cotton Mill  Establishment - 1889 (Beawar, Ajmer)  Founders - Seth Damodar Das Rathi and Colonel Dixon Classification Of Industries
 
 Edward (Beawar-1906) Vijaynagar (Ajmer) Mahalaxmi (Beawar-1925)
-
-Rajasthan Geography Notes
 
 Rajasthan Co-operative Cotton Textile Mill
 
@@ -1177,8 +789,6 @@ Sugar Mills in Rajasthan
 
 Mewar Sugar Mill (1932) Chittorgarh Ganganagar Sugar Mill Keshoraipatan Sugar Mill First - Private Sugar Mill (1937) Sriganganagar (1965 Bundi) Udaipur Sugar Mill (1976) First - Public Sugar Mill First - Co-operative Sugar Mill
 
-Rajasthan Geography Notes
-
 Note :- Ganganagar Sugar Mill is the only sugar mill. Where sugar was made from sugarcane and beetroot (1968). Currently it is closed. It currently operates three ventures.
 
 Ganganagar Sugar Mill
@@ -1186,8 +796,6 @@ Ganganagar Sugar Mill
 Country wine Manufacture of The Hi-Tech Precision manufacturing Heritage Liquor Glass Factory (Dholpur) (Jaipur)
 
 3. Wool Industry:-  Rajasthan (34.46 percent) ranks first in the country in wool production.  Major wool industry - 1- Central Wool Board – Jodhpur 2- Highest wool production in Rajasthan – Jodhpur 3- Largest wool market in Rajasthan – Bikaner 4- Wool Testing Laboratory – Bikaner 5- State Wool Mill – Bikaner 6- Wool Training Center – Jaipur 7- Central Sheep and Wool Research Center - Avikanagar (Tonk) 4. Vegetable Ghee and Mustard Oil Industry:-  First Vanaspati Ghee Factory in Rajasthan - Bhilwara (Established 1964)  Presently highest production of vegetable ghee - Jaipur  Production of mustard oil highest - Jaipur  Major factories of Mustard oil - 1- Chambal – Jaipur 2- Veer Balak – Jaipur 3- Netaji – Jaipur 4- Engine Mark – Bharatpur
-
-Rajasthan Geography Notes
 
 5. Dairy Industry:-  The maximum development of dairy industry in Rajasthan has happened in Jaipur.  First Dairy of Rajasthan - Padma (Ajmer) 1938  Rajasthan State Dairy Development Corporation was established in 1975 in Jaipur in collaboration with the World Bank.  Three tier structure has been made in the state for dairy development.
 
@@ -1197,13 +805,9 @@ Top At District At The Village level RCDF-1977 level- Primary Rajasthan Cooperat
 
  RCDF (Rajasthan Co-Operative Dairy Federation) It was created in place of Rajasthan Dairy Development Corporation.  Note:- Major Dairy operating in Rajasthan:- 1- WRMUL - Western Rajasthan Milk Union Ltd. ranslated (Jodhpur) 2- URMUL) - Uttari Rajasthan Milk Union Ltd. (Bikaner) 3- Gangmul - Ganganagar Milk Union Ltd. (Ganganagar) 4- Metro Dairy – Govindgarh (Jaipur Rural)  Capacity - 11 lakh liters 5- Camel Milk Dairy 1st Johadbeed (Bikaner-2009) 2st Pokaran (Jaisalmer-2021)  The center of marketing of camel milk has been established in Jaipur.  Capacity - 2100 liters/day
 
-Rajasthan Geography Notes
-
 6. Biodiesel :-  Raw Material – Ratanjot / Jatropha and Karanj  Biodiesel Refinery - Kaldwas (Udaipur)  Biodiesel Plant - Jhamar Kotra (Udaipur) 7. Olive Oil :-  Raw Material - Olive  Olive Refinery - Lunkaransar (Bikaner)  Note:- Olive Tea – Plant has been established in Bassi (Jaipur) II. Mineral based Industries:- 1- Cement Industry 2- Glass Industry 3- Salt Industry 4- Marble Industry 5- Granite Industry 6- Asbestos Industry
 
 1. Cement Industry :-  Raw Material - Limestone, Gypsum and Silica  First cement factory in Rajasthan 1912 - 1913 – ACC (Associate Cement Company)  Location - Lakheri (Bundi)  White Cement Factory:- 1. JK White Cement Factory - Gotan (Nagaur) 2. JK White Cement Factory - Mangrol (Chittorgarh) 3. Birla White Cement Factory - Khariakhangar (Jodhpur)  Major units of cement production:- 1. JK Cement Factory - Nimbahera (Chittorgarh) 2. Ultratech Cement Factory - Chittorgarh 3. Chetak Cement Factory - Chittorgarh 4. Lafarge Cement Factory - Chittorgarh
-
-Rajasthan Geography Notes
 
 5. Associate Cement Company - Lakheri (Bundi) 6. Bangar Cement Factory - Pali 7. Binani Cement Factory - Pindwara (Sirohi) 8. Shree Cement - Beawar (Ajmer) 9. Shri Ram Cement - Shriram Nagar (Kota) 10. Grasim Cement Factory - Kotputli (Jaipur) 11. Mangalam Cement Factory - Modak (Kota) 12. Jaipur Cement Factory - Sawai Madhopur 2. Glass Industry :-  Raw Material:- Silica sand, sodium sulphate, saltpeter (obtained from sugar industry)  Highest development of glass industry in Rajasthan – Dholpur
 
@@ -1215,19 +819,13 @@ Sambhar Salt Limited Pachpadra Didwana (Jaipur Rural) (Balotra) (Didwana-Kuchama
 
 4. Marble Industry :-  Rajasthan is considered to be the first in this industry in the country.  Marble is produced the most from Rajsamand. Because here marble production/processing units are maximum.
 
-Rajasthan Geography Notes
-
  Kishangarh (Ajmer) is the largest center of marble market.  The white marble of Rajasthan (Makrana- Didwana-Kuchaman ) is considered world famous. 5. Granite Industry :-  Most of this stone is produced from Jalore, Barmer, Sirohi region of Rajasthan.  Jalore is known as the Granite City in Rajasthan. 6. Mica Industry:-  Mica Brick Factory in Rajasthan - Bhilwara  Bhilwara is also known as mica city.  Use - This product is used to make electronic equipment. III. Forest Produce Based Industries:-  Wood Carved Furniture - Barmer  Gum Production (Chauhatan-Barmer)  Tussar Silk Production (Programme - 1986) operated in Udaipur, Banswara, Kota IV. The engineering or technical industry:- Industry Product Location National Engineering Company Ball and Bearing Jaipur Jaipur Metals Electricity Meters Jaipur Capstan meter water meter Jaipur, Pali Rajasthan Electronics Corporation T.V. Jaipur Mann Industries Iron Door & Tower Construction Jaipur Cable Industries Cable Kota Instrumentation Equipment/Machine Kota J & K Electronics TV Kota Florespar Plant Iron Mixing Plant Construction Dungarpur CIMMCO Wagon Factory (1957) Railway Coach Bharatpur
-
-Rajasthan Geography Notes
 
 V. Chemical Fertilizer Industry :- 1. Chambal Fertilizers and Chemicals – Gadepan (Kota) 2. National Chemicals and Fertilizers (DAP – Diammonium Phosphate) - Kapasan (Chittorgarh) 3. Rajasthan State Chemical Works - Didwana (Nagaur)
 
 c. On the basis of ownership –
 
 Private Industry Public industry Co-operative industry Individual Rights Authority of Government Run by both individual and Government
-
-Rajasthan Geography Notes
 
 Central Government State government Undertakings undertakings 7 23
 
@@ -1238,8 +836,6 @@ statutory board Companies 6 Act 17
  State Government Undertakings :-
 
  Statutory Board - 6 1955 - Rajasthan Finance Corporation 1957 - Agricultural Warehousing Corporation 1st October, 1964 - Rajasthan State Road Transport Corporation (RSRTC) 1970 - Rajasthan Housing Board Corporation - (RHB) 1974 - State Agricultural Marketing Board 1975 - State Land Development Corporation
-
-Rajasthan Geography Notes
 
  Companies Act – 17 Note -  Undertakings operated under the Companies Act of Rajasthan - 17 of which the main 1. RSMML - Raj State Mines & Minerals Ltd. (1974) - Udaipur 2. State Electricity Distribution Corporation - Jodhpur, Ajmer, Jaipur 3. REIL – Rajasthan Electronics & Instruments Ltd. Kanpur (Jaipur)
 
@@ -1253,11 +849,7 @@ II. IV. VI. Special Industrial Industrial Economic Investment Development Zone (
 
 I. Industrial policies :-  General Policies 1- 1978 2- 1991 3- 1994 4- 1998 5- 2010 6- 1st July 2019 Latest Industrial Policy.  MSME Policy :–  Micro Small Medium Enterprises Policy was issued on 20 November 2015.  17 September, 2022  Handicrafts Policy :- 17 September, 2022
 
-Rajasthan Geography Notes
-
 II. Special Economic Zone (SEZ) :–  The SEZ programme in the state is run by RIICO.  Major SEZs of Rajasthan :– S.No. SEZ Related Area Status 1. Boranada SEZ Guargum, Handicraft Jodhpur(Mansarover) 2. Sitapura SEZ Gems & Jewellery Jaipur 3. Mahindra SEZ IT, Handicraft Jaipur (Kalwara) 4. Somani SEZ Hardware and Software Alwar 5. RNB SEZ Textile Bikaner 6. Vatika SEZ (Proposed) I.T. Jaipur III. Industrial Park and Complex :- 1. Japanese Park (JETRO– Japan External Trade Organization)  1st Neemrana (Alwar  2nd Ghilot (Alwar) 2. Korean Park (GWJT) - Ghilot (Kotputli- Bahror) 3. Ceramic Zone – Ghilot (Kotputli- Bahror) 4. Agro Food Park  Sri Ganganagar  Jodhpur  Kota  Alwar 5. Mega Food Park  Roopangarh - Ajmer  Mathania - Jodhpur (Proposed) 6. Information Technology Park (IT Park)  Jaipur  Kota  Udaipur  Jodhpur
-
-Rajasthan Geography Notes
 
 7. Spices Park (Chhapbam Chant)  1st Mathania – Jodhpur  2nd Ramganj Mandi - Kota 8. Garment Park / Apparel Park  Jagatpura (Mahal Road), Jaipur 9. Stone Park  Mandore, Jodhpur  Masalpur, Karauli  Vishnoda, Dholpur  Mandana, Kota 10. Software Park  Kanakapura, Jaipur (REIL-Rajasthan electronics Instrument Limited) 11. Flower Park  Khushkheda (Khairthal -Tijara)
 
@@ -1267,19 +859,13 @@ Note :- Country's first export promotion industrial park - Sitapura, Jaipur (199
 
  Complex 1. Wool complex :-  Khara (Bikaner)  Beawar (Ajmer)  Gohna (Ajmer)  Narbadkheda (Ajmer)
 
-Rajasthan Geography Notes
-
 2. Ceramic Complex :-  Khas (Bikaner) 3. Leather complex  Manpura- Machedi (Jaipur Rural) 4. Petro Complex  Balotra IV. Industrial Investment Program 1. Resurgent Rajasthan First – 2008 2. Resurgent Rajasthan Second – 19 - 20 November, 2015 3. Nivesha/Invest Rajasthan Summit,2022 4. Rising Rajasthan Global Investment (2024) – (9 to11 December,2024)  Among all the above programmes, maximum investment has been made in the 'Energy sector'  Rajasthan Rising figures are yet to come. (Update)
 
 Note:- Nodal agency to organize the investment programme – B.I.P.  Bureau of Investment Promotion  Formation - 1991  Objective - Industrial investment of more than 10 crores
 
 V. Delhi-Mumbai Industrial Corridor (DMIC – Delhi Mumbai Industrial Corridor)  Technical and economic cooperation in this project has been done by "Japan".  The extension of this project is from Dadari (Uttar Pradesh) to Jawaharlal Nehru Port (Mumbai-Maharashtra).  The total length of this industrial corridor is 1504 km. Of which 38 %(570 Km.) will be in Rajasthan.  Mainly 7 districts of Rajasthan are included in this industrial corridor while 22 districts have been included in its area of influence.
 
-Rajasthan Geography Notes
-
  In this industrial corridor, 24 industrial areas and 8 industrial investment zones will be made. In which 3 industrial areas and 2 industrial investment areas of Rajasthan have been included.  Investment Area :- 1. Kishangarh Investment Zone – Ajmer- 2. Khushkheda - Bhiwadi - Neemrana – Alwar  Industrial Area :- 1. Jaipur - Dausa Industrial Area 2. Rajsamand - Bhilwara Industrial Area 3. Pali-Marwar Industrial Area
-
-Rajasthan Geography Notes
 
 VI. Industrial Institute:- A. RFC B. RAJSICO C. RIICO D. RUDA
 
@@ -1287,27 +873,17 @@ A. RFC (Rajasthan Financial Corporation) –  Established - January, 1955 
 
 B. RAJSICO – Rajasthan Small Industries Corporation Limited  Established – June , 1961  Headquarters – Jaipur  Objective :-  To provide training in tribal areas.  To provide raw material, machinery and technical facilities to small scale industries.  RAJSICO does the work of marketing the goods produced from small scale industries. C. RIICO-Rajasthan State Industrial Development and Investment Corporation Limited –  Established in 1969, while reorganization was done in 1980.  Headquarters – Jaipur  Objective :-
 
-Rajasthan Geography Notes
-
  To provide long term loan to small, medium and large scale industries.  Providing land for industries.  This is the apex body of industries in Rajasthan. D. RUDA – Rual Non-farm / Agriculture Development Agency -  Establishment – 1995  Headquarters – Jaipur  Objective:-  To provide training related to various sectors in non-agriculture sectors.
 
  The training areas of RUDA are related to wool and textile industry, leather industry, minor minerals.
 
 VII. Industrial Development Schemes :- (i) Mukhya Mantri Swavalamban Yojana –  Launched – 2013  Objective :– Under this scheme, to provide loan up to Rs 10 lakh to hand based and artisans to set up their own industry. (ii) Mukhya Mantri Yuva Udhyamita Protsahan Abhiyan  Launched – 2013  Purpose - To provide financial support and loans to the youth who have a plan to set up industry. Note - Eligibility for this scheme  Age - 18-45 years  Qualification - 10th + ITI or Graduate  Loan amount - 25 lakhs - 5 crores (iii) Start- up Scheme –  This is a scheme of the Central Government.  Launched - 9 October 2015 in Rajasthan  Under this scheme, to give financial support to the entrepreneurs who set-up industrial plans. Note - Rajasthan is the 5st state of the country under this scheme. (Karnataka, Kerala, Andhra Pradesh, Gujarat)
 
-Rajasthan Geography Notes
-
 (iv) Aside Scheme -  Scheme launched to promote industrial exports.  Launched - March 2002  Other important points related to industries - i. For industrial development -  At District Level :–  District Industries Center - 36  Sub Station – 8 ii. Single Window Clearance Act – 2011 iii. E-Governance and IT Policy - November 2015 iv. Special Industrial Institutes of the State -  Computer Aided Carpet Design Center – Jaipur  Computer Aided Textile Design Center - Bhilwara  Brahmagupta Research and Development Institute - Jodhpur  Foot Wear Design Center - Mandore (Jodhpur)  NIFT (Naional Insitute of Fashion Technology) - Jodhpur  Ceramic Research & Development Center - Bikaner
-
-Rajasthan Geography Notes
 
 A. Energy Production B. Classification of Energy C. Schemes related to Energy D. Institutions related to Energy
 
  Energy plays an important role in Industrial, Economical and Infrastructural development of a state.  At the time of independence, the total installed power capacity in Rajasthan was 13.2 MW.  At present the total installed power capacity in Rajasthan is 24783.64 MW (Till March). A. Currently Producing Energy :-
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 1. Thermal energy contributes is maximum in energy. 2. Coal contributes is maximum in thermal energy.
 
@@ -1325,10 +901,6 @@ Super Thermal Super Critical UMPP Station Station (Ultra Mega Power Project)
 
  Each Power Station with a capacity of 4000 MW or above.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 C. Classification of Energy Resources
 
 Based on Production Based on Possibility
@@ -1344,10 +916,6 @@ Conventional Non-Conventional Non-Renewable Renewable
 (b) Non-Conventional Energy Resources
 
  These energy resources which are relatively new and which utilized advanced technology obtain energy from them are called Non-Conventional energy resources.  Example :– 1 Nuclear Energy 2 Wind Energy
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 3 Biogas Energy 4 Biomass Energy 5 Tidal Energy
 
@@ -1367,19 +935,11 @@ Energy Power Projects in Rajasthan
 
 1. Bhakhra – Nangal Hydro Electric Project  State Getting Benefit :– 1- Rajasthan 2- Punjab 3- Haryana
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Production Capacity - 1493 MW  Share of Rajasthan - 15.2% (227 MW)
 
 2. Vyas Hydro Electric Project  States getting benefit – 1- Rajasthan 2- Punjab  Rajasthan’s Share - 422 MW 3. Mahi–Bajaj Sagar Hydro Electric Project  States Getting Benefit - Rajasthan and Gujarat (45 : 55)  This project has been built in two phases. (i) 2 Unit x 25 MW = 50 MW (ii) 2 Unit x 45 MW = 90 MW  100% Electricity Generated in this project should be consumed in Rajasthan only.(140 Mw.) 4. Chambal Hydro Electric Project -  Joint Scheme of Rajasthan and Madhya Pradesh.
 
  Contribution of Rajasthan and MP in the scheme is equal (50 : 50)  Three dams will produce a total of 386 MW of hydro power in this project. 1. Gandhi Sagar - 23 MW x 5 Unit = 115 MW 2. Rana Pratap Sagar - 43 x MW x 3 Unit = 172 MW 3. Jawahar Sagar - 33 MW x 3 Unit = 99 MW 5. Rahughat Project (Karauli)  Proposal Project :- 1. On Chambal River 2. Joint Scheme of Rajasthan and M.P. 3. Production Capacity = 79 MW
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 (iii) HYDRO POWER PROJECTS OF CENTRAL GOVERNMENT
 
@@ -1393,10 +953,6 @@ Rajasthan Geography Notes
 
 5. Chamera Project - Himachal Pradesh  This project is run on Ravi River by NHPC.  Jammu and Kashmir, Rajasthan, Uttar Pradesh, Punjab, Haryana, Delhi and Chandigarh gets benefit from this project.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 6. Nathpa Jhakari Project - Himachal Pradesh  This project is run on Satlaj River by NHPC.  Uttarakhand, Rajasthan, Uttar Pradesh, Punjab, Haryana, Delhi, Himachal Pradesh gets benefit from this project.
 
 7. Tehri Project - Uttarakhand  This project is run on Bhagirath by Tehri hydro power development corporation limited.  Rajasthan, Madhya Pradesh, Uttarakhand gets benefit from this project.
@@ -1405,17 +961,9 @@ Rajasthan Geography Notes
 
 9. Dhauli Ganga Project – Uttarakhand  This project is run on river Dhauli Ganga by NHPC.  Jammu and Kashmir, Rajasthan, Uttar Pradesh, Punjab, Haryana, Delhi, Himachal Pradesh and Chandigarh gets benefit from this project.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Salal (Chenab)  Dulhasti (Chenab)  Uri (Chenab)  Tehri (Bhagirath)  Tanakpur  (Ravi) Chamera  Dhauli Ganga  (Parvati) Parvati  Nathpa Jhakari Project (Satlaj)
 
  Note– Rajasthan gets 57.68 million units of electricity from Tala (Bhutan) hydro electric project.  Conclusion - There is need for more development and planning in hydro electricity projects so that energy security can be increased in Rajasthan by increasing energy production.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Thermal Energy have the maximum share in Electricity Generation.
 
@@ -1436,10 +984,6 @@ A) State government schemes
 1. Barsingsar Thermal 1. Chabda Super Thermal Power Project Power Plant 2. Gurha thermal 2. Kavai Super Critical Power project Power Plant
 
 1. Giral Thermal Power Project 2. Kapurdi–Jalipa Super 1. Kota Super Thermal Power Thermal Power Project Plant 3. Bhadres Super Power Plant 1. Kali Sindh Super Critical Power Plant
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 1. Suratgarh Super Critical Thermal Power Plant – Shri Ganganagar
 
@@ -1462,10 +1006,6 @@ Rajasthan Geography Notes
  Production Capability - 2320 MW
 
  This is the first thermal power project of Rajasthan.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 4. Kavai Super Critical Power Plant - Baran
 
@@ -1505,19 +1045,11 @@ Rajasthan Geography Notes
 
 B) State: State Projects 1. Satpura Thermal Power Project  Location – Betul (Madhya pradesh)  Beneficiary state – Rajasthan + Madhya Pradesh
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 C) Central Government Scheme
 
 Project Place Run By
 
 1. Singrauli Thermal Plant U.P NTPC 2. Rihad Super Thermal Power Plant U.P NTPC 3. Unchahar Super Thermal Power Plant U.P NTPC 4. Kahal Gaanv Super Thermal Power Plant Bihar NTPC 5. Talchar Super Thermal Power Plant Odisha NTPC
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Gas Power Project :-
 
@@ -1535,10 +1067,6 @@ Note:- Rajasthan government first gas power plant Project (1996) – Ramgarh (Ja
 
 Ramgarh Combined Cycle
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 1. Rajasthan Gas Power Plant Project – Ramgarh (Jaisalmer)
 
 2. Comand Cycle Gas Power Plant Project – Dholpur
@@ -1550,10 +1078,6 @@ Rajasthan Geography Notes
  Rajasthan’s first gas power plant project – Anta Gas Power Station (Baran)
 
 1 Anta Gas Power Plant – Baran
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 2 Dadari Gas Power Plant – Uttar Pradesh
 
@@ -1574,10 +1098,6 @@ Total Installed Capacity = 702.7 MW
 2. Keshoraipatan Thermal Power Plant – Bundi
 
  Production Capacity = 166 MW
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 (b) Non–Conventional Energy Resources –
 
@@ -1606,10 +1126,6 @@ Total Install Capacity - 1180 MW
  Rajasthan gets nuclear power from Rawatbhata (Rajasthan) and Narora (U.P.).
 
  The second nuclear power plant in Rajasthan is proposed in Banswara.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  In India, Rajasthan have the maximum potential for solar power.
 
@@ -1643,10 +1159,6 @@ Bhadla Dhudsar Phalodi-Pokaran Fathgarh NokhSolar Nadiyan Kalan (Jodhpur) (Jaisa
 
 Poogal Solar Park (Bikaner)
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Bhadla (Jodhpur) :-  Solar Park of 2245 MW Capacity have been commission in 4 Phases at Bhadla.
 
 Major Project of Solar Park that are Proposed in Rajasthan
@@ -1671,10 +1183,6 @@ Phase – IV - 500 MW Maisars Adani
 
 1. Solar rooftop power generation scheme :-  Rooftop Solar Programme were issued by MNRE (Ministry of New and renewable Energy) Govt. of India on 20th August, 2019.  This scheme is being implemented in the state by distribution companies (DISCOMs).  Under this scheme the ministry is providing 40% subsidy the first 3 KW and 20% subsidy beyond 3 KW and upto 10 KW of Solar panel Capacity.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 2. Construction of Solar City :-  The cities which have maximum solar power capacity will be developed as solar cities.  This includes Jaipur, Ajmer, Jodhpur.  Proposed districts – Pushkar (Ajmer), Jaisalmer
 
 3. SEEZ (Solar Energy Enterprising Zone)  Where all the condition for generation of solar power are favorable, that area is called SEEZ.  SEEZ area in Rajasthan includes Jodhpur, Jaisalmer and Barmer.
@@ -1686,10 +1194,6 @@ This mission will be run in three phases
 First Phase Second Phase Third Phase 2010-13 2013-17 2017-22 (At Present)
 
 5. Resurgent Rajasthan Summit :-  Organized - 19th - 20th November, 2015  Place – Jaipur (Sitapura)  In this summit, maximum investment to place in solar energy sector.  In which 9 companies did agreement on investing 1,90,000 Crore.  Major investors are Adani groups, Reliance Power, Tata, M/s Azure, Sun Edison.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 6. Solar Energy Policy
 
@@ -1721,9 +1225,7 @@ S.No. Particulars Capacity
 
 3. Solar Rooftop 1,000 MW
 
-4. Solar Pumps 1,000 MW A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+4. Solar Pumps 1,000 MW
 
  Vision and objectives :-
 
@@ -1749,9 +1251,7 @@ Human resource development with particular reference to renewable  energy and
 
  Development of Solar Parks
 
- Facilitating allotment of Government land A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+ Facilitating allotment of Government land
 
 3- Wind Energy  According to a study done by ministry of new and renewable energy government of India at an attitude 100 meters, Rajasthan has wind power generation capacity of about 18770 MW.
 
@@ -1772,10 +1272,6 @@ Note:- In Rajasthan state Jaisalmer has Most possibility for wind energy.
  Rajasthan largest wind park is located in Jaisalmer.
 
  State’s first wind power plant of Railways was established in Kodiyasar.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  In Rajasthan Suzlon Energy contributes the most to wind energy.
 
@@ -1807,10 +1303,6 @@ S.No. Particulars - Capacity
 
  Strengthening of Transmission and Distribution Networks in the State for Renewable Energy integration.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Promotion of Wind Resource Assessment Programme.
 
  To promote industries in manufacturing of wind energy equipment.
@@ -1835,10 +1327,6 @@ Biomass Plant - Place
 
 1. Padampur - Shri Ganganagar 2. Khatoli - Uniyara, Tonk 3. Rangpur - Kota 4. Chanderiya - Chittorgarh 5. Sangaria - Hanumangarh 6. Kachela – Bagsari - Sanchore, Jalore
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Main source of Biogas Energy -
 
 2. Maximum possibility of Biogas energy is Udaipur district.
@@ -1856,3 +1344,85 @@ Rajasthan Geography Notes
  For the development of Biodiesel in Rajasthan, a biodiesel refinery has been established in Kalrawas (Udaipur).
 
  In state, a biodiesel plant has been established in Jhamar – Kotra, Udaipur.
+
+Energy Related Institutions :–
+
+1. Rajasthan Renewable Energy Corporation –
+
+ To develop and conserve non-corporation energy source in state.
+
+ Established - 9th August, 2002.
+
+ Rajasthan renewable energy corporation was established by Merging REDA and RSPCL.
+
+(1) REDA – Rajasthan Energy Development Agency 1985
+
+(2) RSPCL – Rajasthan State Power Corporation Limited 1995
+
+2. Rajasthan State Power Generation Corporation – Jaipur
+
+3. Rajasthan State Power Transmission Corporation - Jaipur
+
+4. Rajasthan State Power Distribution Corporation - Jaipur
+
+5. Rajasthan State Power Distribution Corporation - Ajmer
+
+6. Rajasthan State Power Distribution Corporation - Jodhpur
+
+ Energy Related Major Schemes
+
+1. Ujjawal Discom Assurance Yojana :-
+
+ This scheme was started on 5 November, 2015 by the ministry of Power, Government of India.
+
+ To ensure a sustainment permanent solution to the problem.
+
+ In long– term affordable and accessible 24*7 power for all.
+
+ Under the scheme, Government of India signed a triangular MOU with the state government and each discom of state on 27th January, 2016.
+
+ According to MOU signed on 27th January, 2016, State shall take 75% of DISCOM debt for a period of two years. 50% of Discom debt shall be taken over in 2015-16 and 25% in 2016-17.
+
+2. Deendayal Upadhyay Gram Jyoti Yojna :–
+
+ Under this scheme main schemes for rural area are
+
+1. Separated three phase feeder for villages having population more than 3000 and less than 4000.
+
+2. Replacement of faulty feeder metering devices.
+
+3. Strengthening the energy distribution system.
+
+4. Rural electrification scheme Rajeev Gandhi Grameen Vidyutikaran Yojna has been subsume in Deendayal Upadhyay Gram Jyoti Yojna.
+
+3. Chief Minister Rural Household Connection Scheme (Mukhymantri Gramin Gharelu Connection Yojna)
+
+ This scheme has been started from Oct, 2016 in order to provide electricity to domestic consumes in non-populated areas and disperse land.
+
+ In its first phase till November 2016, interested villagers are included in this scheme by taking a registration fee of Rupees 100.
+
+ Kisaan Urja Surkasha Evam Uttam Yojna.
+
+ Budget - 34422 Crore
+
+ Under this scheme 3 crore solar pump will be installed by 2022.
+
+(i) Provide energy security to farmer.
+
+(ii) Extra energy can be supply to greed.
+
+ Important Days Related Energy
+
+ 20th August – National Renewable Energy Day
+
+ 14th December – World Energy Conservation Day
+
+ Earth Hour Day - It was started from Australia to deliver the message of environment protection and energy saving which india joined in 2009. On this day an appeal is made to discontinue all equipment's except the necessary equipment Earth hour day is celebrated on any day of March between 8:30 PM to 9:30 PM.
+
+4. Saubhagy Yojna / Paradhan Mantri Sahaj Bijli Harghar Yojna – 25th September, 2017
+
+ Object of this scheme is to reached for able electricity to every house of every village.
+
+ Free connection of electricity to poor people.
+
+ Budget - 16320 Crore

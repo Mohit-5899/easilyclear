@@ -1,14 +1,13 @@
 ---
-content_hash: sha256:651098f80e9ef9d3bfd1d5829d27f9c89c33cb5657d041d860ec309a8d65ad77
+content_hash: sha256:fe0f0a2f966e6912cd768d0ab30a66d5c237d062bb92b42e2d629c209b1ef85c
 depth: 2
-description: Details the Arabian Sea, Inland, and Bay of Bengal drainage systems and
-  major rivers.
-ingested_at: '2026-04-17T17:58:09Z'
+description: Detailed study of Arabian Sea, Inland, and Bay of Bengal drainage systems.
+ingested_at: '2026-04-17T18:04:41Z'
 ingestion_version: v2
-name: Drainage System and Rivers
-node_id: geography/springboard_rajasthan_geography/03-climate-and-water-resources/02-drainage-system-and-rivers
-order: 2
-parent: geography/springboard_rajasthan_geography/03-climate-and-water-resources
+name: Drainage Systems (Rivers)
+node_id: geography/springboard_rajasthan_geography/04-water-resources-and-drainage/01-drainage-systems-rivers
+order: 1
+parent: geography/springboard_rajasthan_geography/04-water-resources-and-drainage
 related_skills: []
 source_book: springboard_rajasthan_geography
 source_pages:
@@ -25,9 +24,7 @@ Arabian Sea Inland Drainage Bay of Bengal Rivers System Rivers 17% Rivers 23% (6
 
  Aravali is known as water divide line of Rajasthan because Aravali divided drainage system into two parts.  Mostly river of Rajasthan is Inland drainage system because maximum desert extension in Rajasthan.  Surface water of Rajasthan state part of India is 1.16 %.  Under ground water of Rajasthan state part of India is 1.72%.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes 1. River of Arabian Sea
+1. River of Arabian Sea
 
 (A) Luni (B) Mahi (C) Western Banas (D) Sabarmati
 
@@ -46,10 +43,6 @@ Rajasthan Geography Notes 1. River of Arabian Sea
 2. Bandi :- It is called as chemical river.
 
 Reason :- Dyeing - Printing Industry
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Characteristics :- (1) Other Name of Luni :-
 
@@ -81,10 +74,6 @@ Sagarmati/Lawanvati/Aadhi Mithi – Aadhi Khari (Half Sweet – Half Brine River
 
 Sei Tunnel:- It is a first water tunnel of Rajasthan state which supplied water from Udaipur to Jawai dam of Pali.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Origin:- Mahend Lake (Amreru Hills – Vindhyachal)
 
  Discharge Point:- Gulf of Khambhat (Gujarat)
@@ -100,10 +89,6 @@ Origin - Mahend Lake (Amreru Hills – Vindhyachal)
  Characteristics :- (1) Other Name of Mahi:-
 
  Swarn Rekha river of Southern Rajasthan
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 (2) Triveni Sangam :-
 
@@ -143,9 +128,7 @@ Limpopo 23½ o Topic of Capricorn
 
 6- Som Kamla - Amba - Dungarpur
 
-7- Jakham Dam - Pratapgarh A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+7- Jakham Dam - Pratapgarh
 
  Mahi Bajaj Sagar :-
 
@@ -167,10 +150,6 @@ Rajasthan Geography Notes
 
  Abu (Sirohi) and Disa (Gujarat) City are located at the Bank of this river.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Origin - Padrana Hills (Udaipur)
 
  Confluence - Gulf of Khambhat (Gujarat)
@@ -189,10 +168,6 @@ Gandhinaga r Ahmedabad
 
 Gulf of Khambhat (Gujarat)
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 2. Inland Drainage System
 
 A. Ghagghar River :-  Origin - Kalka Hills (Himachal Pradesh)
@@ -204,10 +179,6 @@ A. Ghagghar River :-  Origin - Kalka Hills (Himachal Pradesh)
  Natt River / Sota River
 
 Fort Abbas (Pakistan) Kalibanban
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 (ii) Catchment Area of Ghagghar :- Catchment Area of Ghagghar River
 
@@ -235,10 +206,6 @@ Ganeshwar Civilisation (Neem ka Thana)
 
 Origin - Khandela Hills (Sikar)
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 C. Sabi /Sahibi/Najafgarh ka Nala /River  Origin - Sewar Hill (Jaipur)
 
  Catchment Area – Jaipur (Rural), Khairthal-Tijara, Kotputali-Behror
@@ -259,10 +226,6 @@ D. Banganga River  Origin – Bairath Hill (Kotputali-Behror)
 
  Characteristics :- (i) Other Name :-  Ganga of Arjun
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Beheaded River - The tributary that ends before meeting main river is called Beheaded river.
 
  Now Banganga river is listed in Inland rivers (2012).
@@ -274,10 +237,6 @@ Ramgarh Dam (Jaipur)
 Panchna Dam (Karoli)
 
 Ramgarh (Jaipur) Ajan Dam (Bharatpur) Ajaan Dam :-  It is located in Bharatpur district.  It's water supplied in Kevla dev national park.  During lack of water in this dam, water supplied from Panchna dam or Gambhir river.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 E. Ruparail River / Varahi River
 
@@ -291,10 +250,6 @@ Lohagarh Fort Moti Lake (Bharatpur)
 
  Origin - Kotari Village (Jaisalmer)  Bujh Lake:- It is a sweet water lake which formed on Kakni River In Jaisalmer.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 Bujh Lake (Jaisalmer)
 
  Other Inland Rivers:-
@@ -305,17 +260,9 @@ Manoharpur Hills (Jaipur Rural)
 
  Mentha river is the most salt bringing river in Sambhar.  Sambhar Lake is an example of centripetal river pattern.  Maximum Inland Drainage Rivers in Rajasthan are located in North - Western Side.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 3. Bay of Bengal Rivers A. Chambal River B. Banas C. Bedach / Aayad River – Gambhiri D. Gambhir River – Yamuna
 
 A. Chambal River :-  Origin - Janapaav Hills - Vindhyan Mountain (M.P.– Indore)  Discharge Point - Yamuna - Etava (U.P)  Catchment Area – Chittorgarh (Entry in Rajasthan- Chaurasigarh), Kota, Bundi, Karoli, Bharatpur, Sawai Madhopur, Dholpur, Gangapurcity.  Length of River - 1051 KM. (In Rajasthan State – 322 KM) o Note:- Old Length of Chambal - 966 KM (In Rajasthan = 135 KM)  Tributaries - Gunjali, Maij, Mangli, Parvati, Newaj, Aahu, Kalisindh, Ghoda-Pachaad, Parvan, Brahmani, Banaas, Chakan, Kunu, Kuraal and Seep.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Characteristics :-
 
@@ -325,10 +272,6 @@ Banas Chambal Seep 3. Samela:-  The confluence of Ahu and Kali Sindh is calle
 
 Alligator Gangetic Lutra- Lutra Dolphins (Otters)
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 10. Behad / Ravines :-  The badland topography is formed by gully erosion of Chambal river.  Which is called Ravines / Dang.  Whose extension in Karauli, Sawai Madhopur and Dholpur. 11. Dam Projects of Chambal :-  In collaboration with Rajasthan, Madhya Pradesh, four dams were constructed on Chambal in three phases.
 
 Stage - I Stage - II Stage - III
@@ -337,10 +280,6 @@ Stage - I Stage - II Stage - III
 
  Origin - Khamnaur Hill (Rajsamand)  Discharge Point - Chambal River (Rameshwaram Ghat - Sawai Madhopur)  Length - 512 KM (Old Length – 480 KM)  Catchment Area –  Mewar’s Plain (Bhilwara, Shahpura, Rajsamand, Chittorgarh)  Malpura - Karauli Plain (Ajmer, Tonk, Kekri, Sawai Madhopur)  Tributary - Kalisil, Dai, Mansi, Mainal (Bhilwara), Bandi, Morel, Aahad (Berach), Kothari and Khari.  Note :- Khari is the longest river of Banas and Berach is the longest tributary of Banas river from right side.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Characteristics 1. Banas - Other Name  Hope of Forest / Varnasha  Vashishthi River
 
 Israda Dam (Sawai Madhopur) Israda Dam (SM)
@@ -348,10 +287,6 @@ Israda Dam (Sawai Madhopur) Israda Dam (SM)
 Rajsamand Dewair Hills
 
 S.No. Triveni Location 1. Banas, Bedach, Menal Bigod – Bhilwara, Menal - Bhilwara 2. Banas, Khari, Dai Rajmahal - Tonk 3. Banas, Chambal, Seep Rameshwaram Ghat – Sawai Madhopur
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 Bigod (Bhilwara) Rajmahal (Tonk) Rameshawaram (Sawaimadhopur)
 
@@ -391,9 +326,7 @@ Note:- Bisalpur Dam :-
 
  It is counted in Conservation Reserve.
 
- Due to lack of water in Bisalpur dam, there is a proposal to connect with Chambal River. This is First River linking project of Rajasthan. A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+ Due to lack of water in Bisalpur dam, there is a proposal to connect with Chambal River. This is First River linking project of Rajasthan.
 
  Excess water of Bisalpur dam is released into Isarda dam (Sawai Madhopur).
 
@@ -408,10 +341,6 @@ C. Berach River/Ayar :-
  Catchment Area - Udaipur, Chittorgarh, Bhilwara
 
  Trilutory - Gambhiri River, Orai.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 1. Udaisagar :- Aayad river is known as Bedach river after fall into Udaisagar lake.
 
@@ -451,10 +380,6 @@ D. Gambhir River/Utangar :-
 
  Luni is the longest river in Desert area or Western Rajasthan.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Mahi is the longest river in Southern Rajasthan of Tribe Area.
 
  Chambal is the longest river of Rajasthan and Eastern Rajasthan.
@@ -463,24 +388,12 @@ Rajasthan Geography Notes
 
 S (6) According to lengthwise, longest river of Rajasthan (Descending Order)  Chambal - 1051 KM  Mahi - 576 KM  Banas - 512 KM  Luni - 495 KM
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 (7) According to drainage area Famous River in Rajasthan (Descending Order)  1st Banas nd  2 Luni rd  3 Chambal  4th Mahi Note:- In all over the largest drainage area is of Chambal but only in Rajasthan has the largest drainage area of Banas. (8) Total Main River Basin and Sub-Basin in Rajasthan (Descending Order)  Total Main River Basin – 15 (Remaining area of Rajasthan has been defined as Ourtside Basin)  Sub-Basin – 58 Main River Basin - Sub-Basin  Luni - 12  Banas - 10  Chambal - 7/8  Mahi - 6 (9) Famous main and Sub – Tributries of Rajasthan
 
  Sabi - Inland Drainage System Sagi - Luni  Moren - Mahi Morel - Banas  Parvati - Chambal Parbati - Gambhir  Gambhir - Yamuna Gambhiri - Berach  Katali - Torawati Kakney - Masurdi of Jaisalmer  Sukadi - Luni Sukali - West Banas  Banas - Bay of Bengal Western Banas - Arabian Sea  Kali Sindh - Chambal
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 Kali Sil – Banas  Masi - Banas Mansi - Vakal (Sabarmati)  Ruparel - Alwar, Bhartpur (Moti Lake) Rupangarh - Ajmer (Sambhar)  Bandi – Pali (Luni) Bandi – Ajmer – Anasagar Lake (Banas)  Khari - Shergaon Hills – Sirohi (Luni - Arabian Sea) Khari - Nagore (Sambhar - Inland Drainage) Khari - Bijral Hill – Rajsamand – (Banas - Bay of Bengal)  Seep – Chambal Seepu – West Banas
 
 Note :- Water Policy of Rajasthan State Was Released on 18 Febuary 2010.
 
  Importance of Rivers :- 1. Creation of Fertile Plains. 2. Raising underground water level. 3. Enhancing biodiversity. 4. Drinking water Supply. 5. Water supply for irrigation. 6. Religious significance.(Triveni Sangam) 7. Fisheries. 8. Hydro Power generation.(Chambal, Mahi, Jakham etc.)
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes

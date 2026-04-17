@@ -1,14 +1,13 @@
 ---
-content_hash: sha256:429462986809fc7983fddc013dfc41b591f0af8ade281e2f3f64b2b025acda3b
+content_hash: sha256:f6b6ac95bed542d33db86a242064156da13f9a7e1aef359bc5fb0664f34ec0f1
 depth: 2
-description: Covers international and interstate boundaries, including neighboring
-  states and districts.
-ingested_at: '2026-04-17T17:58:09Z'
+description: Traditional and historical names for various regions within Rajasthan.
+ingested_at: '2026-04-17T18:04:41Z'
 ingestion_version: v2
-name: Boundaries of Rajasthan
-node_id: geography/springboard_rajasthan_geography/01-introduction-and-location/03-boundaries-of-rajasthan
+name: Historical and Geographical Regions
+node_id: geography/springboard_rajasthan_geography/01-introduction-and-physical-setting/03-historical-and-geographical-regions
 order: 3
-parent: geography/springboard_rajasthan_geography/01-introduction-and-location
+parent: geography/springboard_rajasthan_geography/01-introduction-and-physical-setting
 related_skills: []
 source_book: springboard_rajasthan_geography
 source_pages:
@@ -16,42 +15,6 @@ source_pages:
 subject: geography
 superseded_by: null
 ---
-
-(c) Boundry of Rajasthan:-
-
-Rajasthan state boundry
-
-International Boundry Interstate Boundry (1070 Km.) (4850 Km.) Total Boundary of Rajasthan : 5920 Km.
-
-A. International Boundry  Name of Boundry - Sir Cyril Radcliffe  Starting point - Hindumal Kot (Sriganganagar)  Declared Date - 17 August, 1947  Last / ending Point - Shahgarh or Bakhasar (Barmer)  International Boundary is 18 % (1070 Km) of the total boundary of Rajasthan.  Two states of Pakistan (Punjab, Sindh) are located on the international border.  Share border with 6 district of Rajasthan.
-
-Punjab Bahawalpur 210 KM
-
-Rahimyar Khanpur 168 KM
-
-Khairpur 228 KM Sindh Sanghar
-
-Note – 1. Anupgarh: Nearest district headquarter on International boundary. 2. Phalodi : Farthest district headquarter on International boundry. 3. Dholpur : Farthest district headquarter from International boundry.
-
-B. Interstate Boundary  Neighbour State = 5  Total Interstate boundry = 4850 Km
-
-Neighbour State Boundary 1. Madhya Pradesh 1600 KM 2. Haryana 1262 KM 3. Gujarat 1022 KM 4. Uttar Pradesh 877 KM 5. Punjab 89 KM
-
-State District of Rajasthan 1. Punjab Sri Ganganagar, Hanumangarh 2. Haryana Hanumangarh, Churu, Neem Ka Thana, Kotputali-Behror, Khairthal- Tijara, Deeg. 3. Uttar Pradesh Deeg, Bharatpur, Dholpur 4. Madhaya Dholpur, Karauli, Sawai Madhopur, Bhilwara, Banswara, Baran, Pradesh Jhalawar, Pratapgarh, Chittorgarh 5. Gujarat Sanchore, Banswara, Barmer, Udaipur, Sirohi, Dungarpur
-
-1. The districts of Rajasthan which form the border with two states-  Hanumangarh - Punjab, Haryana  Deeg - Haryana, Uttar Pradesh  Dholpur - Uttar Pradesh, Madhya Pradesh  Banswara - Madhya Pradesh, Gujarat
-
-2. Kota - Chittorgarh:- Those districts of Rajasthan which form border with a state twice. 3. Kota - The district of Rajasthan which form border with a state twice but It's non dismantle district. 4. Chittorgarh - The district of Rajasthan which form border with a state twice but It's dismantle district. 5. Bhilwara divides Chittorgarh into two parts 6. On Interestate boundry - Interestate Boundry
-
-Maximum Longest Boundry Minimum Boundry Barmer Jhalawar (Madhya Pradesh) (Gujarat) 7. 29 District - On Boundary District of Rajasthan  25 District - Located on Interstate boundary.  23 District - Located on Interstate boundary.  6 District - Located on International boundary.  4 District - Located only on International boundary.  2 District - Located on International & Interstate boundary (Sriganganagar, Barmer)
-
-8. 21 Districts – There are land locked districts of Rajasrthan. Note – Those districts of Rajasthan which form the border with maximum and minimum districts.
-
-Maximum Manimum Jaipur Rural (11 Districts)  Jaipur Urban (Only Jaipur Rural) 1. Jaipur City  Jodhpur Urban (Only Jodhpur Rural) 2. Kotputali-Bahror 3. Sikar 4. Neem ka Thana 5. Ajmer 6. Deedwana- Kuchaman 7. Tonk 8. Dudu 9. Dausa 10. Sawai Madhopur 11. Alwar
-
- Rajsamand district headquater and district name is not same. It's Headquater name is Rajnagar.
-
-Note - Boundary Dispute – Mangarh Hill:- It is situated in Banswara which is disputed between Rajasthan and Gujarat.
 
 Historical & Geographical Places of Rajasthan
 

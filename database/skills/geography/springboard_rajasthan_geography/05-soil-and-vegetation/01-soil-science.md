@@ -1,14 +1,13 @@
 ---
-content_hash: sha256:042f7bbba4dcd3a8f4635b83824382189bf0cb23bbe81b953c9ec82ee2e9c40c
+content_hash: sha256:5bef3bbfb00d988e8772ff2c9716bd6035f39f0927aafcd7b0b92c97b50cf205
 depth: 2
-description: Details soil classification, types, and common soil problems like erosion
-  and salinity.
-ingested_at: '2026-04-17T17:58:09Z'
+description: Soil types, scientific classification, and issues like erosion and salinity.
+ingested_at: '2026-04-17T18:04:41Z'
 ingestion_version: v2
-name: Soil Resources
-node_id: geography/springboard_rajasthan_geography/04-natural-resources-and-environment/01-soil-resources
+name: Soil Science
+node_id: geography/springboard_rajasthan_geography/05-soil-and-vegetation/01-soil-science
 order: 1
-parent: geography/springboard_rajasthan_geography/04-natural-resources-and-environment
+parent: geography/springboard_rajasthan_geography/05-soil-and-vegetation
 related_skills: []
 source_book: springboard_rajasthan_geography
 source_pages:
@@ -22,8 +21,6 @@ A) What is Soil B) Organisation of Soil C) Classification of Soils D) Types of S
 (A) Soil - The layer of disintegrated rocks on the upper surface of the earth is called soil. Note - Pedology is the study of soil.
 
 (B) Organisation of Soil –
-
-Rajasthan Geography Notes
 
 (C) Soil Classification -
 
@@ -45,8 +42,6 @@ Ajmer-Bhilwara 6. New Brown Soil
 
 Kota Udaipur 7. Hilly soil Banswara- Dungarpur- Pratapgarh 8. Red Loam
 
-Rajasthan Geography Notes
-
 9. Desert Soil Jaisalmer, Bikaner, Barmer, 11. New Jodhpur and Shekhawati Alwar, Bharatpur, Karauli, Alluvial Soil Dholpur, Dausa and Madhopur
 
 Jaisalmer, Bikaner, Barmer 10. and Jodhpur Desert dunes soil 12. Yellow- Rajsamand, Chittor, Brown Soil Pali, Jalore, Sirohi, Bhilwara, Ajmer, Tonk 13. Gray Jodhpur and Nagaur and S. Madhopur brown Kota, alluvial soil Bundi, Baran, 14. medium Jhalawar deep black soil
@@ -55,11 +50,7 @@ II. Scientific Classification of Soils -
 
  The scientific classification of soil was done by USDA, whose main basis was considered to be "size of soil particles".  The soil of Rajasthan is divided into 5 scientific soil classes – 1. Aridisol 2. Entisol 3. Alfisol 4. Inceptisol 5. Vertisol
 
-Rajasthan Geography Notes
-
  Extension - Bikaner, Jaisalmer, Barmer, Jodhpur  This soil is founded mainly in western rajasthan.  Climate - Dry climate is found in the region.  There are 4 subgroups of this soil - 1. Camb Orthoids 2. Calci Orthids 3. Pali Orthoids, 4. Sal Orthids
-
-Rajasthan Geography Notes
 
  Extension - West of Aravalli  Climate – Arid-Semi arid climate zone.  There are 2 subgroups of this soil – 1. Saments 2. Tourifluvents
 
@@ -72,8 +63,6 @@ Rajasthan Geography Notes
 4. Inceptisol -  This Soil is founded in mainly southern Rajasthan.  Extension - Rajsamand, Pali, Udaipur, Chittorgarh, Banswara, Dungarpur, Pratapgarh.  Climate – It is found in Semi arid - humid type climate.  Subgroup – Eustrocaptus
 
 5. Vertisoil -  Extension - Found in Hadoti region (Kota-Bundi, Baran and Jhalawar).  Climate – It is found in Humid-hyperhumid type climate.  It is Black and Chernozem soil.  Subgroups – Palustartus and Cromestartus
-
-Rajasthan Geography Notes
 
  STUDY OF SOILS OF RAJASTHAN ON GENERAL BASIS – Or D) Types of Soils - 1. Sandy Soil -  It is formed by erosion of sandstone and granite.  Other Name - Dry soil, Thirsty soil, Desert Soil.  Extension – Mainly founded in western rajasthan.  Extension Districts – Jaisalmer, Bikaner, Barmer, Balotra and Jodhpur  Production – Bajra/Millet, Moong, Moth, Guar, Groundnut (Bikaner) Gram  Characteristic -  The particles of this soil are coarse, hence water leakage is more and irrigation is done frequently, therefor it is called thirsty soil.
 
@@ -88,8 +77,6 @@ Rajasthan Geography Notes
 - Narmada Canal – Sanchore, Jalore, Barmer.
 
  Production - Pomegranate and sugarcane maximum, rice.
-
-Rajasthan Geography Notes
 
 4. Alluvial Soil -  Other Name - Delta Soil/Loamy Soil  Formation - It is formed from sediments deposited by rivers.  Extension - Alwar, Bharatpur, Karauli, Dholpur, Tonk, Sawai Madhopur, Jaipur, Dausa  Production - Wheat, Mustard, rice, barley, millet  Characteristic -
 
@@ -109,8 +96,6 @@ Rajasthan Geography Notes
 
 7. Red - Black Soil -  Formation - - It is formed by the erosion of basalt rocks.
 
-Rajasthan Geography Notes
-
  Extension - Pratapgarh, Jhalawar, Chittorgarh, Bhilwara and Bundi.  Production - Maize, Cotton, Opium
 
 8. Red-Yellow Soil -  Formation - Due to water addition, there is erosion of iron-rich rocks, due to which red- yellow soil is formed.  Extension - Udaipur, Rajsamand, Chittorgarh, Bhilwara, Ajmer, Tonk, Sawai Madhopur  Production – Mustard, Jowar E) Soil Problem -
@@ -120,8 +105,6 @@ Rajasthan Geography Notes
  What - Soil erosion on the upper surface of the earth is called earosion.  This is called the 'Creeping Death' of the soil or 'The death of the farmer'.  Erosion Type –
 
 Layer Erosion Sheet Erosion Gully Erosion Factor - Air Rain Water River Water West Rajasthan Rajsamand Most in Chambal Maximum - Highest In Sirohi Basin Rajasthan
-
-Rajasthan Geography Notes
 
  Main causes of erosion -
 
@@ -141,8 +124,4 @@ Method - Leaching Use of Gypsum Fertilizers (iii) Water Logging -
 
  What - Soil Degradation is the physical, chemical and biological decline in soil quality.
 
-Rajasthan Geography Notes
-
  Causes – Maximum uses of Chemicals fertilizers.  Measure - Use of organic fertilizers  Organic State in India – Sikkim  Organic District in Rajasthan - Dungarpur
-
-Rajasthan Geography Notes

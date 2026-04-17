@@ -1,13 +1,13 @@
 ---
-content_hash: sha256:667774d1c999b6bb96b6415e27ac85b146e7da4a1ce3dc32d0c1a341d18a87fd
+content_hash: sha256:a9fbd4ae839a763fa1223e63736c22bf91df8c042dbe397895da075e31b03db7
 depth: 2
-description: Covers brine and fresh water lakes, artificial lakes, and famous wells/stepwells.
-ingested_at: '2026-04-17T17:58:09Z'
+description: Classification and study of brine and fresh water lakes, wells, and ponds.
+ingested_at: '2026-04-17T18:04:41Z'
 ingestion_version: v2
 name: Lakes and Water Bodies
-node_id: geography/springboard_rajasthan_geography/03-climate-and-water-resources/03-lakes-and-water-bodies
-order: 3
-parent: geography/springboard_rajasthan_geography/03-climate-and-water-resources
+node_id: geography/springboard_rajasthan_geography/04-water-resources-and-drainage/02-lakes-and-water-bodies
+order: 2
+parent: geography/springboard_rajasthan_geography/04-water-resources-and-drainage
 related_skills: []
 source_book: springboard_rajasthan_geography
 source_pages:
@@ -38,10 +38,6 @@ Cause :- Remaining Cause :- Depend on fresh parts of Tethys sea water or Rainy W
 
 10 Lunkaransar Bikaner
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  It is Brine water Lake which is located in Jaipur Rural.
 
  Vasudev Chauhan, the creator of this lake (according to Bijolia inscription).
@@ -59,10 +55,6 @@ Note:- Recently, Sambhar Lake was in the news due to the death of Kurja birds. A
  The salt produced from the Sambhar lake is called "Kyar". Kyar
 
 Sambhar Width Salt Making 3-12 K.M. Lake Technique - Kyari
-
-2. Panchpadra Lake A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  It is a brine water lake located in Barmer.
 
@@ -92,10 +84,6 @@ Aravalli Shyam Hill pura Canal
 
 ¼fuokl & Hkhy&eh.kk tutkfr½ Bhat 7 Island Canal
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 Baba ka Bhangra Pyari  Characteristics:-
 
  It is also called as Dhebar Lake.
@@ -122,9 +110,7 @@ Aravalli Fateh Sagar/ Duke of Connaught Hills Dam OR Dewali Pond
 
 Shisarama River Bujhda Swaroop River Sagar Telescope Jagmand ir Jagniwas Nehru Solar Jagat Sing-I Jagat Sing-II Park Obsowatory
 
-City Palace - Udaipur Natani ka Virtual Fish Aquarium Chabutara A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+City Palace - Udaipur Natani ka Virtual Fish Aquarium Chabutara
 
  Natni ka Chabutra is situated near this lake, which was built by Rana Lakha.
 
@@ -164,10 +150,6 @@ Rajasthan Geography Notes
 
  Note :- Ayed river is called Berach after falling into Udaisagar lake.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 6. Doodh Talai :-  It is Fresh water lake which is located in Udaipur. Note :-  Doodh stepwells located in Sirohi. 7. Badi Lake / Jana Sagar :-  It is Fresh water lake which is located in Udaipur. 8. Rajsamand Lake:-  This lake constructed by Maharana Raj Singh.  Construction Period - 1662 to 1676 AD.  River – Gomati, Tali, Kelwa.
 
 Sundial Raj Prashasti (25 Rock Inscription)
@@ -178,9 +160,7 @@ Noo Choki Pal Language - Sanskrit
 
 Dwarikadhish Ghawar Mata Temple Temple
 
- Characteristics :-  Nau Chauki Paal :- Northern part of Rajsamand lake is called Nau Choki Pal.  First lake of the country (1662 years) built for famine relief.  Religious places located near this lake- (1) Dwarkadhish Temple (2) Ghevar Mata Temple  The remains of Sundial has been found on the banks of this lake. A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+ Characteristics :-  Nau Chauki Paal :- Northern part of Rajsamand lake is called Nau Choki Pal.  First lake of the country (1662 years) built for famine relief.  Religious places located near this lake- (1) Dwarkadhish Temple (2) Ghevar Mata Temple  The remains of Sundial has been found on the banks of this lake.
 
  Maximum numbers of people (about 60,000) have contributed in the construction of this lake. 9. Nandsamand Lake:- It is a Fresh Water lake located in Rajsamand.
 
@@ -200,10 +180,6 @@ Deepest Lake = 35m Height = 1200m
 
  Construction Period - 1136 – 1137 AD
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
 Shahjahan Jahangir Daulat Bagh Or Shubash Park
 
 12. Foy Sagar:- Ajmer  Constructed - Engineer Foy  Construction Period - 1891 – 1892 AD  River - Bandi  It is second famine Relief Lake of Rajasthan after Rajsamand Lake. 13. Pushkar Lake :-  It is a Crater Lake / Volcanic Lake of Rajasthan.  Other Name :- Panchva Tirth / Tirthraj / Tirtho ka Mama / Konkan Tirgh / Cresent Shape Lake / Bawan (52) Ghat Lake. Characteristics :-  Pushkar is the largest natural fresh Water lake of Rajasthan.  Pushkar is most holy lake of Rajasthan.  A fair is organized on the banks of Pushkar Lake on Kartik Purnima, which is called "Rangila Mela of Rajasthan".
@@ -211,14 +187,6 @@ Shahjahan Jahangir Daulat Bagh Or Shubash Park
  Lamps are lit in this lake on Kartik Purnima.
 
  The main holy lake of Rajasthan where the bones of prominent personalities Mahatma Gandhi, Balasaheb Thackeray and Atal Bihari Vajpayee were immersed.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
 14. Kaylana Lake / Sir Pratap Sagar
 
@@ -229,10 +197,6 @@ Rajasthan Geography Notes
  Construction Period :- 1872 AD
 
 Characteristics :-  The only lake in the state of Rajasthan which is connected by IGNP canal (Indira Gandhi Canal Project). Beas
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  It is a fresh water lake which is located at Bikaner. The Lake was created by Kapil Muni for the liberation of his mother.
 
@@ -254,9 +218,7 @@ Rajasthan Geography Notes
 
  This is a Natural Lake Which is Located near Amer Fort.
 
- Located - Baran  Characteristics :-  This is an example of crator/meteorite lake.  This lake is Surrounding by horseshoe-like hills.  This lake was included in the list of Geo - heritage by UNSCO in 2020. (Notified 2024) A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
+ Located - Baran  Characteristics :-  This is an example of crator/meteorite lake.  This lake is Surrounding by horseshoe-like hills.  This lake was included in the list of Geo - heritage by UNSCO in 2020. (Notified 2024)
 
  It is a fresh water lake which is location at Bikaner.
 
@@ -269,10 +231,6 @@ Rajasthan Geography Notes
  This lake is located on the "Golden Triangle" (Jaipur, Delhi and Agra).
 
  It is also called "Nandan Kanan" of Rajasthan.
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
 
  Other Lakes of Rajasthan State :- 1) Aanand Sagar Lake - Banswara
 
@@ -322,10 +280,6 @@ Rajasthan Geography Notes
 
  Khari Talab - Bhilwara
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Navlakha Pond - Baran
 
  Sukh Talab - Ranthambore (Sawaimadhopur)
@@ -364,10 +318,6 @@ Rajasthan Geography Notes
 
  Pichola, Fatehsagar, Anasagar, Pushkar , Mansagar and Nakki lakes of Rajasthan have been included in this program.
 
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
  Importance of Lakes :-
 
 1. Salt Production. (Sambhar, Pachpadra,Deedwana etc.)
@@ -383,33 +333,3 @@ Rajasthan Geography Notes
 7. Ground Water Conservation.
 
 8. Religious Significance.( Pushkar, Kolayat, Nakki etc.)
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,
-
-Rajasthan Geography Notes
-
-A. Mode of Irrigation
-
-B. Classification of Irrigation
-
-A. Mode of Irrigation
-
-Wells Tubewells Canals Tank Other 24% 42% 30% 1% 3% Jaipur Jaipur Ganganagar Bhilwar - a
-
-B. Classification of Irrigation
-
-Small Irrigation Medium Irrigation Macro Irrigation Project Project Project Area (0-2000 H) (2000-10000 H) (More than 10000 H)
-
-1. Small Irrigation Project Maxium participate for Irrigation.
-
-2. Multi Purpose Project :-
-
- Such project which have two or more than two objectives are called as multipurpose projects. Example - Irrigation, Drinking water, Hydro Power Project.
-
- Pandit Jawaharlal Nehru called multipurpose projects "temples of modern India".
-
-1st Multi Purpose Project
-
-World India Rajasthan Gang Tennessee – Damodar Canal USA (1933) (1948) (After 1950 AD)
-
-A-1 KeshavVihar, Riddhi-Siddhi Chouraha, Gopalpura Bypass,

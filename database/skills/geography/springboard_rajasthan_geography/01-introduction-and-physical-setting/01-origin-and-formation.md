@@ -1,14 +1,14 @@
 ---
 content_hash: sha256:3f761732e3b6a15e7fc582a19bf7369030ae3d0d97f30f95f54b35e17d4d50ab
 depth: 2
-description: Discusses the geological formation of Rajasthan involving Pangea, Gondwanaland,
+description: The geological formation of Rajasthan involving Pangea, Gondwanaland,
   and the Tethys Sea.
-ingested_at: '2026-04-17T17:58:09Z'
+ingested_at: '2026-04-17T18:04:41Z'
 ingestion_version: v2
 name: Origin and Formation
-node_id: geography/springboard_rajasthan_geography/01-introduction-and-location/01-origin-and-formation
+node_id: geography/springboard_rajasthan_geography/01-introduction-and-physical-setting/01-origin-and-formation
 order: 1
-parent: geography/springboard_rajasthan_geography/01-introduction-and-location
+parent: geography/springboard_rajasthan_geography/01-introduction-and-physical-setting
 related_skills: []
 source_book: springboard_rajasthan_geography
 source_pages:
