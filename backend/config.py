@@ -37,6 +37,11 @@ class Settings(BaseSettings):
         default="google/gemma-4-26b-a4b-it:free",
         description="Model for PageIndex tree traversal. Can point to a cheaper model later if rate limits bite.",
     )
+    model_ingestion: str = Field(
+        default="google/gemma-4-26b-a4b-it:free",
+        description="Model for V2 ingestion (Proposer/Critic/Content Writer). "
+        "Override to a paid-tier slug for higher quality.",
+    )
 
     request_timeout_seconds: float = 60.0
 
