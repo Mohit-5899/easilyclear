@@ -15,6 +15,7 @@ import {
 } from "@phosphor-icons/react";
 import type { BookData, TreeNode } from "@/lib/types";
 import { findNodeById, getSiblings } from "@/lib/tree-utils";
+import { MarkdownContent } from "./MarkdownContent";
 
 interface InspectorDrawerProps {
   book: BookData | null;
@@ -103,10 +104,19 @@ export function InspectorDrawer({
               />
 
               <section className="mt-5">
-                <SectionLabel icon={<FileText size={11} />} label="Summary" />
-                <p className="mt-2 text-sm leading-relaxed text-slate-700">
-                  {node.summary}
-                </p>
+                {node.body && node.body.trim().length > 0 ? (
+                  <>
+                    <SectionLabel icon={<FileText size={11} />} label="Content" />
+                    <MarkdownContent body={node.body} />
+                  </>
+                ) : (
+                  <>
+                    <SectionLabel icon={<FileText size={11} />} label="Summary" />
+                    <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                      {node.summary}
+                    </p>
+                  </>
+                )}
               </section>
 
               {book && (node.nodes?.length || path.length > 0) ? (
