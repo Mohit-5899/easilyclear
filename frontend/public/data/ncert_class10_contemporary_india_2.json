@@ -1,0 +1,460 @@
+{
+  "doc_name": "Contemporary India II (NCERT Class 10 Geography)",
+  "book_slug": "ncert_class10_contemporary_india_2",
+  "doc_description": "",
+  "source_url": "https://ncert.nic.in/textbook/pdf/jess1dd.zip",
+  "source_authority": "official",
+  "source_publisher": "NCERT",
+  "language": "en",
+  "subject": "geography",
+  "subject_scope": "pan_india",
+  "exam_coverage": [
+    "patwari",
+    "reet",
+    "ras_pre",
+    "rbse_10"
+  ],
+  "ingested_at": "2026-04-15T17:37:32.449196+00:00",
+  "cleaned_at": "2026-04-15T17:37:37.208562+00:00",
+  "cleanup_version": "v1",
+  "cleaner_layers_applied": [
+    "whitelist",
+    "regex"
+  ],
+  "pageindex_version": "vendored-f2dcffc0",
+  "llm_model_indexing": "google/gemma-4-26b-a4b-it",
+  "structure": [
+    {
+      "title": "Everything available in our environment",
+      "node_id": "0000",
+      "start_index": 1,
+      "end_index": 1,
+      "summary": "The partial document discusses the concept of resources, defining them as elements from the environment that satisfy human needs and are accessible, feasible, and acceptable. It emphasizes the interactive relationship between nature, technology, and institutions in transforming environmental materials into resources, highlighting that resources are not free gifts of nature but are created through human activities. The document classifies resources based on origin (biotic and abiotic), exhaustibility (renewable and non-renewable), ownership (individual, community, national, and international), and status of development (potential, developed stock, and reserves). It also prompts readers to identify items used in daily life and the materials used in their creation, supported by figures illustrating the interdependence of nature, technology, and institutions, as well as the classification of resources."
+    },
+    {
+      "title": "Development of Resources",
+      "node_id": "0001",
+      "start_index": 2,
+      "end_index": 2,
+      "summary": "The partial document discusses the importance of resources for human survival and quality of life, highlighting issues caused by their indiscriminate use, such as resource depletion, societal inequality, and global ecological crises like global warming and pollution. It emphasizes the need for equitable resource distribution and resource planning for sustainable development. The concept of sustainable development is explained as development that does not harm the environment or compromise future generations' needs. The document also covers the Rio de Janeiro Earth Summit of 1992, where global leaders addressed environmental and socio-economic issues, signed declarations on climate change and biodiversity, endorsed Forest Principles, and adopted Agenda 21 for sustainable development in the 21st century.",
+      "nodes": [
+        {
+          "title": "Sustainable development",
+          "node_id": "0002",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "The partial document discusses the importance of resources for human survival and quality of life, highlighting issues caused by their indiscriminate use, such as resource depletion, societal inequality, and global ecological crises like global warming and environmental pollution. It emphasizes the need for equitable resource distribution and resource planning for sustainable development. The concept of sustainable development is explained as development that does not harm the environment or compromise future generations' needs. The document also covers the Rio de Janeiro Earth Summit of 1992, where global leaders addressed environmental and socio-economic issues, signed declarations on climate change and biodiversity, endorsed Forest Principles, and adopted Agenda 21 for sustainable development in the 21st century."
+        },
+        {
+          "title": "Rio de Janeiro Earth Summit, 1992",
+          "node_id": "0003",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "The partial document discusses the importance of resources for human survival and quality of life, highlighting issues caused by their indiscriminate use, such as resource depletion, societal inequality, and global ecological crises like global warming and environmental pollution. It emphasizes the need for equitable resource distribution and resource planning for sustainable development. The concept of sustainable development is explained as development that does not harm the environment or compromise future generations' needs. The document also covers the Rio de Janeiro Earth Summit of 1992, where global leaders addressed environmental and socio-economic issues, signed declarations on climate change and biodiversity, endorsed Forest Principles, and adopted Agenda 21 for sustainable development in the 21st century."
+        },
+        {
+          "title": "Agenda 21",
+          "node_id": "0004",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "The partial document discusses the importance of resources for human survival and quality of life, highlighting issues caused by their indiscriminate use, such as resource depletion, societal inequality, and global ecological crises like global warming and environmental pollution. It emphasizes the need for equitable resource distribution and resource planning for sustainable development. The concept of sustainable development is explained as development that does not harm the environment or compromise future generations' needs. The document also covers the Rio de Janeiro Earth Summit of 1992, where global leaders addressed environmental and socio-economic issues, signed declarations on climate change and biodiversity, endorsed Forest Principles, and adopted Agenda 21 for sustainable development in the 21st century."
+        }
+      ]
+    },
+    {
+      "title": "Resources and Development",
+      "node_id": "0005",
+      "start_index": 3,
+      "end_index": 3,
+      "summary": "The partial document discusses the distribution and availability of resources in different regions of India, highlighting disparities such as resource-rich but economically backward areas (e.g., Jharkhand, Chhattisgarh, Madhya Pradesh) and resource-poor but economically developed regions. It emphasizes the need for balanced resource planning at various levels and explores how factors like technology, institutions, and historical experiences (e.g., colonization) influence resource utilization and development. The document also underscores the importance of conserving resources to ensure sustainable development, warning against irrational consumption and over-utilization.",
+      "nodes": [
+        {
+          "title": "Conservation of Resources",
+          "node_id": "0006",
+          "start_index": 3,
+          "end_index": 4,
+          "summary": "The partial document discusses the distribution and utilization of resources in India, highlighting regional disparities in resource availability and development. It emphasizes the need for balanced resource planning at various levels and explores the relationship between resource richness, economic development, and historical factors like colonization. The document also addresses the importance of technological and institutional advancements for effective resource utilization. Additionally, it covers land utilization in India, categorizing land use into forests, non-cultivable land, uncultivated land, fallow lands, and net sown areas. It explains how physical and human factors influence land use patterns and stresses the importance of sustainable resource conservation to prevent over-exploitation."
+        }
+      ]
+    },
+    {
+      "title": "Land Utilisation",
+      "node_id": "0007",
+      "start_index": 4,
+      "end_index": 4,
+      "summary": "The partial document discusses the land distribution and utilization in India, highlighting the division of land into plains, mountains, plateaus, and islands, along with their respective contributions to agriculture, industry, tourism, and resource availability. It outlines the purposes of land use, including forests, non-cultivable land, uncultivated land, fallow lands, and net sown areas. Additionally, it explains the factors influencing land use patterns, such as physical aspects (topography, climate, soil) and human factors (population density, technology, culture). The document also emphasizes sustainable land use, critiquing greed and exploitative practices as detrimental to resource management.",
+      "nodes": [
+        {
+          "title": "Land Use Pattern in India",
+          "node_id": "0008",
+          "start_index": 4,
+          "end_index": 6,
+          "summary": "The partial document discusses the land resources and utilization in India, highlighting the distribution of land across various relief features such as plains, mountains, plateaus, and islands, and their respective contributions to agriculture, industry, tourism, and ecological balance. It outlines the categories of land use, including forests, non-cultivable land, uncultivated land, fallow lands, and net sown area, and examines the factors influencing land use patterns, such as physical and human factors. The document also addresses the challenges of land degradation caused by human activities like deforestation, overgrazing, mining, over-irrigation, and industrial pollution, and emphasizes the need for conservation measures like afforestation and sustainable land management. Additionally, it highlights the disparities in net sown area across states, the decline in forest and pasture land, and the ecological and societal impacts of land misuse."
+        },
+        {
+          "title": "Land Degradation and Conservation Measures",
+          "node_id": "0009",
+          "start_index": 6,
+          "end_index": 7,
+          "summary": "The partial document discusses land use and degradation in India, highlighting the impact of human activities such as deforestation, overgrazing, mining, and over-irrigation on land quality. It emphasizes the consequences of land degradation on society and the environment and mentions industrial pollution as a contributing factor. Conservation measures like afforestation and proper land management are suggested. The document also classifies Indian soils based on factors like formation, texture, and fertility. It describes alluvial soils, their widespread presence, fertility, and suitability for crops like sugarcane and wheat, as well as black soils, their characteristics, formation, and suitability for cotton cultivation, particularly in the Deccan plateau region."
+        }
+      ]
+    },
+    {
+      "title": "Classification of Soils",
+      "node_id": "0010",
+      "start_index": 7,
+      "end_index": 7,
+      "summary": "The partial document discusses the classification of soils in India based on factors like formation, color, texture, and properties. It highlights the varied relief features, climatic conditions, and vegetation types contributing to soil diversity. The document specifically describes alluvial soils, their widespread presence in northern plains and coastal deltas, high fertility, and suitability for crops like sugarcane, paddy, and wheat. It also covers black soils, their black color, association with the Deccan trap region, suitability for cotton cultivation, and formation influenced by climatic conditions and parent rock material.",
+      "nodes": [
+        {
+          "title": "Alluvial Soils",
+          "node_id": "0011",
+          "start_index": 7,
+          "end_index": 7,
+          "summary": "The partial document discusses the classification of soils in India based on factors like formation, color, texture, and properties. It highlights the diverse types of soils due to India's varied relief, climate, and vegetation. The document specifically describes alluvial soils, which are widespread, fertile, and found in the northern plains, eastern coastal plains, and parts of Rajasthan and Gujarat. These soils are ideal for crops like sugarcane, paddy, and wheat. It also covers black soils, known as regur soils or black cotton soils, which are prevalent in the Deccan trap region and are suitable for cotton cultivation."
+        },
+        {
+          "title": "Black Soil",
+          "node_id": "0012",
+          "start_index": 7,
+          "end_index": 9,
+          "summary": "The partial document discusses the classification of soils in India based on factors like formation, color, texture, and properties. It covers various soil types, including:\n\n1. **Alluvial Soils**: Found in northern plains and river deltas, highly fertile, suitable for crops like sugarcane, paddy, and wheat.\n2. **Black Soils**: Known as regur soils, ideal for cotton cultivation, found in the Deccan plateau, sticky when wet, and prone to cracking in hot weather.\n3. **Red and Yellow Soils**: Found in low rainfall areas, derived from crystalline rocks, red due to iron diffusion, and yellow in hydrated form.\n4. **Laterite Soils**: Found in tropical climates with heavy rainfall, acidic, nutrient-deficient, prone to erosion, but suitable for crops like tea, coffee, and cashew with proper conservation.\n5. **Arid Soils**: Found in dry regions, sandy, saline, low in humus and moisture, with high salt content in some areas. \n\nThe document highlights the geographical distribution, characteristics, and agricultural suitability of these soil types."
+        },
+        {
+          "title": "Red and Yellow Soils",
+          "node_id": "0013",
+          "start_index": 9,
+          "end_index": 9,
+          "summary": "The partial document discusses different types of soils in India, their characteristics, and their geographical distribution. It covers black soils, which are poor in phosphoric content, develop cracks in hot weather, and are sticky when wet. It describes red and yellow soils, formed on crystalline igneous rocks, found in regions like the Deccan plateau, Odisha, and Chhattisgarh, with their reddish color due to iron diffusion. Laterite soils, derived from intense leaching in tropical climates, are acidic, nutrient-deficient, and prone to erosion but suitable for crops like tea, coffee, and cashew nuts after conservation techniques. Arid soils, found in dry climates, are sandy, saline, and lack humus and moisture, with high salt content in some areas."
+        },
+        {
+          "title": "Laterite Soil",
+          "node_id": "0014",
+          "start_index": 9,
+          "end_index": 9,
+          "summary": "The partial document discusses different types of soils in India, their characteristics, and their geographical distribution. It covers black soils, which are poor in phosphoric content and develop deep cracks in hot weather, aiding aeration. Red and yellow soils are found in regions like the Deccan plateau, Odisha, and the Western Ghats, with their color attributed to iron diffusion. Laterite soils, formed under tropical climates with heavy rainfall, are acidic, nutrient-deficient, and prone to erosion but can support crops like tea, coffee, and cashew nuts with proper conservation techniques. Arid soils, found in dry regions, are sandy, saline, and lack humus and moisture, with high salt content in some areas."
+        },
+        {
+          "title": "Arid Soils",
+          "node_id": "0015",
+          "start_index": 9,
+          "end_index": 10,
+          "summary": "The partial document discusses various types of soils in India, their characteristics, distribution, and agricultural suitability. It covers Red and Yellow Soils, Laterite Soil, and Arid Soils, detailing their formation, properties, and regions where they are found. The document also addresses soil erosion, its causes (both natural and human-induced), and methods of soil conservation such as contour ploughing, terrace farming, strip cropping, and shelter belts. It highlights the importance of these techniques in preventing soil degradation and maintaining soil fertility."
+        },
+        {
+          "title": "Soil Erosion and Soil Conservation",
+          "node_id": "0016",
+          "start_index": 10,
+          "end_index": 19,
+          "summary": "The partial document covers topics related to soil erosion, soil conservation methods, biodiversity, forest and wildlife resources, and water scarcity. It discusses the causes and effects of soil erosion, methods like contour ploughing, terrace farming, and strip cropping to prevent it, and the importance of shelter belts. It highlights India's rich biodiversity, conservation efforts like Project Tiger, and the role of communities in protecting forests and wildlife through initiatives like the Chipko movement and Joint Forest Management (JFM). Sacred groves and traditional conservation practices are also mentioned. Additionally, it addresses water scarcity, its causes, and the need for water conservation and management, emphasizing the uneven distribution and seasonal variability of water resources."
+        }
+      ]
+    },
+    {
+      "title": "Water Scarcity and the Need for Water Conservation and Management",
+      "node_id": "0017",
+      "start_index": 19,
+      "end_index": 21,
+      "summary": "The partial document discusses the global water scarcity issue despite the abundance and renewability of water. It highlights that only a small proportion of Earth's water is freshwater, which is essential for human use and is replenished through the hydrological cycle. The document explores causes of water scarcity, including over-exploitation, unequal access, population growth, increased agricultural demands, and urbanization. It emphasizes the role of irrigated agriculture as the largest consumer of water and the impact of industrialization and urban expansion on freshwater resources. Additionally, it addresses the depletion of groundwater due to excessive use in cities and farming, and the need for sustainable water conservation and management practices, such as developing drought-resistant crops and dry farming techniques.",
+      "nodes": [
+        {
+          "title": "Multi-purpose River Projects",
+          "node_id": "0018",
+          "start_index": 21,
+          "end_index": 25,
+          "summary": "The partial document discusses water resource management, highlighting issues like groundwater depletion due to over-extraction for irrigation and urban water needs. It examines the impact of industrialization, urbanization, and the increasing demand for water and energy on freshwater resources. The document elaborates on multi-purpose river projects and dams, their benefits such as irrigation, electricity generation, and flood control, as well as their ecological and social drawbacks, including habitat disruption, sedimentation, and induced floods. It also explores traditional water harvesting systems in India, emphasizing their ecological and socio-economic advantages, with examples like rooftop rainwater harvesting in Rajasthan and diversion channels in the Western Himalayas. Additionally, it mentions government initiatives like the Pradhan Mantri Krishi Sinchayee Yojana to improve irrigation and water conservation practices."
+        },
+        {
+          "title": "Rainwater Harvesting",
+          "node_id": "0019",
+          "start_index": 25,
+          "end_index": 30,
+          "summary": "The partial document primarily discusses water resources, focusing on traditional and modern rainwater harvesting techniques in India. It highlights ancient water-harvesting systems adapted to local ecological conditions, such as rooftop rainwater harvesting in Rajasthan, diversion channels in the Western Himalayas, and inundation channels in Bengal. The document also describes the decline of traditional practices in some areas due to modern water availability, while emphasizing successful adaptations in rural and urban regions like Gendathur, Karnataka. Additionally, it mentions bamboo drip irrigation in Meghalaya and the legal enforcement of rainwater harvesting in Tamil Nadu. The document concludes with exercises on water scarcity, multi-purpose river projects, and the importance of agriculture in India, including types of farming like primitive subsistence agriculture."
+        }
+      ]
+    },
+    {
+      "title": "Agriculture",
+      "node_id": "0020",
+      "start_index": 30,
+      "end_index": 30,
+      "summary": "The partial document discusses the significance of agriculture in India, highlighting its role as a primary activity that supports two-thirds of the population and provides food and raw materials for industries. It mentions the export of agricultural products like tea, coffee, and spices. The document introduces different types of farming systems in India, focusing on Primitive Subsistence Farming, which is practiced on small patches of land using basic tools and family labor. This farming method relies on natural soil fertility, monsoons, and environmental conditions, and involves slash-and-burn techniques. It is known by various names in different regions of India, such as jhumming in northeastern states, pamlou in Manipur, and dipa in Bastar, among others. The document also draws parallels to similar practices in other countries.",
+      "nodes": [
+        {
+          "title": "Types of Farming",
+          "node_id": "0021",
+          "start_index": 30,
+          "end_index": 31,
+          "summary": "The partial document discusses the significance of agriculture in India, highlighting its role as a primary activity that sustains two-thirds of the population and provides food and raw materials for industries. It categorizes farming into three types: Primitive Subsistence Farming, Intensive Subsistence Farming, and Commercial Farming. Primitive Subsistence Farming involves small-scale, labor-intensive methods like slash-and-burn agriculture, practiced in specific regions under various local names (e.g., jhumming, pamlou). Intensive Subsistence Farming is characterized by high population pressure, labor-intensive practices, and the use of biochemical inputs and irrigation for higher yields. Commercial Farming focuses on modern inputs like HYV seeds and fertilizers, with varying degrees of commercialization across regions. Plantation farming, a subset of commercial farming, involves large-scale cultivation of single crops like tea, coffee, and rubber, primarily for industrial use and market sale, supported by transport and communication networks."
+        },
+        {
+          "title": "Cropping Pattern",
+          "node_id": "0022",
+          "start_index": 32,
+          "end_index": 34,
+          "summary": "The partial document discusses the cropping patterns and agricultural practices in India, highlighting the diversity in crops due to physical and cultural variations. It explains the three main cropping seasons in India: rabi, kharif, and zaid, detailing the crops grown in each season and their geographical distribution. Key crops like wheat, rice, millets (jowar, bajra, ragi), and maize are described, including their climatic requirements, soil preferences, and major producing states. The document also emphasizes the role of irrigation, modern inputs, and the Green Revolution in enhancing agricultural productivity in specific regions."
+        },
+        {
+          "title": "Major Crops",
+          "node_id": "0023",
+          "start_index": 34,
+          "end_index": 38,
+          "summary": "The partial document provides an overview of agricultural practices and crop production in India. It covers the cultivation of major food crops like rice, wheat, and millets (jowar, bajra, ragi), highlighting their climatic and soil requirements, regions of production, and significance. It also discusses maize, sugarcane, and oilseeds, detailing their uses, growing conditions, and major producing states. Plantation crops like tea and coffee are described, emphasizing their climatic needs, production areas, and global significance. Additionally, horticultural crops and non-food crops like rubber and jute are mentioned, focusing on their industrial importance, cultivation requirements, and key producing regions."
+        },
+        {
+          "title": "Technological and Institutional Reforms",
+          "node_id": "0024",
+          "start_index": 38,
+          "end_index": 42,
+          "summary": "The partial document covers the following main points:\n\n1. **Agricultural Production in India**: Highlights India's production of vegetables like peas, cauliflower, onion, cabbage, tomato, brinjal, and potato. Discusses non-food crops such as rubber and jute, including their geographical conditions, uses, and major producing states.\n\n2. **Technological and Institutional Reforms in Agriculture**: Describes government initiatives like crop insurance, Grameen banks, cooperative societies, Kisan Credit Card (KCC), Personal Accident Insurance Scheme (PAIS), and minimum support prices to support farmers.\n\n3. **Bhoodan-Gramdan Movement**: Explains Vinoba Bhave's efforts in land redistribution through the Bhoodan and Gramdan movements, emphasizing cooperative farming and the \"Blood-less Revolution.\"\n\n4. **Exercises and Activities**: Includes multiple-choice questions, short and long-answer questions about agriculture, and project work like group discussions on farmer literacy and mapping wheat-producing areas.\n\n5. **Minerals and Their Uses**: Discusses the importance of minerals in daily life, their extraction, and their role in manufacturing items like vehicles, toothpaste, and light bulbs. It also includes an anecdote to explain the use of metals in transportation."
+        }
+      ]
+    },
+    {
+      "title": "Minerals and Energy Resources",
+      "node_id": "0025",
+      "start_index": 42,
+      "end_index": 43,
+      "summary": "The partial document discusses the significance and usage of minerals in daily life, highlighting their presence in household items, transportation, construction, and even toothpaste. It explains the origin of minerals from the earth's crust, their extraction from ores, and their role in human development. The document also explores the composition and classification of minerals, their physical and chemical properties, and their occurrence in different types of rocks. Additionally, it touches on the study of minerals by geographers and geologists, focusing on their distribution, formation, and economic importance.",
+      "nodes": [
+        {
+          "title": "Mode of Occurrence of Minerals",
+          "node_id": "0026",
+          "start_index": 43,
+          "end_index": 44,
+          "summary": "The partial document discusses the composition and classification of rocks and minerals, their formation, and their physical and chemical properties. It highlights the study of minerals by geographers and geologists, focusing on their distribution, economic significance, and classification based on their mode of occurrence. It explains the forms in which minerals occur, such as veins, lodes, placer deposits, and oceanic sources. The document also touches on mining practices, including illegal \"rat-hole\" mining in India, and emphasizes the factors affecting the economic viability of mineral reserves, such as concentration, extraction ease, and market proximity."
+        },
+        {
+          "title": "Ferrous Minerals",
+          "node_id": "0027",
+          "start_index": 44,
+          "end_index": 45,
+          "summary": "The partial document discusses the extraction and distribution of minerals in India, focusing on the differences between mining methods such as open-pit mining, quarrying, and underground mining. It highlights \"Rat-Hole Mining\" in Meghalaya, which involves narrow tunnels and has been declared illegal by the National Green Tribunal. The document also explains placer deposits found in valley sands, minerals derived from ocean waters, and the economic significance of mineral concentration and extraction. It details the distribution of ferrous minerals like iron ore, describing major iron ore belts in Odisha-Jharkhand, Durg-Bastar-Chandrapur, Ballari-Chitradurga, and Maharashtra-Goa, along with their export significance. Additionally, it covers manganese, its uses in steel production, and other industries. The document emphasizes the correlation between mineral distribution and industrial locations."
+        },
+        {
+          "title": "Non-Ferrous Minerals",
+          "node_id": "0028",
+          "start_index": 45,
+          "end_index": 47,
+          "summary": "The partial document discusses the distribution and significance of minerals and energy resources in India. It highlights the major iron ore belts, including Odisha-Jharkhand, Durg-Bastar-Chandrapur, Ballari-Chitradurga-Chikkamagaluru-Tumakuru, and Maharashtra-Goa, detailing their locations, quality of ore, and export significance. It also covers manganese, emphasizing its role in steel production and other industries. The document mentions India's deficiency in copper reserves and its primary mining locations in Madhya Pradesh, Rajasthan, and Jharkhand. Additionally, it explains bauxite as the primary source of aluminium, its formation, and its importance due to its strength and lightness."
+        },
+        {
+          "title": "Non-Metallic Minerals",
+          "node_id": "0029",
+          "start_index": 48,
+          "end_index": 48,
+          "summary": "The partial document discusses non-metallic minerals, focusing on mica and limestone. It highlights mica's properties, uses in the electric and electronic industries, and its major production areas in India, including Jharkhand, Rajasthan, and Andhra Pradesh. Limestone is described as a key raw material for the cement industry and iron smelting, found in sedimentary rocks. The document also addresses the hazards of mining, including health risks to miners, environmental impacts like land degradation, water contamination, and air pollution. It briefly mentions the historical significance of aluminium."
+        },
+        {
+          "title": "Rock Minerals",
+          "node_id": "0030",
+          "start_index": 48,
+          "end_index": 48,
+          "summary": "The partial document discusses non-metallic minerals, focusing on mica and limestone. It highlights mica's properties, uses in the electric and electronic industries, and its major production areas in India, including Jharkhand, Rajasthan, and Andhra Pradesh. Limestone is described as a key raw material for the cement industry and iron smelting, found in sedimentary rocks. The document also addresses the hazards of mining, including health risks to miners, environmental degradation, and pollution of water sources due to mining activities. It briefly mentions the historical significance of aluminium."
+        },
+        {
+          "title": "Hazards of Mining",
+          "node_id": "0031",
+          "start_index": 48,
+          "end_index": 49,
+          "summary": "The partial document discusses the significance and characteristics of non-metallic minerals like mica and limestone, highlighting their properties, uses, and major production areas in India. It addresses the hazards of mining, including health risks to miners, environmental degradation, and pollution caused by mining activities. The document emphasizes the need for stricter safety regulations and environmental laws to mitigate these issues. Additionally, it underscores the importance of conserving mineral resources due to their finite and non-renewable nature, stressing the challenges of depletion, increasing extraction costs, and declining quality of minerals over time."
+        },
+        {
+          "title": "Conservation of Minerals",
+          "node_id": "0032",
+          "start_index": 49,
+          "end_index": 50,
+          "summary": "The partial document discusses the importance of stricter safety regulations and environmental laws to prevent mining hazards. It emphasizes the finite and non-renewable nature of mineral resources, highlighting the rapid consumption of these resources and the challenges of extraction from greater depths with declining quality. Conservation strategies such as planned and sustainable use, improved technologies, recycling, and using substitutes are suggested. The document also covers energy resources, classifying them into conventional (coal, petroleum, natural gas, firewood, etc.) and non-conventional (solar, wind, tidal, etc.) sources. It highlights the reliance on coal in India for energy needs, explaining its formation and types based on compression and burial depth."
+        },
+        {
+          "title": "Energy Resources",
+          "node_id": "0033",
+          "start_index": 50,
+          "end_index": 50,
+          "summary": "The partial document discusses the sustainable use and conservation of mineral resources, emphasizing the need for improved technologies, recycling, and the use of substitutes. It also explores energy resources, categorizing them into conventional (coal, petroleum, natural gas, firewood, cattle dung cake, and electricity) and non-conventional sources (solar, wind, tidal, geothermal, biogas, and atomic energy). The document highlights the reliance on coal in India for energy needs, its formation process, and its various forms based on compression and burial conditions. Additionally, it mentions the challenges of using firewood and dung cake due to environmental and agricultural concerns.",
+          "nodes": [
+            {
+              "title": "Conventional Sources of Energy",
+              "node_id": "0034",
+              "start_index": 50,
+              "end_index": 50,
+              "summary": "The partial document discusses the sustainable use and conservation of mineral resources, emphasizing the need for improved technologies, recycling, and the use of substitutes for minerals. It also explores energy resources, categorizing them into conventional (coal, petroleum, natural gas, firewood, cattle dung cake, and electricity) and non-conventional sources (solar, wind, tidal, geothermal, biogas, and atomic energy). The document highlights the reliance on coal in India for energy needs, its formation process, and its various forms based on compression and burial conditions. Additionally, it mentions the challenges of using firewood and dung cake due to environmental and agricultural concerns.",
+              "nodes": [
+                {
+                  "title": "Coal",
+                  "node_id": "0035",
+                  "start_index": 50,
+                  "end_index": 52,
+                  "summary": "The partial document discusses the sustainable use and conservation of mineral resources, emphasizing the need for improved technologies, recycling, and substitutes for minerals. It elaborates on energy resources, classifying them into conventional (coal, petroleum, natural gas, firewood, cattle dung cake, and electricity) and non-conventional sources (solar, wind, tidal, geothermal, biogas, and atomic energy). The document provides detailed information on coal, its types, distribution, and significance as a major energy source in India. It also covers petroleum, its uses, geological formations, and key production areas like Mumbai High, Gujarat, and Assam. Additionally, it highlights natural gas, its association with petroleum deposits, applications in various sectors, and the development of gas infrastructure and distribution networks."
+                },
+                {
+                  "title": "Petroleum",
+                  "node_id": "0036",
+                  "start_index": 52,
+                  "end_index": 52,
+                  "summary": "The partial document discusses the energy resources in India, focusing on coal, petroleum, and natural gas. It highlights the major coalfields in India, including Jharia, Raniganj, and Bokaro, and mentions coal deposits in the Godavari, Mahanadi, Son, and Wardha valleys, as well as tertiary coal in northeastern states like Meghalaya and Assam. The document explains the significance of coal for heavy industries and thermal power stations due to its bulky nature. It then shifts to petroleum, describing its uses as fuel, lubricant, and raw material for industries, and its occurrence in anticlines, fault traps, and porous rock formations. Major petroleum production areas like Mumbai High, Gujarat, and Assam are identified, with Assam being the oldest oil-producing state. Lastly, the document covers natural gas, found with petroleum deposits, and its applications in power generation, industries, transportation, and domestic use, emphasizing the expansion of gas infrastructure and city gas distribution networks."
+                },
+                {
+                  "title": "Natural Gas",
+                  "node_id": "0037",
+                  "start_index": 52,
+                  "end_index": 54,
+                  "summary": "The partial document discusses the distribution and significance of various energy resources in India. It covers coal, highlighting its major coalfields and its role in heavy industries and thermal power stations. Petroleum is detailed as a key energy source, explaining its occurrence, uses, and major production areas like Mumbai High, Gujarat, and Assam. Natural gas is described as a byproduct of petroleum, with its applications in domestic, industrial, and power sectors. The document emphasizes the need for non-conventional energy sources like solar, wind, tidal, biomass, and waste energy due to the environmental and economic challenges posed by fossil fuels. It also explains nuclear energy, its generation using Uranium and Thorium, and mentions India's nuclear power stations. Solar energy's potential in India, particularly in rural areas, is highlighted, along with its environmental benefits."
+                }
+              ]
+            },
+            {
+              "title": "Non-Conventional Sources of Energy",
+              "node_id": "0038",
+              "start_index": 54,
+              "end_index": 54,
+              "summary": "The partial document discusses various energy sources in India, focusing on the need for renewable and non-conventional energy sources due to the growing consumption of fossil fuels and their environmental and economic impacts. It highlights the potential of solar, wind, tidal, biomass, and waste energy as sustainable alternatives. The document also covers nuclear energy, explaining its generation through atomic alterations using resources like Uranium and Thorium found in specific regions of India. Additionally, it emphasizes India's efforts in developing solar energy, particularly in rural areas, to reduce dependence on traditional fuels and promote environmental conservation. The document includes tasks such as locating thermal/hydel power plants and nuclear power stations on the map of India.",
+              "nodes": [
+                {
+                  "title": "Nuclear or Atomic Energy",
+                  "node_id": "0039",
+                  "start_index": 54,
+                  "end_index": 54,
+                  "summary": "The partial document discusses various energy sources in India, focusing on the need for renewable and non-conventional energy sources due to the growing consumption of fossil fuels and their environmental and economic impacts. It highlights India's potential in solar, wind, tidal, biomass, and waste energy, emphasizing the country's efforts in developing these resources. The document also explains nuclear energy generation using Uranium and Thorium, mentioning their availability in specific regions like Jharkhand, Rajasthan, and Kerala. Additionally, it describes India's potential for solar energy, its applications in rural areas, and the establishment of solar power plants to reduce dependence on traditional fuels. It includes tasks like locating thermal/hydel power plants and nuclear power stations on the map of India."
+                },
+                {
+                  "title": "Solar Energy",
+                  "node_id": "0040",
+                  "start_index": 54,
+                  "end_index": 55,
+                  "summary": "The partial document discusses various aspects of energy resources in India, focusing on the need for sustainable energy development. It highlights the growing dependence on fossil fuels and their environmental and economic repercussions, emphasizing the importance of renewable energy sources like solar, wind, biomass, and geothermal energy. The document also covers nuclear energy, its generation process, and the resources required, such as uranium and thorium. It mentions India's potential for solar energy due to its tropical climate and the establishment of solar power plants in rural areas. Geothermal energy is briefly discussed, with examples of experimental projects in Himachal Pradesh and Ladakh. The document stresses energy conservation, advocating for judicious use of resources, promotion of renewable energy, and adopting energy-efficient practices to ensure sustainable development."
+                },
+                {
+                  "title": "Geothermal Energy",
+                  "node_id": "0041",
+                  "start_index": 55,
+                  "end_index": 55,
+                  "summary": "The partial document discusses geothermal energy and its utilization for electricity generation, highlighting India's potential with experimental projects in Himachal Pradesh and Ladakh. It emphasizes the importance of energy conservation and sustainable energy development, advocating for renewable energy sources and efficient energy use. Practical measures like using public transport, power-saving devices, and non-conventional energy sources are suggested. Additionally, it mentions biogas as an efficient use of cattle dung, improving manure quality and reducing reliance on fuelwood and cow dung cakes."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Conservation of Energy Resources",
+          "node_id": "0042",
+          "start_index": 55,
+          "end_index": 58,
+          "summary": "The partial document discusses the following main points:\n\n1. **Geothermal Energy**: Explanation of geothermal energy generation, its potential in India, and experimental projects in Himachal Pradesh and Ladakh.\n2. **Conservation of Energy Resources**: Emphasis on sustainable energy development, energy conservation, renewable energy sources, and judicious use of limited energy resources.\n3. **Biogas**: Highlighting biogas as an efficient use of cattle dung, improving manure quality, and reducing reliance on fuelwood and cow dung cakes.\n4. **Minerals**: Questions and activities related to mineral formation, types, and conservation, including their distribution and uses.\n5. **Manufacturing Industries**: Importance of manufacturing in economic development, its role in modernizing agriculture, reducing unemployment, eradicating poverty, and boosting trade and commerce."
+        }
+      ]
+    },
+    {
+      "title": "Manufacturing Industries",
+      "node_id": "0043",
+      "start_index": 58,
+      "end_index": 58,
+      "summary": "The partial document discusses the concept and importance of manufacturing in the context of economic development. It explains manufacturing as the process of producing goods in large quantities by transforming raw materials into valuable products, with examples like paper from wood and iron and steel from iron ore. It highlights the role of the secondary sector in converting primary materials into finished goods and its contribution to economic strength. The importance of manufacturing is emphasized as it modernizes agriculture, reduces dependence on agricultural income, generates employment, eradicates poverty, reduces regional disparities, boosts exports, and enhances trade and commerce, ultimately contributing to a country's prosperity.",
+      "nodes": [
+        {
+          "title": "Importance of Manufacturing",
+          "node_id": "0044",
+          "start_index": 58,
+          "end_index": 59,
+          "summary": "The partial document discusses the concept and importance of manufacturing, highlighting its role in transforming raw materials into valuable products and its contribution to economic development. It emphasizes how manufacturing modernizes agriculture, reduces dependence on agricultural income, creates jobs, eradicates poverty, reduces regional disparities, and boosts trade through exports. The document also classifies industries based on various criteria: source of raw materials (agro-based and mineral-based), main role (basic/key industries and consumer industries), capital investment (small-scale industries), and ownership (public, private, joint, and cooperative sectors). Examples of each category are provided to illustrate these classifications."
+        },
+        {
+          "title": "Classification of Industries",
+          "node_id": "0045",
+          "start_index": 59,
+          "end_index": 59,
+          "summary": "The partial document discusses the classification of manufacturing industries based on various criteria. It highlights examples of manufactured products used in daily life and categorizes industries as follows: \n\n1. **Source of raw materials**: Agro-based (e.g., cotton, jute, sugar) and mineral-based (e.g., iron and steel, cement).  \n2. **Main role**: Basic/key industries (e.g., iron and steel) and consumer industries (e.g., sugar, paper).  \n3. **Capital investment**: Small-scale industries with a defined maximum investment limit.  \n4. **Ownership**: Public sector (government-owned), private sector (individually owned), joint sector (state and private collaboration), and cooperative sector (owned by cooperatives)."
+        },
+        {
+          "title": "Agro-Based Industries",
+          "node_id": "0046",
+          "start_index": 59,
+          "end_index": 61,
+          "summary": "The partial document discusses the classification of manufacturing industries based on various criteria such as the source of raw materials (agro-based and mineral-based), their main role (basic/key industries and consumer industries), capital investment (small-scale industries), and ownership (public, private, joint, and cooperative sectors). It also highlights the significance of the textile industry in India, emphasizing its contribution to industrial production, employment, and foreign exchange earnings. The document elaborates on the cotton textile industry, its historical development, localization in regions like Maharashtra and Gujarat, its links with agriculture, and its role in supporting other industries. It also mentions the decentralization of weaving to preserve traditional skills and the importance of handspun khadi for employment."
+        },
+        {
+          "title": "Mineral-Based Industries",
+          "node_id": "0047",
+          "start_index": 62,
+          "end_index": 65,
+          "summary": "The partial document discusses various mineral-based and manufacturing industries in India. It covers the iron and steel industry, highlighting its importance as a basic industry and its concentration in the Chhotanagpur plateau due to resource availability. The sugar industry is discussed, emphasizing its seasonal nature and the shift of mills to southern and western states due to higher sucrose content and better cooperative success. The document also explains aluminium smelting, its uses, and the factors influencing its location. The chemical industry is described, including its inorganic and organic sectors, with a focus on its growth and diversification. The fertilizer industry is detailed, noting its expansion post-Green Revolution and the lack of domestic potash reserves. The cement industry is highlighted for its role in construction and its dependence on heavy raw materials. Lastly, the automobile industry is discussed, emphasizing its growth post-liberalization and its major production hubs across India."
+        },
+        {
+          "title": "Industrial Pollution and Environmental Degradation",
+          "node_id": "0048",
+          "start_index": 66,
+          "end_index": 68,
+          "summary": "The partial document discusses the impact of industrial pollution and environmental degradation in India, highlighting the significant contribution of industries to economic growth while addressing the adverse effects on land, water, air, and noise pollution. It elaborates on the causes and consequences of air pollution, water pollution, thermal pollution, and soil contamination, citing examples like the Bhopal Gas tragedy and the harmful effects of industrial waste and toxic emissions. The document also emphasizes sustainable development practices, such as optimizing equipment, minimizing waste, creating green belts, and implementing ecological monitoring. It mentions NTPC's proactive measures for environmental preservation and sustainable resource management, including ISO certification for its Environment Management System. Additionally, it includes exercises like multiple-choice questions related to industries and their raw materials or products."
+        },
+        {
+          "title": "NTPC Shows the Way",
+          "node_id": "0049",
+          "start_index": 68,
+          "end_index": 71,
+          "summary": "The partial document discusses the integration of economic development with environmental concerns, emphasizing sustainable development practices in industries. It highlights measures such as optimizing equipment, minimizing waste, promoting ecological balance, and reducing pollution through advanced management systems. The document also showcases NTPC's proactive environmental efforts and ISO certification for its Environment Management System. Additionally, it includes exercises and activities related to manufacturing industries, environmental pollution, and transport systems. The latter part focuses on the importance of transport and communication as lifelines of the economy, detailing their role in facilitating trade and socio-economic progress, and classifying transport into land, water, and air domains."
+        }
+      ]
+    },
+    {
+      "title": "Lifelines of National Economy",
+      "node_id": "0050",
+      "start_index": 71,
+      "end_index": 71,
+      "summary": "The partial document discusses the importance of transport, communication, and trade in daily life and their role in the socio-economic development of a country. It highlights how goods and services are moved from supply to demand locations through transport, which is classified into land, water, and air transport. The document emphasizes the complementary relationship between transport, communication, and trade, showcasing their contribution to India's connectivity and progress despite its diversity. It also explains how advancements in science and technology have expanded the scope of trade and transport, transforming the world into a connected global village. The chapter aims to explore how modern transport and communication systems act as lifelines for the nation's economy and trade at local, national, and global levels.",
+      "nodes": [
+        {
+          "title": "Transport",
+          "node_id": "0051",
+          "start_index": 71,
+          "end_index": 72,
+          "summary": "The partial document discusses the importance of transport, communication, and trade in daily life and their role in the socio-economic development of a country. It highlights how goods and services are moved from supply to demand locations through various modes of transport—land, water, and air—and emphasizes the complementary relationship between transport, communication, and trade. The document explains the significance of modern transport and communication systems as lifelines of the economy, enabling local, national, and global trade. It also outlines the advantages of road transport over railways, such as lower construction costs, adaptability to diverse terrains, and door-to-door service. Additionally, it classifies roads in India into six categories, focusing on the Golden Quadrilateral Super Highways, National Highways, and State Highways, and their role in connecting major cities and regions to enhance accessibility and reduce travel time.",
+          "nodes": [
+            {
+              "title": "Roadways",
+              "node_id": "0052",
+              "start_index": 72,
+              "end_index": 74,
+              "summary": "The partial document discusses the importance and classification of road and rail transport in India. It highlights the advantages of road transport, such as lower construction costs, adaptability to diverse terrains, door-to-door service, and its role as a feeder to other transport modes. It categorizes roads into six classes, including the Golden Quadrilateral Super Highways, National Highways, and State Highways, emphasizing their role in connecting major cities and regions. The document also describes the types of roads based on construction materials, such as metalled and unmetalled roads. Additionally, it covers the significance of railways as a primary mode of transportation for freight and passengers, their role in economic integration, and their distribution influenced by geographical and economic factors. It mentions the Atal Tunnel as a significant infrastructure achievement, connecting Manali to the Lahul-Spiti valley year-round."
+            },
+            {
+              "title": "Railways",
+              "node_id": "0053",
+              "start_index": 74,
+              "end_index": 75,
+              "summary": "The partial document discusses various modes of transportation in India, including roads, railways, and waterways. It classifies roads based on construction materials into metalled (all-weather) and unmetalled roads. Railways are highlighted as the principal mode of transportation for freight and passengers, contributing significantly to economic integration and development. The Indian Railway network is influenced by physiographic, economic, and administrative factors and is organized into 17 zones. The Atal Tunnel, a modern highway tunnel in the Himalayas, is mentioned for its strategic importance. The document also covers the development of gas pipelines and the expansion of India's inland waterways, emphasizing their cost-effectiveness, fuel efficiency, and environmental benefits. The National Waterways Act, 2016, is noted for declaring 111 inland waterways as National Waterways to promote inland water transport."
+            },
+            {
+              "title": "Waterways",
+              "node_id": "0054",
+              "start_index": 75,
+              "end_index": 78,
+              "summary": "The partial document discusses the lifelines of the national economy, focusing on transportation infrastructure in India. It covers the following main points:\n\n1. **Pipeline Networks**: Details about major oil and gas pipelines, including routes like Assam to Kanpur and Salaya to Jalandhar, and the expansion of India's gas pipeline infrastructure from 1,700 km to 18,500 km.\n\n2. **Waterways**: Highlights the historical significance of waterways, their cost-effectiveness, and environmental benefits. It mentions the declaration of 111 National Waterways under the National Waterways Act, 2016, and provides details about key waterways like the Ganga (NW-1), Brahmaputra (NW-2), and others.\n\n3. **Sea Ports**: Discusses India's major and minor ports, their role in handling 95% of foreign trade, and specific ports like Deendayal (Kandla), V.O. Chidambaranar, Chennai, Vishakhapatnam, Paradwip, and Kolkata, along with their specializations and significance.\n\n4. **Airways**: Emphasizes the importance of air travel in connecting remote and difficult terrains, particularly in the northeastern states, Jammu and Kashmir, Himachal Pradesh, and Uttarakhand. It also mentions services like Pawanhans Helicopters Ltd. for inaccessible areas.\n\nThe document highlights the critical role of these transportation systems in supporting India's economy and trade."
+            },
+            {
+              "title": "Airways",
+              "node_id": "0055",
+              "start_index": 78,
+              "end_index": 80,
+              "summary": "The partial document discusses the significance of air travel in India, particularly in the northeastern region and difficult terrains, highlighting services provided by Pawanhans Helicopters Ltd. It also describes major ports in India, their specializations, and their roles in trade, such as Chennai, Vishakhapatnam, Paradwip, Kolkata, and Haldia ports. Additionally, it covers India's extensive terrestrial network for broadcasting, the diversity of newspapers published in multiple languages, and India's prominence in film production. The document further explains international trade, its importance for economic prosperity, the concept of balance of trade, and India's trade relations, including key export commodities. It also mentions India's large telecom network and its reach in rural areas."
+            }
+          ]
+        },
+        {
+          "title": "International Trade",
+          "node_id": "0056",
+          "start_index": 80,
+          "end_index": 81,
+          "summary": "The partial document covers the following main points:\n\n1. **Media and Communication in India**: Highlights India's extensive terrestrial network, diverse broadcasting programs, and the publication of newspapers in multiple languages, with Hindi being the most prominent. It also mentions India's position as the largest producer of feature films and the role of the Central Board of Film Certification.\n\n2. **International Trade**: Explains the concept of trade, including local, state-level, and international trade. It discusses the importance of trade as an economic indicator, the components of trade (export and import), and the balance of trade. It lists India's major export commodities (e.g., gems, chemicals, agriculture products) and imports (e.g., petroleum, machinery, electronics). It also highlights India's prominence in the software industry and its contribution to foreign exchange.\n\n3. **Tourism in India**: Discusses the growth of tourism in India over the past two decades, supported by government initiatives like Swadesh Darshan 2.0 and PRASHAD. It emphasizes tourism's role in national integration, cultural promotion, and economic development. Various types of tourism (heritage, eco, adventure, medical, etc.) are mentioned, along with the potential for further development across the country.\n\n4. **Project and Discussion on Tourism**: Encourages students to prepare a project on heritage tourism in India, map important tourist places, and discuss the potential for tourism development in their state/UT, focusing on sustainable development and economic benefits."
+        },
+        {
+          "title": "Tourism as a Trade",
+          "node_id": "0057",
+          "start_index": 81,
+          "end_index": 100,
+          "summary": "The partial document primarily discusses the lifelines of the national economy, focusing on India's imports, including petroleum, gems, chemicals, and machinery, and its emergence as a software export leader. It highlights the growth of tourism in India, supported by government initiatives like Swadesh Darshan 2.0 and PRASHAD, emphasizing its role in promoting national integration, cultural heritage, and economic development. The document also includes exercises on transportation, trade, and tourism, along with activities to explore tourism potential in states/UTs. Additionally, it provides appendices, a glossary of terms, and details about textbook development and rationalization in line with the National Education Policy 2020."
+        }
+      ]
+    }
+  ]
+}
