@@ -260,7 +260,7 @@ def _build_proposer_user_prompt(
         f"## Existing skills in this subject\n\n"
         f"{existing_skills_block}\n\n"
         f"## Full paragraph list\n\n"
-        f"{_render_paragraph_block(extracted)}"
+        f"{_render_paragraph_block(extracted, max_chars=400)}"
         f"{feedback_block}\n\n"
         f"Now emit the JSON skill tree as specified. Output ONLY the JSON object."
     )
@@ -276,7 +276,7 @@ async def run_proposer(
     book_subject: str = "general",
     existing_skills: list[Any] | None = None,
     prior_feedback: CriticFeedback | None = None,
-    max_tokens: int = 8192,
+    max_tokens: int = 16384,
 ) -> ProposedTree:
     """Run the Proposer agent and return a validated skill tree.
 
@@ -309,7 +309,9 @@ async def run_proposer(
             logger.warning(
                 "Proposer attempt %d failed validation: %s", attempt, exc
             )
+            logger.debug("Proposer raw output: %r", raw[:2000])
             if attempt == 2:
+                logger.error("Proposer raw output (first 2000 chars): %r", raw[:2000])
                 raise
             # Prepend a correction note and try once more.
             user_prompt = (

@@ -38,6 +38,15 @@ _BACKEND = _REPO_ROOT / "backend"
 if str(_BACKEND) not in sys.path:
     sys.path.insert(0, str(_BACKEND))
 
+# pydantic-settings resolves env_file relative to CWD. Load backend/.env
+# explicitly here so the CLI can be invoked from anywhere without losing
+# LLM_PROVIDER / OPENROUTER_API_KEY from the user's environment.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(_BACKEND / ".env", override=False)
+except ImportError:  # pragma: no cover - dotenv is a hard dep
+    pass
+
 
 logging.basicConfig(
     level=logging.INFO,
