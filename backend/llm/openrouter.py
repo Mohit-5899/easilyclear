@@ -1,9 +1,18 @@
+import asyncio
 import json
+import logging
+import random
 from typing import AsyncIterator
 
 import httpx
 
 from .base import LLMResponse, Message
+
+logger = logging.getLogger(__name__)
+
+_RETRY_STATUSES = {429, 500, 502, 503, 504}
+_MAX_RETRIES = 5
+_BASE_DELAY = 2.0
 
 
 class OpenRouterClient:
@@ -67,13 +76,30 @@ class OpenRouterClient:
             response_format=response_format,
         )
         async with httpx.AsyncClient(timeout=self._timeout) as client:
-            resp = await client.post(
-                f"{self._base_url}/chat/completions",
-                headers=self._headers,
-                json=payload,
-            )
-            resp.raise_for_status()
-            data = resp.json()
+            for attempt in range(_MAX_RETRIES + 1):
+                resp = await client.post(
+                    f"{self._base_url}/chat/completions",
+                    headers=self._headers,
+                    json=payload,
+                )
+                if resp.status_code in _RETRY_STATUSES and attempt < _MAX_RETRIES:
+                    retry_after = resp.headers.get("retry-after")
+                    if retry_after is not None:
+                        try:
+                            delay = float(retry_after)
+                        except ValueError:
+                            delay = _BASE_DELAY * (2 ** attempt)
+                    else:
+                        delay = _BASE_DELAY * (2 ** attempt) + random.uniform(0, 1)
+                    logger.warning(
+                        "openrouter: %d (retrying in %.1fs, attempt %d/%d)",
+                        resp.status_code, delay, attempt + 1, _MAX_RETRIES,
+                    )
+                    await asyncio.sleep(delay)
+                    continue
+                resp.raise_for_status()
+                data = resp.json()
+                break
 
         choice = data["choices"][0]["message"]["content"]
         usage = data.get("usage") or {}
