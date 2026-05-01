@@ -7,6 +7,7 @@ from pydantic import BaseModel
 from config import get_settings
 from llm import LLMClient, Message, get_llm_client
 
+from .agent_chat import router as agent_chat_router
 from .chat import router as tutor_chat_router
 from .ingest import router as ingest_router
 from .tests import router as tests_router
@@ -31,6 +32,7 @@ app.add_middleware(
 )
 
 app.include_router(tutor_chat_router)
+app.include_router(agent_chat_router)
 app.include_router(tests_router)
 app.include_router(ingest_router)
 
