@@ -19,6 +19,7 @@ import type { BookData, TreeNode } from "@/lib/types";
 import { findNodeById, getSiblings } from "@/lib/tree-utils";
 import { MarkdownContent } from "./MarkdownContent";
 import { ChatTab } from "./ChatTab";
+import { PracticeTab } from "./PracticeTab";
 
 type DrawerTab = "content" | "chat" | "practice";
 
@@ -180,10 +181,12 @@ export function InspectorDrawer({
                 </div>
               )}
 
-              {activeTab === "practice" && (
-                <div className="px-6 py-5 text-sm text-slate-500">
-                  Mock test generator coming next (D21–22).
-                </div>
+              {activeTab === "practice" && book && (
+                <PracticeTab
+                  nodeId={node.node_id}
+                  nodeName={node.title}
+                  bookSlug={book.book_slug ?? ""}
+                />
               )}
             </div>
 
