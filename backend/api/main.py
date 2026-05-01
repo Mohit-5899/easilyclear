@@ -8,6 +8,7 @@ from config import get_settings
 from llm import LLMClient, Message, get_llm_client
 
 from .chat import router as tutor_chat_router
+from .ingest import router as ingest_router
 from .tests import router as tests_router
 
 
@@ -31,6 +32,7 @@ app.add_middleware(
 
 app.include_router(tutor_chat_router)
 app.include_router(tests_router)
+app.include_router(ingest_router)
 
 
 class HealthResponse(BaseModel):
