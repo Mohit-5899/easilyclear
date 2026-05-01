@@ -57,6 +57,16 @@ class GradeResponse(BaseModel):
     details: list[GradeDetail]
 
 
+class TestSummary(BaseModel):
+    """Lightweight projection of a MockTest for the /tests index."""
+
+    test_id: str
+    node_id: str
+    book_slug: str | None = None
+    question_count: int
+    generated_at: str
+
+
 def _get_skill_root(app_state) -> Path:
     override = getattr(app_state, "skill_root_override", None)
     if override is not None:
@@ -107,6 +117,22 @@ async def create_test(req: CreateTestRequest, request: Request) -> MockTest:
     )
     _TEST_STORE[test.test_id] = test
     return test
+
+
+@router.get("", response_model=list[TestSummary])
+async def list_tests() -> list[TestSummary]:
+    """List every test in the in-memory store, newest first."""
+    summaries = [
+        TestSummary(
+            test_id=t.test_id,
+            node_id=t.node_id,
+            book_slug=t.book_slug,
+            question_count=len(t.questions),
+            generated_at=t.generated_at,
+        )
+        for t in _TEST_STORE.values()
+    ]
+    return sorted(summaries, key=lambda s: s.generated_at, reverse=True)
 
 
 @router.get("/{test_id}", response_model=MockTest)
