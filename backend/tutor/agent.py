@@ -31,6 +31,7 @@ from pydantic import BaseModel, Field, ValidationError
 
 from llm.base import LLMClient, Message
 
+from .context_mgmt import manage_context
 from .retriever import ParagraphHit
 from .scope import Scope, build_retriever_for_scope, scope_label
 
@@ -163,6 +164,11 @@ async def run_agent(
             continue
         msgs.append(Message(role=role, content=str(turn.get("content", ""))))
     msgs.append(Message(role="user", content=user_message))
+
+    # Stage 0 — context management (Anthropic context-engineering pattern):
+    # clear stale tool results, optionally compact older turns. Cheap when
+    # the conversation is short; pays for itself on long threads.
+    msgs = await manage_context(msgs, llm=llm, model=model)
 
     # Track all hits accumulated across the loop so the final text-delta can
     # reference them by their stable [N] index.
