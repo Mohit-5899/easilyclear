@@ -398,3 +398,72 @@ Output size becomes O(#leaves × 2 ints) instead of O(#paragraphs). For 2237 par
 ### A.8 Coverage threshold raised to 95%
 
 Per Addendum A.1 source-preservation, missing paragraphs now mean missing content in the student's study material (no LLM rewrite to compensate). Threshold raised from 0.80 to 0.95 to flag trees that drop too much.
+
+### A.9 Structural validation — catch silent misrouting
+
+**Problem discovered post-ingestion (2026-04-23):** a Springboard ingestion produced a tree that passed the 95% coverage check but had **5 of 18 leaves misrouted**:
+
+- `06-economic-geography/01-minerals-and-mining.md` — STUB, body = description echo only
+- `06-economic-geography/04-industry-and-tourism.md` — STUB, body = description echo only
+- `06-economic-geography/02-energy-resources.md` — bloated to 1427 lines, first 1000+ lines are forest policies (Chapter 5 content)
+- `05-soil-and-vegetation/02-forestry-and-vegetation.md` — body starts with mineral content (Chapter 6 content)
+
+Coverage was 100% by paragraph count, but content landed in the wrong leaves. Two leaves had `paragraph_start=None`/`paragraph_end=None` and silently produced empty bodies; their paragraphs were absorbed into a sibling's range with a mismatched title.
+
+**Root cause:** the original Pydantic model allowed `paragraph_start: int | None`. The Proposer occasionally emitted `null` for the last 1–2 leaves of a chapter (likely token-budget tail effect), and the pipeline accepted these stubs without complaint.
+
+**Fix — three-layer enforcement:**
+
+1. **Pydantic model_validator on `ProposedTree`** (parse-time gate) — rejects:
+   - Any leaf with `paragraph_start=None` or `paragraph_end=None`
+   - Any leaf with `end < start`
+   - Any two leaves with overlapping ranges
+   - Triggers the existing `run_proposer` retry loop, which re-prompts with the validation error and asks Gemma to fix it.
+2. **Proposer system prompt** — explicit "ABSOLUTE RULES" section banning null leaves, plus a mandatory self-check formula (sum of (end-start+1) across leaves must equal total_paragraphs).
+3. **Pipeline** — coverage failure is now a `RuntimeError`, not a warning. We refuse to emit a broken skill folder.
+
+**Why not enforce title-content semantic match in code?** That requires a second LLM judge pass, which doubles cost and adds latency. Instead, the prompt explicitly instructs the Proposer to verify title-content match before emitting, and human/visual audit catches the residual.
+
+### A.10 Stage 1.5 — Page-level OCR (Tesseract)
+
+**Problem discovered post-V2.1 ingestion (2026-05-01):** Springboard's 267-page PDF has 2503 embedded images (avg 9.4/page, max 26/page on a single page). PyMuPDF's `page.get_text()` reads only native text glyphs — it misses:
+
+- Maps with district labels (e.g., physical divisions, mineral belts, climate zones)
+- Tables rendered as raster images
+- Section headers drawn as logo/banner images
+- Diagram annotations (Aravalli formation, monsoon flow arrows)
+
+For a geography textbook, these labels ARE the content. Losing them means the tutor can't answer "Which districts have arid climate?" reliably.
+
+**Fix:** new module `backend/ingestion_v2/ocr.py`:
+- Renders each page at 200 DPI via `page.get_pixmap`
+- Runs Tesseract via `pytesseract.image_to_string(img, lang='eng')`
+- Merges OCR-only lines into native text via `merge_ocr_with_native()` (substring dedupe by normalized form)
+- Merging happens BEFORE branding cleanup so OCR-introduced banners ("SPRINGBOARD ACADEMY") are stripped by the existing regex pipeline
+
+**Cost:** Tesseract is local + free. Runtime: ~0.6s/page = +160s on a 267-page book.
+
+**Springboard run after enabling OCR:**
+- Paragraphs: 797 → 1061 (+264 from images)
+- Cleanup fragments stripped: 777 → 1264 (regex caught the OCR-introduced branding too)
+
+**Default:** OCR is on for `.pdf` input. `.txt` input skips OCR (no images to extract). Override via `extract_document(use_ocr=False)`.
+
+### A.11 Stage 6 — Title refinement
+
+**Problem:** the Proposer assigns leaf titles based on its read of the full book, but its paragraph range boundaries occasionally drift one section header late. Result: leaf labeled "Lakes and Water Bodies" whose actual paragraphs start with "A. Mode of Irrigation". Coverage and structural validators don't catch this — the tree is structurally valid; only the labels are wrong.
+
+In V2.1 this happened on 9 of 20 leaves of the Springboard tree (mineral leaf had energy content, lakes leaf had irrigation content, etc.).
+
+**Fix:** new module `backend/ingestion_v2/title_refiner.py` runs between Stage 5 (validate) and Stage 7 (content fill). For each leaf:
+- Pulls the first 5 source paragraphs of its range (capped at 600 chars each)
+- Sends to Gemma with `prompts_v2/title_refiner_system.md`
+- Receives JSON `{title, description}` and overwrites the Proposer's labels in-place on the ProposedTree
+
+Internal-node titles are NOT refined — those describe a chapter's intent (set from the full subtree at Proposer time) and are more reliably correct than leaf titles.
+
+**Why before fill_content?** Internal-node bodies are auto-generated as a "Contents" outline of children's titles; running refinement first ensures chapter SKILL.md files reference the corrected leaf titles.
+
+**Cost:** ~$0.005 × N_leaves on Gemma 4 26B paid tier. ~$0.10 per book at typical 20-leaf trees. Adds ~30-60s latency.
+
+**Failure handling:** per-leaf failures (parse errors, validation errors) are logged and the original Proposer label is kept. The pipeline does not abort.

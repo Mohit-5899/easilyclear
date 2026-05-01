@@ -18,10 +18,11 @@ import re
 from pathlib import Path
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field, ValidationError
+from pydantic import BaseModel, Field, ValidationError, model_validator
 
 from llm.base import LLMClient, Message
 
+from ._json_utils import ensure_valid_json
 from .extract import ExtractedDoc
 from .pre_structure import DraftHierarchy
 
@@ -64,10 +65,62 @@ class ProposedNode(BaseModel):
 ProposedNode.model_rebuild()
 
 
+def _collect_leaves(node: ProposedNode, out: list[ProposedNode]) -> None:
+    """DFS collector — a leaf is any node with no children."""
+    if not node.children:
+        out.append(node)
+        return
+    for child in node.children:
+        _collect_leaves(child, out)
+
+
 class ProposedTree(BaseModel):
-    """Root wrapper for the proposed tree."""
+    """Root wrapper for the proposed tree.
+
+    Per spec Addendum A.9 — structural sanity is enforced at parse time so
+    the existing Proposer retry loop (run_proposer) surfaces the violation
+    back to the model with a correction prompt. This catches the
+    null-range/overlap bug that produced stub leaves on the first ingestion.
+    """
 
     root: ProposedNode
+
+    @model_validator(mode="after")
+    def _check_tree_structure(self) -> "ProposedTree":
+        leaves: list[ProposedNode] = []
+        _collect_leaves(self.root, leaves)
+
+        if not leaves:
+            raise ValueError("tree has no leaves — at least one is required")
+
+        for leaf in leaves:
+            if leaf.paragraph_start is None or leaf.paragraph_end is None:
+                raise ValueError(
+                    f"leaf {leaf.title!r} has null paragraph_start or "
+                    f"paragraph_end. Every leaf MUST cover a contiguous "
+                    f"range of paragraph IDs (both fields non-null, "
+                    f"start <= end)."
+                )
+            if leaf.paragraph_end < leaf.paragraph_start:
+                raise ValueError(
+                    f"leaf {leaf.title!r} has end ({leaf.paragraph_end}) "
+                    f"< start ({leaf.paragraph_start}). Range must be "
+                    f"non-empty and forward."
+                )
+
+        # Check non-overlapping ranges across ALL leaves (siblings or not).
+        sorted_leaves = sorted(leaves, key=lambda lf: lf.paragraph_start or 0)
+        for prev, curr in zip(sorted_leaves, sorted_leaves[1:]):
+            if (curr.paragraph_start or 0) <= (prev.paragraph_end or 0):
+                raise ValueError(
+                    f"overlapping leaf ranges: {prev.title!r} "
+                    f"[{prev.paragraph_start}-{prev.paragraph_end}] and "
+                    f"{curr.title!r} "
+                    f"[{curr.paragraph_start}-{curr.paragraph_end}]. "
+                    f"Each paragraph ID must belong to exactly one leaf."
+                )
+
+        return self
 
 
 # -----------------------------------------------------------------------------
@@ -140,45 +193,9 @@ def _render_draft_chapters(draft: DraftHierarchy) -> str:
 # JSON extraction / retry helpers
 
 
-def _ensure_valid_json(text: str) -> str:
-    """Strip markdown fences and leading/trailing prose around a JSON object.
-
-    Some models (especially free-tier Gemma) wrap JSON in ```json fences or
-    prepend a sentence even when asked not to. This helper pulls out the
-    first balanced {...} block it can find.
-    """
-    if not text:
-        raise ValueError("empty model response")
-
-    stripped = text.strip()
-    # Remove ``` fences if present.
-    fence_match = re.match(r"^```(?:json)?\s*(.*?)\s*```\s*$", stripped, re.DOTALL)
-    if fence_match:
-        stripped = fence_match.group(1).strip()
-
-    # If the whole thing parses, return as-is.
-    try:
-        json.loads(stripped)
-        return stripped
-    except json.JSONDecodeError:
-        pass
-
-    # Otherwise, find the first balanced { ... } region.
-    start = stripped.find("{")
-    if start == -1:
-        raise ValueError("no JSON object found in model response")
-    depth = 0
-    for idx in range(start, len(stripped)):
-        ch = stripped[idx]
-        if ch == "{":
-            depth += 1
-        elif ch == "}":
-            depth -= 1
-            if depth == 0:
-                candidate = stripped[start : idx + 1]
-                json.loads(candidate)  # raises if still malformed
-                return candidate
-    raise ValueError("unbalanced braces in model response")
+# Local alias retained for the rest of this module's call sites; the
+# implementation now lives in ._json_utils so title_refiner.py can share it.
+_ensure_valid_json = ensure_valid_json
 
 
 async def _call_json(
@@ -309,7 +326,12 @@ async def run_proposer(
         prior_feedback=prior_feedback,
     )
 
-    for attempt in (1, 2):
+    # Per spec Addendum A.9 — bumped from 2 to 5 attempts. The structural
+    # validator (no nulls, no overlaps, no inverted ranges) catches subtle
+    # Gemma slip-ups that often need 2-3 corrections to converge.
+    max_attempts = 5
+    last_raw = ""
+    for attempt in range(1, max_attempts + 1):
         raw = await _call_json(
             llm,
             system_prompt=system_prompt,
@@ -318,23 +340,31 @@ async def run_proposer(
             temperature=0.2,
             max_tokens=max_tokens,
         )
+        last_raw = raw
         try:
             cleaned = _ensure_valid_json(raw)
             return ProposedTree.model_validate_json(cleaned)
         except (ValidationError, ValueError, json.JSONDecodeError) as exc:
             logger.warning(
-                "Proposer attempt %d failed validation: %s", attempt, exc
+                "Proposer attempt %d/%d failed validation: %s",
+                attempt, max_attempts, exc,
             )
             logger.debug("Proposer raw output: %r", raw[:2000])
-            if attempt == 2:
-                logger.error("Proposer raw output (first 2000 chars): %r", raw[:2000])
+            if attempt == max_attempts:
+                logger.error(
+                    "Proposer raw output (first 2000 chars): %r", last_raw[:2000]
+                )
                 raise
-            # Prepend a correction note and try once more.
+            # Prepend a correction note and try again.
             user_prompt = (
                 f"Your previous response failed validation with this error:\n"
                 f"{exc}\n\n"
-                f"Please emit ONLY a valid JSON object matching the schema. "
-                f"No prose, no markdown fences.\n\n"
+                f"FIX EXACTLY THAT LEAF. Re-emit the FULL JSON with the fix. "
+                f"No prose, no markdown fences. Verify before emitting:\n"
+                f"- every leaf has integer (non-null) paragraph_start AND paragraph_end\n"
+                f"- every leaf has paragraph_end >= paragraph_start\n"
+                f"- no two leaves share any paragraph ID (no overlaps)\n"
+                f"- sorted leaves cover [0..total-1] contiguously (no gaps)\n\n"
                 f"{user_prompt}"
             )
     raise RuntimeError("unreachable")

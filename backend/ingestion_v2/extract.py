@@ -20,6 +20,7 @@ from pathlib import Path
 import fitz  # PyMuPDF
 from pydantic import BaseModel, Field
 
+from .ocr import merge_ocr_with_native, ocr_page
 from .text_cleanup import CleanupPattern, CleanupReport, clean_text
 
 
@@ -110,7 +111,10 @@ def _extract_bookmarks(doc: fitz.Document) -> list[Bookmark]:
 
 
 def _extract_pdf(
-    pdf_path: Path, source_patterns: list[CleanupPattern]
+    pdf_path: Path,
+    source_patterns: list[CleanupPattern],
+    *,
+    use_ocr: bool = True,
 ) -> ExtractedDoc:
     try:
         doc = fitz.open(pdf_path)
@@ -122,9 +126,28 @@ def _extract_pdf(
         next_id = 0
         aggregated_counts: dict[str, int] = {}
         aggregated_samples: dict[str, list[str]] = {}
+        ocr_chars_recovered = 0
 
         for page_index, page in enumerate(doc, start=1):
-            raw = page.get_text("text")
+            native = page.get_text("text") or ""
+            # Stage 1.5 — page-level OCR. Recovers map labels, table cells,
+            # section headers rendered as raster images. Merge BEFORE the
+            # branding cleanup so OCR-introduced "SPRINGBOARD ACADEMY"
+            # banners get stripped by the same regex pipeline.
+            if use_ocr:
+                try:
+                    ocr_raw = ocr_page(page)
+                    merged = merge_ocr_with_native(native, ocr_raw)
+                    ocr_chars_recovered += max(0, len(merged) - len(native))
+                    raw = merged
+                except (OSError, RuntimeError) as exc:  # pragma: no cover - tesseract failure
+                    logger.warning(
+                        "extract: OCR failed on page %d (%s: %s); using native text only",
+                        page_index, type(exc).__name__, exc,
+                    )
+                    raw = native
+            else:
+                raw = native
             if not raw or not raw.strip():
                 continue
             report = clean_text(raw, source_patterns=source_patterns)
@@ -145,6 +168,12 @@ def _extract_pdf(
         page_count = doc.page_count
     finally:
         doc.close()
+
+    if use_ocr:
+        logger.info(
+            "extract: OCR added %d chars across %d pages",
+            ocr_chars_recovered, page_count,
+        )
 
     combined_report = CleanupReport(
         cleaned_text="",
@@ -188,6 +217,7 @@ def extract_document(
     source_path: Path,
     *,
     source_patterns: Iterable[CleanupPattern] = (),
+    use_ocr: bool = True,
 ) -> ExtractedDoc:
     """Extract paragraphs (+ bookmarks for PDF) from a .pdf or .txt file.
 
@@ -215,7 +245,7 @@ def extract_document(
     patterns_list = list(source_patterns)
     suffix = source_path.suffix.lower()
     if suffix == ".pdf":
-        result = _extract_pdf(source_path, patterns_list)
+        result = _extract_pdf(source_path, patterns_list, use_ocr=use_ocr)
     elif suffix == ".txt":
         result = _extract_txt(source_path, patterns_list)
     else:

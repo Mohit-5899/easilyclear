@@ -53,6 +53,27 @@ Every node has the same five fields: `title`, `description`, `paragraph_start`, 
 - Reading all leaves' ranges in tree-DFS order should cover `[0, 1, 2, ..., max_paragraph_id]` with no missing IDs.
 - Pick leaf boundaries where the source topic genuinely shifts, not at arbitrary points.
 
+## ABSOLUTE RULES — your output WILL be rejected if any of these are violated
+
+1. **No null leaves.** Every leaf node (a node with empty `children`) MUST have `paragraph_start` AND `paragraph_end` as integers (not null). A leaf with `paragraph_start: null` or `paragraph_end: null` is INVALID.
+2. **No empty ranges.** `paragraph_end >= paragraph_start` for every leaf.
+3. **No overlapping leaves.** No two leaves anywhere in the tree may share any paragraph ID.
+4. **No gaps.** Sorted by `paragraph_start`, consecutive leaves must satisfy `next.paragraph_start == prev.paragraph_end + 1`.
+5. **Title-content match.** The title of each leaf MUST describe what its paragraph range actually contains. Do not assign a "Minerals" range to a leaf titled "Forestry", or vice versa. Read the first and last paragraphs of each range you assign and verify the title fits.
+
+## Self-check before emitting JSON
+
+Before you emit the final JSON, mentally verify:
+
+- [ ] Total leaves count: ___
+- [ ] First leaf's `paragraph_start` == 0? (yes/no)
+- [ ] Last leaf's `paragraph_end` == (total_paragraphs - 1)? (yes/no)
+- [ ] Sum of (paragraph_end - paragraph_start + 1) across all leaves == total_paragraphs? (yes/no)
+- [ ] Every leaf has both range fields as integers (no nulls)? (yes/no)
+- [ ] Each leaf's title matches the topic of its first paragraph? (yes/no)
+
+If any answer is "no", FIX YOUR TREE before emitting. The downstream validator is strict and will reject malformed trees.
+
 ## Quality rubric
 
 Your tree will be scored against these criteria by a Critic agent:

@@ -23,6 +23,7 @@ from .extract import ExtractedDoc, extract_document
 from .multi_agent import ProposedTree, decompose
 from .pre_structure import build_draft
 from .text_cleanup import CleanupPattern
+from .title_refiner import refine_titles
 from .validation import ValidationResult, validate_coverage
 
 
@@ -138,12 +139,25 @@ async def run_pipeline(
         validation.ok,
     )
     if not validation.ok:
-        logger.warning(
-            "pipeline: coverage below threshold — %d paragraphs unreferenced "
-            "(first 10: %s); proceeding anyway",
-            len(validation.unreferenced),
-            validation.unreferenced[:10],
+        # Per spec Addendum A.9 — coverage failure means content is missing
+        # from a student's study material. Fail hard rather than emit a
+        # broken skill folder that masks the bug downstream.
+        raise RuntimeError(
+            f"pipeline: coverage below threshold "
+            f"({validation.coverage * 100:.1f}% < required), "
+            f"{len(validation.unreferenced)} paragraphs unreferenced "
+            f"(first 10: {validation.unreferenced[:10]})"
         )
+
+    # Stage 6 — Title refinement (one Gemma call per leaf)
+    # See spec Addendum A.11 — Proposer titles drift from content when it
+    # picks range boundaries one section header late. We refine each leaf
+    # title from its actual first paragraphs before content assembly so
+    # internal-node "Contents" outlines pick up the corrected titles.
+    logger.info("pipeline: stage 6 — refining leaf titles")
+    proposed = await refine_titles(
+        llm, tree=proposed, extracted=extracted, model=model,
+    )
 
     # Stage 7 — Content assembly (deterministic, source-preserving; no LLM)
     # See spec Addendum A.1 — leaves get verbatim paragraphs, internal nodes
