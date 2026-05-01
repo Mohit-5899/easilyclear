@@ -7,6 +7,9 @@ from pydantic import BaseModel
 from config import get_settings
 from llm import LLMClient, Message, get_llm_client
 
+from .chat import router as tutor_chat_router
+from .tests import router as tests_router
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -25,6 +28,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(tutor_chat_router)
+app.include_router(tests_router)
 
 
 class HealthResponse(BaseModel):

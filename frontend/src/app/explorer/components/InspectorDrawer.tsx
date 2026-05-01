@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   X,
@@ -12,10 +12,15 @@ import {
   TreeStructure,
   CaretRight,
   FileText,
+  ChatCircle,
+  Exam,
 } from "@phosphor-icons/react";
 import type { BookData, TreeNode } from "@/lib/types";
 import { findNodeById, getSiblings } from "@/lib/tree-utils";
 import { MarkdownContent } from "./MarkdownContent";
+import { ChatTab } from "./ChatTab";
+
+type DrawerTab = "content" | "chat" | "practice";
 
 interface InspectorDrawerProps {
   book: BookData | null;
@@ -36,6 +41,12 @@ export function InspectorDrawer({
   const node = result?.node ?? null;
   const path = result?.path ?? [];
   const depth = path.length;
+
+  const [activeTab, setActiveTab] = useState<DrawerTab>("content");
+  // Reset to content tab when switching nodes.
+  useEffect(() => {
+    setActiveTab("content");
+  }, [selectedNodeId]);
 
   const siblings = book && selectedNodeId ? getSiblings(book.structure, selectedNodeId) : [];
   const currentIndex = node ? siblings.findIndex((s) => s.node_id === node.node_id) : -1;
@@ -93,43 +104,87 @@ export function InspectorDrawer({
               </button>
             </header>
 
+            {/* Tab bar */}
+            <nav className="flex border-b border-slate-100 px-3">
+              {([
+                { key: "content" as const, label: "Content", icon: <FileText size={12} /> },
+                { key: "chat" as const, label: "Chat", icon: <ChatCircle size={12} /> },
+                { key: "practice" as const, label: "Practice", icon: <Exam size={12} /> },
+              ]).map((tab) => (
+                <button
+                  key={tab.key}
+                  type="button"
+                  onClick={() => setActiveTab(tab.key)}
+                  className={
+                    "flex items-center gap-1.5 border-b-2 px-3 py-2 text-xs font-medium transition-colors " +
+                    (activeTab === tab.key
+                      ? "border-indigo-500 text-zinc-950"
+                      : "border-transparent text-slate-500 hover:text-zinc-700")
+                  }
+                >
+                  {tab.icon}
+                  {tab.label}
+                </button>
+              ))}
+            </nav>
+
             {/* Scrollable content */}
-            <div className="flex-1 overflow-y-auto px-6 py-5">
-              <MetadataChips
-                nodeId={node.node_id}
-                depth={depth}
-                startIndex={node.start_index}
-                endIndex={node.end_index}
-                childCount={node.nodes?.length ?? 0}
-              />
-
-              <section className="mt-5">
-                {node.body && node.body.trim().length > 0 ? (
-                  <>
-                    <SectionLabel icon={<FileText size={11} />} label="Content" />
-                    <MarkdownContent body={node.body} />
-                  </>
-                ) : (
-                  <>
-                    <SectionLabel icon={<FileText size={11} />} label="Summary" />
-                    <p className="mt-2 text-sm leading-relaxed text-slate-700">
-                      {node.summary}
-                    </p>
-                  </>
-                )}
-              </section>
-
-              {book && (node.nodes?.length || path.length > 0) ? (
-                <section className="mt-6">
-                  <SectionLabel icon={<TreeStructure size={11} />} label="Neighborhood" />
-                  <MiniNeighborhood
-                    book={book}
-                    node={node}
-                    path={path}
-                    onNavigate={onNavigate}
+            <div className="flex-1 overflow-y-auto">
+              {activeTab === "content" && (
+                <div className="px-6 py-5">
+                  <MetadataChips
+                    nodeId={node.node_id}
+                    depth={depth}
+                    startIndex={node.start_index}
+                    endIndex={node.end_index}
+                    childCount={node.nodes?.length ?? 0}
                   />
-                </section>
-              ) : null}
+
+                  <section className="mt-5">
+                    {node.body && node.body.trim().length > 0 ? (
+                      <>
+                        <SectionLabel icon={<FileText size={11} />} label="Content" />
+                        <MarkdownContent body={node.body} />
+                      </>
+                    ) : (
+                      <>
+                        <SectionLabel icon={<FileText size={11} />} label="Summary" />
+                        <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                          {node.summary}
+                        </p>
+                      </>
+                    )}
+                  </section>
+
+                  {book && (node.nodes?.length || path.length > 0) ? (
+                    <section className="mt-6">
+                      <SectionLabel icon={<TreeStructure size={11} />} label="Neighborhood" />
+                      <MiniNeighborhood
+                        book={book}
+                        node={node}
+                        path={path}
+                        onNavigate={onNavigate}
+                      />
+                    </section>
+                  ) : null}
+                </div>
+              )}
+
+              {activeTab === "chat" && book && (
+                <div className="h-full">
+                  <ChatTab
+                    nodeId={node.node_id}
+                    nodeName={node.title}
+                    bookSlug={book.book_slug ?? ""}
+                  />
+                </div>
+              )}
+
+              {activeTab === "practice" && (
+                <div className="px-6 py-5 text-sm text-slate-500">
+                  Mock test generator coming next (D21–22).
+                </div>
+              )}
             </div>
 
             {/* Footer: sibling nav */}
