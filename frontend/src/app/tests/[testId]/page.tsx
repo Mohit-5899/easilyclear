@@ -81,7 +81,7 @@ export default function TestPage({ params }: PageProps) {
   const submit = async () => {
     if (!test) return;
     setSubmitting(true);
-    router.push(`/test/${testId}/review`);
+    router.push(`/tests/${testId}/review`);
   };
 
   if (loadError) {
@@ -91,10 +91,10 @@ export default function TestPage({ params }: PageProps) {
           <p className="text-sm font-medium text-red-700">Failed to load test</p>
           <p className="mt-1 text-xs text-red-600">{loadError}</p>
           <button
-            onClick={() => router.push("/explorer")}
+            onClick={() => router.push("/library")}
             className="mt-4 rounded-md bg-red-600 px-3 py-1.5 text-sm text-white"
           >
-            Back to Explorer
+            Back to Library
           </button>
         </div>
       </div>
@@ -114,7 +114,7 @@ export default function TestPage({ params }: PageProps) {
       <header className="sticky top-0 z-10 border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-6 py-4">
           <button
-            onClick={() => router.push("/explorer")}
+            onClick={() => router.push("/library")}
             className="text-xs text-slate-500 hover:text-zinc-950"
           >
             ← Exit

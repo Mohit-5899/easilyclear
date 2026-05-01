@@ -2,7 +2,7 @@
 
 /**
  * PracticeTab — generates a mock test from the selected skill node and
- * navigates the user to the full-screen test mode at /test/[id].
+ * navigates the user to the full-screen test mode at /tests/[id].
  *
  * Per spec docs/superpowers/specs/2026-05-03-mock-test.md.
  */
@@ -34,7 +34,7 @@ export function PracticeTab({ nodeId, nodeName, bookSlug }: PracticeTabProps) {
         book_slug: bookSlug,
         n: count,
       });
-      router.push(`/test/${test.test_id}`);
+      router.push(`/tests/${test.test_id}`);
     } catch (e) {
       setError((e as Error).message);
     } finally {
