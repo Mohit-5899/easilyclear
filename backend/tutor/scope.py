@@ -66,6 +66,12 @@ def _list_book_dirs(skill_root: Path) -> list[Path]:
         for book_dir in subject_dir.iterdir():
             if not book_dir.is_dir():
                 continue
+            # Skip preserved comparison snapshots (e.g. .v2.0-buggy,
+            # .v2.1-shifted). They duplicate the live book's paragraphs
+            # and contaminate retrieval scores.
+            name = book_dir.name
+            if "." in name or name.startswith("_"):
+                continue
             if (book_dir / "SKILL.md").is_file():
                 out.append(book_dir)
     return out

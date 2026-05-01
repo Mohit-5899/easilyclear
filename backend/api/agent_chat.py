@@ -41,7 +41,7 @@ class AgentChatRequest(BaseModel):
     messages: list[ChatTurn] = Field(min_length=1)
     book_slug: str | None = None
     default_scope: Scope = "all"
-    max_steps: int = Field(default=3, ge=1, le=5)
+    max_steps: int = Field(default=4, ge=1, le=6)
 
 
 def _get_skill_root(app_state) -> Path:

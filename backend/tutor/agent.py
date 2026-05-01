@@ -86,6 +86,15 @@ def _parse_decision(raw: str) -> _ToolDecision | None:
     return None
 
 
+def _book_label_from_node_id(node_id: str) -> str:
+    """node_id looks like 'geography/<book_slug>/<chapter>/<leaf>'.
+    Return a human-readable book label and a short chapter::leaf trail."""
+    parts = node_id.split("/")
+    if len(parts) < 2:
+        return node_id
+    return parts[1].replace("_", " ").title()
+
+
 def _format_tool_result_message(
     scope_str: str, hits: list[ParagraphHit]
 ) -> str:
@@ -93,7 +102,14 @@ def _format_tool_result_message(
         return f"TOOL_RESULT (lookup_skill_content, scope={scope_str})\n(no hits)"
     lines = [f"TOOL_RESULT (lookup_skill_content, scope={scope_str})"]
     for idx, h in enumerate(hits, start=1):
-        lines.append(f"[{idx}] (page {h.page}) {h.snippet}")
+        # Include book + node trail so the model can answer "what sources
+        # are these" without us having to plumb metadata separately.
+        book = _book_label_from_node_id(h.node_id)
+        trail = "/".join(h.node_id.split("/")[2:]) or h.node_id
+        lines.append(
+            f"[{idx}] book={book!r} path={trail!r} page={h.page}\n"
+            f"    {h.snippet}"
+        )
     return "\n".join(lines)
 
 
@@ -129,8 +145,8 @@ async def run_agent(
     history: list[dict[str, str]],
     user_message: str,
     system_prompt: str,
-    max_steps: int = 3,
-    top_k: int = 3,
+    max_steps: int = 4,
+    top_k: int = 8,
     default_scope: Scope = "all",
     default_book_slug: str | None = None,
 ) -> AsyncIterator[bytes]:
@@ -176,6 +192,9 @@ async def run_agent(
     text_id = f"t-{uuid.uuid4().hex[:8]}"
     answered = False
 
+    # Loop guard — block near-duplicate queries from causing wasted steps.
+    seen_query_keys: set[str] = set()
+
     for step in range(1, max_steps + 1):
         raw = await _call_decision(llm, model=model, messages=msgs)
         decision = _parse_decision(raw)
@@ -213,12 +232,34 @@ async def run_agent(
         if decision.action == "lookup":
             scope = decision.scope or default_scope
             book_slug = decision.book_slug or default_book_slug
+            query = decision.query or ""
+
+            # Loop guard: dedupe near-identical queries via tokenized
+            # signature (lowercase word set). If the same set has been
+            # seen this turn, replace the result with a hint to broaden.
+            qkey = " ".join(sorted({w for w in re.findall(r"[a-z0-9]+", query.lower()) if len(w) > 2}))
+            if qkey and qkey in seen_query_keys:
+                logger.info("agent: blocking duplicate query %r", query)
+                msgs.append(Message(
+                    role="user",
+                    content=(
+                        f"TOOL_RESULT (lookup_skill_content, scope={scope})\n"
+                        "(duplicate query — already searched these keywords. "
+                        "Try DIFFERENT specific keywords: named entities "
+                        "from the topic, district names, MW capacities, "
+                        "act names, year numbers. Or answer with what you "
+                        "have using the [N] markers from earlier hits.)"
+                    ),
+                ))
+                continue
+            seen_query_keys.add(qkey)
+
             yield _sse({
                 "type": "tool-call",
                 "id": f"tc{step}",
                 "name": "lookup_skill_content",
                 "args": {
-                    "query": decision.query or "",
+                    "query": query,
                     "scope": scope,
                     "book_slug": book_slug,
                     "node_id": decision.node_id,
@@ -230,7 +271,7 @@ async def run_agent(
                     book_slug=book_slug,
                     node_id=decision.node_id,
                 )
-                hits = retriever.search(decision.query or "", k=top_k)
+                hits = retriever.search(query, k=top_k)
             except (FileNotFoundError, ValueError) as exc:
                 logger.warning("agent: lookup failed (%s); empty hits", exc)
                 hits = []
