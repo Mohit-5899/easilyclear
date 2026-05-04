@@ -39,7 +39,11 @@ class ChatTurn(BaseModel):
 
 class AgentChatRequest(BaseModel):
     messages: list[ChatTurn] = Field(min_length=1)
+    # Wire field name retained for backward compat with already-saved chat
+    # threads in the browser; semantically this is the subject slug now
+    # (per spec 2026-05-04). Future request bodies should send subject_slug.
     book_slug: str | None = None
+    subject_slug: str | None = None
     default_scope: Scope = "all"
     max_steps: int = Field(default=4, ge=1, le=6)
 
@@ -96,7 +100,7 @@ async def agent_chat(
             system_prompt=system_prompt,
             max_steps=req.max_steps,
             default_scope=req.default_scope,
-            default_book_slug=req.book_slug,
+            default_subject_slug=req.subject_slug or req.book_slug,
         ),
         media_type="text/event-stream",
         headers=headers,

@@ -1,8 +1,8 @@
 [
   {
-    "slug": "springboard_rajasthan_geography",
-    "name": "Springboard Academy — Rajasthan Geography",
+    "slug": "rajasthan_geography",
+    "name": "Rajasthan Geography",
     "scope": "rajasthan",
-    "skill_folder": "database/skills/geography/springboard_rajasthan_geography"
+    "skill_folder": "database/skills/rajasthan_geography"
   }
 ]

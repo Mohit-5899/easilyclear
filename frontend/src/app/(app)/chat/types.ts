@@ -4,7 +4,7 @@
  * docs/research/2026-05-02-ux-redesign-architecture.md §3 streaming UX).
  */
 
-export type Scope = "all" | "book" | "node";
+export type Scope = "all" | "subject" | "node";
 
 export interface Citation {
   index: number;
@@ -18,7 +18,7 @@ export interface ToolCallEvent {
   id: string;
   query: string;
   scope: Scope;
-  bookSlug?: string;
+  subjectSlug?: string;
   nodeId?: string;
   hitCount?: number; // filled when tool-result arrives
   scopeLabel?: string;

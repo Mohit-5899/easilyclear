@@ -93,14 +93,14 @@ export default async function LibraryIndex() {
           href="/admin/ingest?admin=1"
           className="inline-flex items-center gap-1.5 rounded-md border border-slate-200 bg-white px-3 py-1.5 text-xs text-slate-700 hover:border-indigo-300 hover:text-zinc-950"
         >
-          <CloudArrowUp size={12} /> Ingest a book
+          <CloudArrowUp size={12} /> Ingest a source
         </Link>
       </header>
 
       <div className="flex-1 overflow-y-auto px-6 py-6">
         {cards.length === 0 ? (
           <p className="text-sm text-slate-500">
-            No books ingested yet. Try the Admin → Ingest page.
+            No sources ingested yet. Try the Admin → Ingest page.
           </p>
         ) : (
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

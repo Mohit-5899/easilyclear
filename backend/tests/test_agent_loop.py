@@ -28,43 +28,51 @@ SYSTEM_PROMPT = "You are a tutor. Output JSON {action: lookup|answer, ...}"
 
 
 def _make_book(root: Path) -> None:
-    """Build a test book with enough paragraph diversity that BM25 IDF
-    produces non-zero scores. With <3 paragraphs all containing the same
-    term, IDF goes negative and the retriever drops every hit."""
-    book = root / "geography" / "tinybook"
-    book.mkdir(parents=True)
-    (book / "SKILL.md").write_text(
-        "---\nnode_id: geography/tinybook\n---\n## Contents\n"
+    """Build a subject-canonical test tree with enough paragraph diversity
+    that BM25 IDF produces non-zero scores."""
+    subj = root / "tinysubject"
+    subj.mkdir(parents=True)
+    (subj / "SKILL.md").write_text(
+        "---\nnode_id: tinysubject\nsubject: tinysubject\n---\n## Contents\n"
     )
-    chap = book / "01-chapter"
+    chap = subj / "01-chapter"
     chap.mkdir()
     (chap / "SKILL.md").write_text(
-        "---\nnode_id: geography/tinybook/01-chapter\n---\n## Contents\n"
+        "---\nnode_id: tinysubject/01-chapter\nsubject: tinysubject\n"
+        "---\n## Contents\n"
     )
-    (chap / "01-aravali.md").write_text(
-        "---\n"
-        "node_id: geography/tinybook/01-chapter/01-aravali\n"
-        "source_pages: [3]\n"
-        "---\n"
+
+    def _leaf(slug: str, page: int, body: str) -> str:
+        return (
+            f"---\n"
+            f"node_id: tinysubject/01-chapter/{slug}\n"
+            f"subject: tinysubject\n"
+            f"sources:\n"
+            f"  - source_id: 1\n"
+            f"    publisher: Test Publisher\n"
+            f"    pages: [{page}]\n"
+            f"    paragraph_ids: [0, 1]\n"
+            f"    authority_rank: 2\n"
+            f"---\n"
+            f"## Source 1 (page {page})\n\n"
+            f"{body}\n"
+        )
+
+    (chap / "01-aravali.md").write_text(_leaf(
+        "01-aravali", 3,
         "Aravalli is the oldest fold mountain range in India.\n\n"
-        "Gurushikhar in Sirohi at 1722 metres is the highest peak.\n"
-    )
-    (chap / "02-rivers.md").write_text(
-        "---\n"
-        "node_id: geography/tinybook/01-chapter/02-rivers\n"
-        "source_pages: [4]\n"
-        "---\n"
+        "Gurushikhar in Sirohi at 1722 metres is the highest peak.",
+    ))
+    (chap / "02-rivers.md").write_text(_leaf(
+        "02-rivers", 4,
         "Banas is the longest river that drains entirely within Rajasthan.\n\n"
-        "Chambal originates in Janapao Hills of Madhya Pradesh.\n"
-    )
-    (chap / "03-climate.md").write_text(
-        "---\n"
-        "node_id: geography/tinybook/01-chapter/03-climate\n"
-        "source_pages: [5]\n"
-        "---\n"
+        "Chambal originates in Janapao Hills of Madhya Pradesh.",
+    ))
+    (chap / "03-climate.md").write_text(_leaf(
+        "03-climate", 5,
         "Mawath is winter rainfall caused by western disturbance from the Mediterranean.\n\n"
-        "Jaisalmer experiences arid desert climate with very low annual rainfall.\n"
-    )
+        "Jaisalmer experiences arid desert climate with very low annual rainfall.",
+    ))
 
 
 class _ScriptedLLM:

@@ -122,22 +122,38 @@ def _parse_leaf_paragraphs(path: Path) -> list[dict]:
     """
     post = frontmatter.load(path)
     node_id = str(post.metadata.get("node_id", ""))
-    pages = post.metadata.get("source_pages") or [1]
-    page = int(pages[0]) if pages else 1
+    # New v3 schema: pages live in sources[].pages. Legacy v2 schema:
+    # source_pages at top level. Try v3 first, fall back to v2.
+    pages: list[int] = []
+    sources = post.metadata.get("sources")
+    if isinstance(sources, list) and sources:
+        for s in sources:
+            if isinstance(s, dict) and isinstance(s.get("pages"), list):
+                pages.extend(int(p) for p in s["pages"] if isinstance(p, int))
+    if not pages:
+        legacy_pages = post.metadata.get("source_pages") or [1]
+        if isinstance(legacy_pages, list):
+            pages = [int(p) for p in legacy_pages if isinstance(p, int)]
+    page = pages[0] if pages else 1
 
     paragraphs: list[dict] = []
-    for idx, chunk in enumerate(_PARAGRAPH_SPLIT.split(post.content)):
+    paragraph_id = 0
+    for chunk in _PARAGRAPH_SPLIT.split(post.content):
         text = chunk.strip()
         if len(text) < 20:
+            continue
+        # Skip the v3 source-section headers — they're chrome, not content.
+        if text.startswith("## Source ") or text.startswith("# Source "):
             continue
         paragraphs.append(
             {
                 "node_id": node_id,
-                "paragraph_id": idx,
+                "paragraph_id": paragraph_id,
                 "page": page,
                 "text": text,
             }
         )
+        paragraph_id += 1
     return paragraphs
 
 

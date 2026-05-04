@@ -45,8 +45,8 @@ import type {
 } from "./types";
 
 const SCOPE_OPTIONS: { value: Scope; label: string }[] = [
-  { value: "all", label: "All books" },
-  { value: "book", label: "Current book" },
+  { value: "all", label: "All subjects" },
+  { value: "subject", label: "Current subject" },
   { value: "node", label: "Current selection" },
 ];
 
@@ -241,9 +241,9 @@ export default function ChatPage() {
         query: String((ev.args as Record<string, unknown>)?.query ?? ""),
         scope:
           ((ev.args as Record<string, unknown>)?.scope as Scope) ?? "all",
-        bookSlug: ((ev.args as Record<string, unknown>)?.book_slug ?? undefined) as
-          | string
-          | undefined,
+        subjectSlug: ((ev.args as Record<string, unknown>)?.subject_slug
+          ?? (ev.args as Record<string, unknown>)?.book_slug
+          ?? undefined) as string | undefined,
         nodeId: ((ev.args as Record<string, unknown>)?.node_id ?? undefined) as
           | string
           | undefined,
@@ -381,7 +381,7 @@ export default function ChatPage() {
                 : "Tutor"}
             </h1>
             <p className="text-[11px] text-slate-500">
-              Gemma searches the textbook and cites every claim.
+              Gemma searches the canonical sources and cites every claim.
             </p>
           </div>
           {turns.length > 0 && (
@@ -536,7 +536,7 @@ function EmptyState({ onPick }: { onPick: (text: string) => void }) {
           Ask anything
         </h2>
         <p className="mt-1 text-sm text-slate-600">
-          Gemma will search the source textbook and cite every claim.
+          Gemma will search the canonical sources and cite every claim.
         </p>
         <div className="mt-6 grid gap-2 text-left">
           {examples.map((ex) => (

@@ -103,7 +103,6 @@ export default function TestsIndex() {
                   <p className="truncate text-[11px] text-slate-500">
                     {t.question_count} questions ·{" "}
                     {new Date(t.generated_at).toLocaleString()}
-                    {t.book_slug ? ` · ${t.book_slug}` : ""}
                   </p>
                 </div>
                 <Link

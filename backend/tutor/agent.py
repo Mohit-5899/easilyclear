@@ -86,28 +86,33 @@ def _parse_decision(raw: str) -> _ToolDecision | None:
     return None
 
 
-def _book_label_from_node_id(node_id: str) -> str:
-    """node_id looks like 'geography/<book_slug>/<chapter>/<leaf>'.
-    Return a human-readable book label and a short chapter::leaf trail."""
+def _node_trail_from_node_id(node_id: str) -> str:
+    """Drop the leading subject segment to leave just chapter/leaf trail.
+
+    Per spec 2026-05-04 the node_id is now ``<subject>/<chapter>/<leaf>``
+    (no book slug). Returns the part after the subject for compact display.
+    """
     parts = node_id.split("/")
-    if len(parts) < 2:
-        return node_id
-    return parts[1].replace("_", " ").title()
+    return "/".join(parts[1:]) if len(parts) > 1 else node_id
 
 
 def _format_tool_result_message(
     scope_str: str, hits: list[ParagraphHit]
 ) -> str:
+    """Render TOOL_RESULT lines for the agent.
+
+    Brand-stripping rule (spec 2026-05-04): NO publisher names in the
+    message. The model only sees ``[N] path='...' page=...`` plus the
+    snippet. Source attribution lives in the leaf's frontmatter, never
+    surfaced to the LLM.
+    """
     if not hits:
         return f"TOOL_RESULT (lookup_skill_content, scope={scope_str})\n(no hits)"
     lines = [f"TOOL_RESULT (lookup_skill_content, scope={scope_str})"]
     for idx, h in enumerate(hits, start=1):
-        # Include book + node trail so the model can answer "what sources
-        # are these" without us having to plumb metadata separately.
-        book = _book_label_from_node_id(h.node_id)
-        trail = "/".join(h.node_id.split("/")[2:]) or h.node_id
+        trail = _node_trail_from_node_id(h.node_id)
         lines.append(
-            f"[{idx}] book={book!r} path={trail!r} page={h.page}\n"
+            f"[{idx}] path={trail!r} page={h.page}\n"
             f"    {h.snippet}"
         )
     return "\n".join(lines)
@@ -148,7 +153,7 @@ async def run_agent(
     max_steps: int = 4,
     top_k: int = 8,
     default_scope: Scope = "all",
-    default_book_slug: str | None = None,
+    default_subject_slug: str | None = None,
 ) -> AsyncIterator[bytes]:
     """Drive the JSON-mode tool loop and emit SSE events.
 
@@ -164,7 +169,8 @@ async def run_agent(
         max_steps: cap on lookup/answer turns. Default 3.
         top_k: how many hits to surface per lookup.
         default_scope: scope to use when the model omits ``scope``.
-        default_book_slug: scope to use when scope=book and model omits slug.
+        default_subject_slug: which subject to use when the model picks
+            scope=subject without naming one.
 
     Emits SSE events in order:
         start-step → (tool-call → tool-result → data-citation × N)*
@@ -208,14 +214,14 @@ async def run_agent(
                         "args": {"query": user_message, "scope": default_scope}})
             try:
                 retriever = build_retriever_for_scope(
-                    skill_root, default_scope, book_slug=default_book_slug,
+                    skill_root, default_scope, subject_slug=default_subject_slug,
                 )
                 hits = retriever.search(user_message, k=top_k)
             except (FileNotFoundError, ValueError) as exc:
                 logger.warning("agent: degrade-path retrieval failed: %s", exc)
                 hits = []
             label = scope_label(skill_root, default_scope,
-                                book_slug=default_book_slug)
+                                subject_slug=default_subject_slug)
             yield _sse({"type": "tool-result", "id": f"tc{step}",
                         "hit_count": len(hits), "scope_label": label})
             for i, h in enumerate(hits, start=len(accumulated) + 1):
@@ -231,7 +237,9 @@ async def run_agent(
 
         if decision.action == "lookup":
             scope = decision.scope or default_scope
-            book_slug = decision.book_slug or default_book_slug
+            # Pydantic ToolDecision still names the field ``book_slug`` for
+            # wire compat with older saved threads — treat it as subject_slug.
+            subject_slug = decision.book_slug or default_subject_slug
             query = decision.query or ""
 
             # Loop guard: dedupe near-identical queries via tokenized
@@ -261,14 +269,14 @@ async def run_agent(
                 "args": {
                     "query": query,
                     "scope": scope,
-                    "book_slug": book_slug,
+                    "subject_slug": subject_slug,
                     "node_id": decision.node_id,
                 },
             })
             try:
                 retriever = build_retriever_for_scope(
                     skill_root, scope,
-                    book_slug=book_slug,
+                    subject_slug=subject_slug,
                     node_id=decision.node_id,
                 )
                 hits = retriever.search(query, k=top_k)
@@ -276,7 +284,7 @@ async def run_agent(
                 logger.warning("agent: lookup failed (%s); empty hits", exc)
                 hits = []
             label = scope_label(skill_root, scope,
-                                book_slug=book_slug,
+                                subject_slug=subject_slug,
                                 node_id=decision.node_id)
             yield _sse({
                 "type": "tool-result",

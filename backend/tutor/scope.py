@@ -1,19 +1,24 @@
-"""Multi-book BM25 scope resolver for the agentic tutor.
+"""Subject-canonical BM25 scope resolver for the agentic tutor.
 
-Per docs/research/2026-05-02-ux-redesign-architecture.md §3 — the agent
-calls ``lookup_skill_content`` with a scope tag (all/book/node). This
-module builds a BM25 retriever for any of those scopes and caches the
-indices in process memory, keyed by ``(scope, book_slug?, node_id?)``.
+Per docs/superpowers/specs/2026-05-04-subject-canonical-tree.md.
 
-Hackathon scale: <20K paragraphs total — one in-process LRU is plenty.
-Post-hackathon migrate to SQLite/Tantivy if multi-process replicas appear.
+Layout (post-migration):
+    <skill_root>/<subject_slug>/SKILL.md           ← subject root
+    <skill_root>/<subject_slug>/01-<chapter>/...   ← chapters + leaves
+
+Scope levels exposed to the agent:
+    all     — every subject's canonical tree
+    subject — one subject's canonical tree
+    node    — one leaf or sub-tree (delegates to retriever.build_retriever_for_node)
+
+Hackathon scale: <20K paragraphs total — one in-process index per call is
+plenty. Post-hackathon, cache + invalidate on disk-mtime.
 """
 
 from __future__ import annotations
 
 import json
 import logging
-from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
@@ -28,34 +33,32 @@ from .retriever import (
 logger = logging.getLogger(__name__)
 
 
-Scope = Literal["all", "book", "node"]
+Scope = Literal["all", "subject", "node"]
 
 
-def _scope_label_for_book(skill_root: Path, book_slug: str) -> str:
-    """Read the book root SKILL.md frontmatter for a friendly label."""
-    # Books are nested under <subject>/<book_slug>/. Walk subjects to find it.
-    for subject_dir in skill_root.iterdir():
-        if not subject_dir.is_dir():
-            continue
-        candidate = subject_dir / book_slug
-        if candidate.is_dir():
-            try:
-                import frontmatter
-                post = frontmatter.load(candidate / "SKILL.md")
-                name = post.metadata.get("name")
-                if name:
-                    return str(name)
-            except (OSError, ValueError):
-                pass
-            return book_slug
-    return book_slug
+def _scope_label_for_subject(skill_root: Path, subject_slug: str) -> str:
+    """Read the subject root SKILL.md frontmatter for a friendly label."""
+    candidate = skill_root / subject_slug / "SKILL.md"
+    if candidate.is_file():
+        try:
+            import frontmatter
+            post = frontmatter.load(candidate)
+            name = post.metadata.get("name")
+            if name:
+                return str(name)
+        except (OSError, ValueError):
+            pass
+    # Fallback: prettify the slug.
+    return subject_slug.replace("_", " ").replace("-", " ").title()
 
 
-def _list_book_dirs(skill_root: Path) -> list[Path]:
-    """Return every book root directory under ``skill_root``.
+def _list_subject_dirs(skill_root: Path) -> list[Path]:
+    """Return every subject canonical-tree root under ``skill_root``.
 
-    Layout: ``<skill_root>/<subject>/<book_slug>/`` (book dir contains the
-    book root SKILL.md).
+    A subject directory has a ``SKILL.md`` directly inside it (not nested
+    under a book_slug). Hidden / dotted / underscored directories are
+    skipped — that pattern reserves the namespace for archived snapshots
+    (e.g. ``geography.v2.0-buggy``) without needing a separate exclusion list.
     """
     out: list[Path] = []
     if not skill_root.is_dir():
@@ -63,45 +66,39 @@ def _list_book_dirs(skill_root: Path) -> list[Path]:
     for subject_dir in skill_root.iterdir():
         if not subject_dir.is_dir():
             continue
-        for book_dir in subject_dir.iterdir():
-            if not book_dir.is_dir():
-                continue
-            # Skip preserved comparison snapshots (e.g. .v2.0-buggy,
-            # .v2.1-shifted). They duplicate the live book's paragraphs
-            # and contaminate retrieval scores.
-            name = book_dir.name
-            if "." in name or name.startswith("_"):
-                continue
-            if (book_dir / "SKILL.md").is_file():
-                out.append(book_dir)
+        name = subject_dir.name
+        if name.startswith(".") or name.startswith("_") or "." in name:
+            continue
+        if (subject_dir / "SKILL.md").is_file():
+            out.append(subject_dir)
     return out
 
 
-def _build_all_books_retriever(skill_root: Path) -> BM25Retriever:
-    """Build a single BM25 corpus across every book on disk."""
+def _build_all_subjects_retriever(skill_root: Path) -> BM25Retriever:
+    """One BM25 corpus across every subject canonical tree on disk."""
     paragraphs: list[dict] = []
-    for book_dir in _list_book_dirs(skill_root):
-        for leaf_path in _walk_leaf_files(book_dir, ""):
+    for subject_dir in _list_subject_dirs(skill_root):
+        for leaf_path in _walk_leaf_files(subject_dir, ""):
             try:
                 paragraphs.extend(_parse_leaf_paragraphs(leaf_path))
             except (OSError, ValueError) as exc:
-                logger.warning(
-                    "scope: skipping leaf %s (%s)", leaf_path, exc,
-                )
+                logger.warning("scope: skipping leaf %s (%s)", leaf_path, exc)
     return BM25Retriever(paragraphs)
 
 
-def _build_book_retriever(skill_root: Path, book_slug: str) -> BM25Retriever:
-    """Build a BM25 corpus across one book's leaves."""
+def _build_subject_retriever(
+    skill_root: Path, subject_slug: str
+) -> BM25Retriever:
+    """BM25 corpus over one subject's leaves."""
+    subject_dir = skill_root / subject_slug
+    if not subject_dir.is_dir() or not (subject_dir / "SKILL.md").is_file():
+        raise FileNotFoundError(f"subject not found: {subject_slug}")
     paragraphs: list[dict] = []
-    for book_dir in _list_book_dirs(skill_root):
-        if book_dir.name != book_slug:
+    for leaf_path in _walk_leaf_files(subject_dir, ""):
+        try:
+            paragraphs.extend(_parse_leaf_paragraphs(leaf_path))
+        except (OSError, ValueError):
             continue
-        for leaf_path in _walk_leaf_files(book_dir, ""):
-            try:
-                paragraphs.extend(_parse_leaf_paragraphs(leaf_path))
-            except (OSError, ValueError):
-                continue
     return BM25Retriever(paragraphs)
 
 
@@ -109,29 +106,28 @@ def build_retriever_for_scope(
     skill_root: Path,
     scope: Scope,
     *,
-    book_slug: str | None = None,
+    subject_slug: str | None = None,
     node_id: str | None = None,
 ) -> BM25Retriever:
     """Resolve ``scope`` to a BM25 retriever.
 
     Args:
-        skill_root: filesystem root of skill folders, typically ``database/skills``.
-        scope: one of "all", "book", "node".
-        book_slug: required when scope == "book".
-        node_id: required when scope == "node" (a fully-qualified node_id
-            like ``geography/<book>/<chapter>/<leaf>`` — same convention used
-            by ``build_retriever_for_node``).
+        skill_root: filesystem root of skill folders (``database/skills``).
+        scope: one of "all", "subject", "node".
+        subject_slug: required when scope == "subject".
+        node_id: required when scope == "node" (e.g.
+            ``rajasthan_geography/02-physiographic-divisions/03-aravali``).
 
     Raises:
-        ValueError: if required fields for the scope are missing.
-        FileNotFoundError: if the skill_root or scoped target does not exist.
+        ValueError: required field missing for the chosen scope.
+        FileNotFoundError: skill_root, subject, or node does not exist.
     """
     if scope == "all":
-        return _build_all_books_retriever(skill_root)
-    if scope == "book":
-        if not book_slug:
-            raise ValueError("scope='book' requires book_slug")
-        return _build_book_retriever(skill_root, book_slug)
+        return _build_all_subjects_retriever(skill_root)
+    if scope == "subject":
+        if not subject_slug:
+            raise ValueError("scope='subject' requires subject_slug")
+        return _build_subject_retriever(skill_root, subject_slug)
     if scope == "node":
         if not node_id:
             raise ValueError("scope='node' requires node_id")
@@ -143,16 +139,19 @@ def scope_label(
     skill_root: Path,
     scope: Scope,
     *,
-    book_slug: str | None = None,
+    subject_slug: str | None = None,
     node_id: str | None = None,
 ) -> str:
-    """Human-readable label for a scope. Used in tool-call SSE events."""
+    """Human-readable label for a scope. Used in tool-call SSE events.
+
+    Never returns publisher names — only subject titles or leaf names.
+    """
     if scope == "all":
-        return "All books"
-    if scope == "book":
-        if not book_slug:
-            return "Unknown book"
-        return _scope_label_for_book(skill_root, book_slug)
+        return "All subjects"
+    if scope == "subject":
+        if not subject_slug:
+            return "Unknown subject"
+        return _scope_label_for_subject(skill_root, subject_slug)
     if scope == "node":
         if not node_id:
             return "Unknown node"
@@ -161,10 +160,10 @@ def scope_label(
 
 
 def serialize_scope_args(
-    scope: Scope, book_slug: str | None, node_id: str | None
+    scope: Scope, subject_slug: str | None, node_id: str | None
 ) -> str:
     """Cache key for a scoped retriever (used by callers that memoize)."""
     return json.dumps(
-        {"scope": scope, "book_slug": book_slug, "node_id": node_id},
+        {"scope": scope, "subject_slug": subject_slug, "node_id": node_id},
         sort_keys=True,
     )
