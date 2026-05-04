@@ -97,7 +97,7 @@ async def _run_job(
     try:
         result = await run_pipeline(
             pdf_path=pdf_path,
-            subject=subject,
+            subject_slug=subject,
             book_slug=book_slug,
             book_metadata=book_metadata,
             settings=settings,

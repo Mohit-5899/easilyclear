@@ -61,27 +61,35 @@ def _count_nodes(node: FilledNode) -> tuple[int, int]:
 
 async def run_pipeline(
     pdf_path: Path,
-    subject: str,
-    book_slug: str,
+    subject_slug: str,
     book_metadata: dict[str, Any],
+    *,
+    book_slug: str | None = None,
     output_root: Path | None = None,
     settings: Settings | None = None,
     source_patterns: list[CleanupPattern] | None = None,
+    overwrite_subject: bool = False,
 ) -> PipelineResult:
-    """Run the full V2 ingestion pipeline end-to-end.
+    """Run the full V2 ingestion pipeline end-to-end (v3 schema).
 
     Args:
         pdf_path: Absolute path to a text-extractable PDF.
-        subject: Top-level subject folder name, e.g. ``"geography"``.
-        book_slug: kebab-or-snake-case unique ID under <subject>, e.g.
-            ``"ncert_class10_contemporary_india_2_v2"``.
-        book_metadata: Freeform dict rendered into the root SKILL.md
-            frontmatter. Recognized keys: name, scope, exam_coverage,
-            publisher, source_url.
+        subject_slug: Subject canonical slug (e.g. ``"rajasthan_geography"``).
+            Replaces the old ``subject`` + ``book_slug`` pair — books no
+            longer get their own subfolder under the subject (per spec
+            2026-05-04).
+        book_metadata: Freeform dict for the root SKILL.md frontmatter.
+            Recognized keys: name, scope, exam_coverage, publisher,
+            source_url, authority_rank (0=NCERT, 1=RBSE/state, 2=coaching).
+        book_slug: Per-source slug retained inside ``sources[]`` metadata
+            (audit trail). If omitted, derived from book_metadata.publisher
+            via slugify().
         output_root: Root for emitted skill folders. Defaults to
             ``<repo>/database/skills/``.
-        settings: Optional Settings override; otherwise loaded via
-            get_settings().
+        overwrite_subject: If True, clobber an existing subject folder.
+            Default False — emit raises SubjectTreeExistsError to prevent
+            silent overwrites; the caller should route a 2nd source
+            through merge.py instead.
 
     Returns:
         PipelineResult with the emitted path, node stats, and coverage.
@@ -90,7 +98,9 @@ async def run_pipeline(
     s = settings or get_settings()
     root = output_root or _DEFAULT_OUTPUT_ROOT
     model = s.model_ingestion
-    book_title = book_metadata.get("name") or book_slug
+    book_title = book_metadata.get("name") or subject_slug
+    # Derive a per-source book_slug if not provided — purely metadata.
+    effective_book_slug = book_slug or book_metadata.get("book_slug") or subject_slug
 
     logger.info("pipeline: starting (pdf=%s, model=%s)", pdf_path, model)
 
@@ -165,14 +175,20 @@ async def run_pipeline(
     logger.info("pipeline: stage 7 — assembling source-preserved content")
     filled: FilledTree = fill_content(tree=proposed, extracted=extracted)
 
-    # Stage 8 — Emit
+    # Stage 8 — Emit (v3 schema; subject-canonical layout)
     logger.info("pipeline: stage 8 — emitting skill folder")
+    source_metadata = {
+        "publisher": book_metadata.get("publisher", "unknown"),
+        "book_slug": effective_book_slug,
+        "authority_rank": int(book_metadata.get("authority_rank", 3)),
+    }
     folder = await emit_skill_folder(
         filled=filled,
-        subject=subject,
-        book_slug=book_slug,
+        subject_slug=subject_slug,
         book_metadata=book_metadata,
         output_root=root,
+        source_metadata=source_metadata,
+        overwrite=overwrite_subject,
     )
 
     total_nodes, total_leaves = _count_nodes(filled.root)

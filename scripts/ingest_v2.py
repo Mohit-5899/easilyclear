@@ -67,10 +67,32 @@ def _parse_args() -> argparse.Namespace:
         required=True,
         help="HTTP(S) URL, ZIP URL, file:// URI, or local path to the PDF.",
     )
+    # v3 schema: subject is the canonical key; book_slug becomes per-source
+    # provenance metadata only (kept for audit + dedup).
+    p.add_argument(
+        "--subject-slug", default=None,
+        help="Subject canonical slug (e.g. 'rajasthan_geography'). "
+             "If omitted, falls back to --subject for v2 compat.",
+    )
     p.add_argument("--subject", default="geography")
-    p.add_argument("--book-slug", required=True)
+    p.add_argument(
+        "--book-slug", required=True,
+        help="Per-source slug retained inside sources[] metadata for audit "
+             "and dedup ranking (NOT exposed in URLs / UI).",
+    )
     p.add_argument("--book-name", required=True)
     p.add_argument("--scope", default="rajasthan")
+    p.add_argument(
+        "--authority-rank", type=int, default=3,
+        help="0=NCERT, 1=RBSE/state, 2=coaching, 3=other. Drives dedup "
+             "winner-rule ordering when a subject has multiple sources.",
+    )
+    p.add_argument(
+        "--overwrite-subject", action="store_true",
+        help="Clobber an existing subject folder. Default: refuse and "
+             "exit with a clear error so a 2nd source must route through "
+             "merge.py (deferred to P2.5).",
+    )
     p.add_argument(
         "--exam-coverage",
         default="",
@@ -139,6 +161,7 @@ async def _main() -> int:
         "scope": args.scope,
         "exam_coverage": exam_coverage,
         "publisher": args.publisher,
+        "authority_rank": args.authority_rank,
         "source_url": args.source if urlparse(args.source).scheme in ("http", "https") else "",
     }
 
@@ -153,13 +176,18 @@ async def _main() -> int:
             args.branding, len(source_patterns),
         )
 
+    # v3 canonical: subject_slug drives the folder layout. Falls back to
+    # --subject for callers still on the v2 CLI surface.
+    subject_slug = args.subject_slug or args.subject
+
     result = await run_pipeline(
         pdf_path=pdf_path,
-        subject=args.subject,
+        subject_slug=subject_slug,
         book_slug=args.book_slug,
         book_metadata=book_metadata,
         output_root=output_root,
         source_patterns=source_patterns,
+        overwrite_subject=args.overwrite_subject,
     )
 
     print("=" * 70)
