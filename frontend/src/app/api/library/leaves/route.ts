@@ -69,7 +69,12 @@ export async function GET() {
     } catch {
       continue;
     }
-    collectLeaves(book.structure, [], entry.slug, entry.name ?? entry.slug, out);
+    // Skip the synthetic root — its title duplicates the subject name in
+    // the topic-picker breadcrumb. Start at the root's children so `path`
+    // reads <chapter> › <leaf> only.
+    const subjectChildren =
+      (book.structure[0] as TreeNode & { nodes?: TreeNode[] })?.nodes ?? book.structure;
+    collectLeaves(subjectChildren, [], entry.slug, entry.name ?? entry.slug, out);
   }
 
   return NextResponse.json(out);

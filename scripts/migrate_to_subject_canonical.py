@@ -97,6 +97,17 @@ def _rewrite_node_id(old_id: str, old_subject: str, book_slug: str, new_subject:
     return f"{new_subject}{suffix}"
 
 
+def _derive_subject_display_name(slug: str) -> str:
+    """Turn ``rajasthan_geography`` → ``Rajasthan Geography``.
+
+    Used as the brand-free fallback for the root SKILL.md ``name`` field
+    when the caller does not pass ``--subject-name``. Per spec 2026-05-04,
+    the root name surfaces on the radial canvas as the central node label
+    so it MUST be brand-free.
+    """
+    return slug.replace("_", " ").replace("-", " ").title()
+
+
 def _migrate_root_skill(
     src: Path,
     dst: Path,
@@ -108,12 +119,24 @@ def _migrate_root_skill(
     authority_rank: int,
     book_metadata: dict[str, Any],
     ingested_at: str,
+    subject_name: str | None = None,
 ) -> None:
-    """Rewrite the top-level SKILL.md for the subject root."""
+    """Rewrite the top-level SKILL.md for the subject root.
+
+    Spec 2026-05-04 brand-strip rule: the existing v2 root ``name`` field
+    typically contains the publisher name (e.g. ``Springboard Academy —
+    Rajasthan Geography``). We REPLACE it with a brand-free subject name,
+    NOT carry it forward, so the canvas root label stays clean.
+    """
     post = frontmatter.load(src)
     body = post.content
+    canonical_name = (
+        subject_name
+        or book_metadata.get("subject_name")
+        or _derive_subject_display_name(new_subject)
+    )
     new_metadata: dict[str, Any] = {
-        "name": post.metadata.get("name") or new_subject,
+        "name": canonical_name,
         "description": post.metadata.get("description", ""),
         "node_id": new_subject,
         "depth": 0,
@@ -246,6 +269,7 @@ def migrate_book_to_subject(
     authority_rank: int,
     book_metadata: dict[str, Any],
     skills_root: Path = _SKILLS_ROOT,
+    subject_name: str | None = None,
 ) -> Path:
     """Run the migration. Returns the new subject folder path."""
     src_root = skills_root / old_subject / book_slug
@@ -273,6 +297,7 @@ def migrate_book_to_subject(
             authority_rank=authority_rank,
             book_metadata=book_metadata,
             ingested_at=ingested_at,
+            subject_name=subject_name,
         )
 
     # 2. Walk every other .md
@@ -310,6 +335,16 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--old-subject", default="geography")
     p.add_argument("--book-slug", required=True)
     p.add_argument("--new-subject", required=True)
+    p.add_argument(
+        "--subject-name", default=None,
+        help="Brand-free display name for the subject root (e.g. "
+             "'Rajasthan Geography'). Surfaces as the canvas central "
+             "node label and the library card title. If omitted, "
+             "derives from --new-subject by replacing _/- with spaces "
+             "and title-casing. NEVER use the publisher's own book "
+             "title here — that re-introduces the brand leak fixed "
+             "during the 2026-05-04 QA sweep.",
+    )
     p.add_argument("--publisher", required=True)
     p.add_argument(
         "--authority-rank", type=int, required=True,
@@ -346,6 +381,7 @@ def _main() -> int:
         publisher=args.publisher,
         authority_rank=args.authority_rank,
         book_metadata=book_metadata,
+        subject_name=args.subject_name,
     )
     print(f"\n✓ migrated to {dst}")
 
