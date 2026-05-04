@@ -8,7 +8,7 @@ exam_coverage:
 - ras_pre
 ingested_at: '2026-05-04T03:07:14Z'
 ingestion_version: v3
-name: Springboard Academy — Rajasthan Geography
+name: Rajasthan Geography
 node_id: rajasthan_geography
 sources:
 - authority_rank: 2
