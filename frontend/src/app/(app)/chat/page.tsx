@@ -3,29 +3,13 @@
 /**
  * Agentic /chat page (Redesign D5-6, polish D8).
  *
- * Wires the AI SDK UI Message Stream protocol from /tutor/agent_chat:
- *   start-step → tool-call → tool-result → data-citation* → text-delta* →
- *   text-end → finish → [DONE]
- *
- * UI:
- *   - Recent threads rail (localStorage-backed via lib/chat-store)
- *   - Message list with inline tool-call pills
- *   - Right rail of citation cards (cross-highlight on hover)
- *   - Composer with scope picker
- *
- * Per docs/research/2026-05-02-ux-redesign-architecture.md §2.2.
+ * Pure orchestration: thread persistence, layout shell, callbacks. Streaming
+ * lives in `./hooks/useAgentStream`; UI panels are split into
+ * `./components/*`. Per docs/research/2026-05-02-ux-redesign-architecture.md §2.2.
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-  BookmarkSimple,
-  ChatCircle,
-  PaperPlaneRight,
-  Plus,
-  Spinner,
-  Stop,
-  Trash,
-} from "@phosphor-icons/react";
+import { Spinner } from "@phosphor-icons/react";
 
 import {
   deleteThread,
@@ -36,32 +20,24 @@ import {
   saveThread,
   type ThreadIndex,
 } from "@/lib/chat-store";
-import type {
-  AssistantTurn,
-  ChatTurn,
-  Citation,
-  Scope,
-  ToolCallEvent,
-} from "./types";
-
-const SCOPE_OPTIONS: { value: Scope; label: string }[] = [
-  { value: "all", label: "All subjects" },
-  { value: "subject", label: "Current subject" },
-  { value: "node", label: "Current selection" },
-];
+import type { Citation, Scope } from "./types";
+import { ChatComposer } from "./components/ChatComposer";
+import { CitationsRail } from "./components/CitationsRail";
+import { EmptyState } from "./components/EmptyState";
+import { ThreadsRail } from "./components/ThreadsRail";
+import { Turn } from "./components/Turn";
+import { useAgentStream } from "./hooks/useAgentStream";
 
 export default function ChatPage() {
   const [threadId, setThreadId] = useState<string | null>(null);
   const [threads, setThreads] = useState<ThreadIndex[]>([]);
-  const [turns, setTurns] = useState<ChatTurn[]>([]);
   const [draft, setDraft] = useState("");
   const [scope, setScope] = useState<Scope>("all");
-  const [streaming, setStreaming] = useState(false);
   const [hoveredCitation, setHoveredCitation] = useState<number | null>(null);
-  const abortRef = useRef<AbortController | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  // Hydrate index on mount + open the most recent thread.
+  const { turns, streaming, send, stop, reset } = useAgentStream();
+
   useEffect(() => {
     const idx = listThreads();
     setThreads(idx);
@@ -69,12 +45,11 @@ export default function ChatPage() {
       const stored = getThread(idx[0].id);
       if (stored) {
         setThreadId(stored.id);
-        setTurns(stored.turns);
+        reset(stored.turns);
       }
     }
-  }, []);
+  }, [reset]);
 
-  // Persist when turns change.
   useEffect(() => {
     if (!threadId || turns.length === 0) return;
     const firstUser = turns.find((t) => t.role === "user");
@@ -91,38 +66,6 @@ export default function ChatPage() {
     setThreads(listThreads());
   }, [turns, threadId]);
 
-  const startNewThread = useCallback(() => {
-    if (streaming) return;
-    setThreadId(null);
-    setTurns([]);
-  }, [streaming]);
-
-  const openThread = useCallback(
-    (id: string) => {
-      if (streaming) return;
-      const stored = getThread(id);
-      if (!stored) return;
-      setThreadId(id);
-      setTurns(stored.turns);
-    },
-    [streaming],
-  );
-
-  const removeThread = useCallback(
-    (id: string, ev: React.MouseEvent) => {
-      ev.stopPropagation();
-      if (streaming && id === threadId) return;
-      deleteThread(id);
-      setThreads(listThreads());
-      if (id === threadId) {
-        setThreadId(null);
-        setTurns([]);
-      }
-    },
-    [streaming, threadId],
-  );
-
-  // Auto-scroll on new content
   useEffect(() => {
     scrollRef.current?.scrollTo({
       top: scrollRef.current.scrollHeight,
@@ -138,247 +81,65 @@ export default function ChatPage() {
     return out;
   }, [turns]);
 
-  const send = useCallback(async () => {
+  const startNewThread = useCallback(() => {
+    if (streaming) return;
+    setThreadId(null);
+    reset([]);
+  }, [streaming, reset]);
+
+  const openThread = useCallback(
+    (id: string) => {
+      if (streaming) return;
+      const stored = getThread(id);
+      if (!stored) return;
+      setThreadId(id);
+      reset(stored.turns);
+    },
+    [streaming, reset],
+  );
+
+  const removeThread = useCallback(
+    (id: string, ev: React.MouseEvent) => {
+      ev.stopPropagation();
+      if (streaming && id === threadId) return;
+      deleteThread(id);
+      setThreads(listThreads());
+      if (id === threadId) {
+        setThreadId(null);
+        reset([]);
+      }
+    },
+    [streaming, threadId, reset],
+  );
+
+  const handleSend = useCallback(() => {
     const text = draft.trim();
     if (!text || streaming) return;
-
     setDraft("");
-    setStreaming(true);
-
-    const userTurn: ChatTurn = { role: "user", text };
-    const assistantSeed: AssistantTurn = {
-      role: "assistant",
-      text: "",
-      toolCalls: [],
-      citations: [],
-      status: "streaming",
-    };
-    const newTurns = [...turns, userTurn, assistantSeed];
-    setTurns(newTurns);
-
     if (!threadId) setThreadId(newThreadId());
+    void send(text, scope);
+  }, [draft, scope, streaming, threadId, send]);
 
-    const controller = new AbortController();
-    abortRef.current = controller;
-
-    try {
-      const resp = await fetch("/api/tutor/agent_chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          messages: newTurns
-            .filter((t): t is ChatTurn => t.role !== "assistant" || t.text.length > 0)
-            .map((t) =>
-              t.role === "user"
-                ? { role: "user", content: t.text }
-                : { role: "assistant", content: (t as AssistantTurn).text },
-            )
-            .concat([{ role: "user", content: text }]),
-          default_scope: scope,
-          max_steps: 3,
-        }),
-        signal: controller.signal,
-      });
-
-      if (!resp.ok || !resp.body) {
-        throw new Error(`agent_chat failed: ${resp.status}`);
-      }
-
-      const reader = resp.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = "";
-      while (true) {
-        const { value, done } = await reader.read();
-        if (done) break;
-        buffer += decoder.decode(value, { stream: true });
-        let idx;
-        while ((idx = buffer.indexOf("\n\n")) !== -1) {
-          const frame = buffer.slice(0, idx);
-          buffer = buffer.slice(idx + 2);
-          if (!frame.startsWith("data: ")) continue;
-          const payload = frame.slice(6).trim();
-          if (!payload || payload === "[DONE]") continue;
-          try {
-            handleEvent(JSON.parse(payload));
-          } catch {
-            // ignore malformed frames
-          }
-        }
-      }
-
-      setTurns((prev) =>
-        prev.map((t, i) =>
-          i === prev.length - 1 && t.role === "assistant"
-            ? { ...t, status: "complete" }
-            : t,
-        ),
-      );
-    } catch (err) {
-      const aborted = (err as Error).name === "AbortError";
-      if (!aborted) {
-        setTurns((prev) =>
-          prev.map((t, i) => {
-            if (i !== prev.length - 1 || t.role !== "assistant") return t;
-            return {
-              ...t,
-              text: t.text || `[error: ${(err as Error).message}]`,
-              status: "error",
-            };
-          }),
-        );
-      }
-    } finally {
-      setStreaming(false);
-      abortRef.current = null;
-    }
-  }, [draft, scope, streaming, turns]);
-
-  const handleEvent = (ev: Record<string, unknown>) => {
-    const t = String(ev.type ?? "");
-    if (t === "tool-call") {
-      const call: ToolCallEvent = {
-        id: String(ev.id ?? ""),
-        query: String((ev.args as Record<string, unknown>)?.query ?? ""),
-        scope:
-          ((ev.args as Record<string, unknown>)?.scope as Scope) ?? "all",
-        subjectSlug: ((ev.args as Record<string, unknown>)?.subject_slug
-          ?? (ev.args as Record<string, unknown>)?.book_slug
-          ?? undefined) as string | undefined,
-        nodeId: ((ev.args as Record<string, unknown>)?.node_id ?? undefined) as
-          | string
-          | undefined,
-      };
-      appendToolCallToLastAssistant(call);
-    } else if (t === "tool-result") {
-      const id = String(ev.id ?? "");
-      patchToolCallOnLastAssistant(id, {
-        hitCount: Number(ev.hit_count ?? 0),
-        scopeLabel: String(ev.scope_label ?? ""),
-      });
-    } else if (t === "data-citation") {
-      const data = ev.data as Citation;
-      appendCitationToLastAssistant(data);
-    } else if (t === "text-delta") {
-      const delta = String((ev as { delta?: string }).delta ?? "");
-      appendDeltaToLastAssistant(delta);
-    }
-  };
-
-  const appendToolCallToLastAssistant = (call: ToolCallEvent) => {
-    setTurns((prev) =>
-      prev.map((t, i) => {
-        if (i !== prev.length - 1 || t.role !== "assistant") return t;
-        return { ...t, toolCalls: [...t.toolCalls, call] };
-      }),
-    );
-  };
-
-  const patchToolCallOnLastAssistant = (
-    id: string,
-    patch: Partial<ToolCallEvent>,
-  ) => {
-    setTurns((prev) =>
-      prev.map((t, i) => {
-        if (i !== prev.length - 1 || t.role !== "assistant") return t;
-        return {
-          ...t,
-          toolCalls: t.toolCalls.map((c) =>
-            c.id === id ? { ...c, ...patch } : c,
-          ),
-        };
-      }),
-    );
-  };
-
-  const appendCitationToLastAssistant = (c: Citation) => {
-    setTurns((prev) =>
-      prev.map((t, i) => {
-        if (i !== prev.length - 1 || t.role !== "assistant") return t;
-        return { ...t, citations: [...t.citations, c] };
-      }),
-    );
-  };
-
-  const appendDeltaToLastAssistant = (delta: string) => {
-    setTurns((prev) =>
-      prev.map((t, i) => {
-        if (i !== prev.length - 1 || t.role !== "assistant") return t;
-        return { ...t, text: t.text + delta };
-      }),
-    );
-  };
-
-  const stop = () => {
-    abortRef.current?.abort();
-  };
+  const headerTitle = threadId
+    ? threads.find((th) => th.id === threadId)?.title ?? "Tutor"
+    : "Tutor";
 
   return (
     <div className="flex h-full">
-      {/* Recent threads rail */}
-      <aside className="hidden w-56 flex-shrink-0 border-r border-slate-200 bg-white md:flex md:flex-col">
-        <div className="flex h-14 items-center justify-between border-b border-slate-200 px-3">
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">
-            Threads
-          </span>
-          <button
-            type="button"
-            onClick={startNewThread}
-            disabled={streaming}
-            className="inline-flex items-center gap-1 rounded-md bg-zinc-950 px-2 py-1 text-[11px] font-medium text-white disabled:opacity-30"
-          >
-            <Plus size={10} weight="bold" /> New
-          </button>
-        </div>
-        <ul className="flex-1 overflow-y-auto p-2">
-          {threads.length === 0 ? (
-            <li className="px-2 py-3 text-xs text-slate-400">
-              Your conversations will appear here.
-            </li>
-          ) : (
-            threads.map((th) => (
-              <li key={th.id}>
-                <button
-                  type="button"
-                  onClick={() => openThread(th.id)}
-                  className={
-                    "group flex w-full items-start justify-between gap-1 rounded-md px-2 py-1.5 text-left text-xs transition " +
-                    (th.id === threadId
-                      ? "bg-indigo-50 text-indigo-900"
-                      : "text-slate-700 hover:bg-slate-100")
-                  }
-                >
-                  <span className="line-clamp-2 flex-1 leading-snug">
-                    {th.title}
-                  </span>
-                  <span
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Delete thread"
-                    onClick={(ev) => removeThread(th.id, ev)}
-                    onKeyDown={(ev) => {
-                      if (ev.key === "Enter" || ev.key === " ") {
-                        removeThread(th.id, ev as unknown as React.MouseEvent);
-                      }
-                    }}
-                    className="invisible inline-flex h-4 w-4 cursor-pointer items-center justify-center rounded text-slate-400 hover:bg-slate-200 group-hover:visible"
-                  >
-                    <Trash size={10} />
-                  </span>
-                </button>
-              </li>
-            ))
-          )}
-        </ul>
-      </aside>
+      <ThreadsRail
+        threads={threads}
+        activeId={threadId}
+        streaming={streaming}
+        onNewThread={startNewThread}
+        onOpen={openThread}
+        onDelete={removeThread}
+      />
 
-      {/* Main chat column */}
       <section className="flex min-w-0 flex-1 flex-col">
         <header className="flex h-14 items-center justify-between border-b border-slate-200 bg-white px-6">
           <div>
             <h1 className="text-sm font-semibold text-zinc-950">
-              {threadId
-                ? threads.find((th) => th.id === threadId)?.title ?? "Tutor"
-                : "Tutor"}
+              {headerTitle}
             </h1>
             <p className="text-[11px] text-slate-500">
               Gemma searches the canonical sources and cites every claim.
@@ -418,239 +179,22 @@ export default function ChatPage() {
           )}
         </div>
 
-        {/* Composer */}
-        <div className="border-t border-slate-200 bg-white px-6 py-4">
-          <div className="mx-auto max-w-3xl">
-            <div className="flex items-end gap-2 rounded-xl border border-slate-200 bg-white p-2 shadow-sm focus-within:border-indigo-400">
-              <textarea
-                value={draft}
-                onChange={(e) => setDraft(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    send();
-                  }
-                }}
-                rows={1}
-                placeholder="Ask anything about Rajasthan geography…"
-                className="flex-1 resize-none bg-transparent px-2 py-1.5 text-sm leading-relaxed text-zinc-950 outline-none placeholder:text-slate-400"
-                disabled={streaming}
-              />
-              <button
-                type="button"
-                onClick={streaming ? stop : send}
-                disabled={!streaming && !draft.trim()}
-                className="flex h-8 w-8 items-center justify-center rounded-md bg-indigo-500 text-white transition hover:bg-indigo-600 disabled:opacity-30"
-                aria-label={streaming ? "Stop" : "Send"}
-              >
-                {streaming ? <Stop size={14} /> : <PaperPlaneRight size={14} />}
-              </button>
-            </div>
-            <div className="mt-2 flex items-center justify-between text-[11px] text-slate-500">
-              <label className="inline-flex items-center gap-1.5">
-                Scope:
-                <select
-                  value={scope}
-                  onChange={(e) => setScope(e.target.value as Scope)}
-                  className="bg-transparent text-zinc-700 focus:outline-none"
-                  disabled={streaming}
-                >
-                  {SCOPE_OPTIONS.map((o) => (
-                    <option key={o.value} value={o.value}>
-                      {o.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <span>Model: google/gemma-4-26b-a4b-it</span>
-            </div>
-          </div>
-        </div>
+        <ChatComposer
+          draft={draft}
+          onDraftChange={setDraft}
+          scope={scope}
+          onScopeChange={setScope}
+          streaming={streaming}
+          onSend={handleSend}
+          onStop={stop}
+        />
       </section>
 
-      {/* Right rail — citations */}
-      <aside className="hidden w-72 flex-shrink-0 border-l border-slate-200 bg-white lg:flex lg:flex-col">
-        <header className="flex h-14 items-center border-b border-slate-200 px-4">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-            Sources
-          </h2>
-        </header>
-        <div className="flex-1 overflow-y-auto p-3">
-          {allCitations.length === 0 ? (
-            <p className="text-xs text-slate-400">
-              Citations appear here as the agent retrieves source paragraphs.
-            </p>
-          ) : (
-            <ul className="space-y-2">
-              {allCitations.map((c) => (
-                <li
-                  key={`${c.index}-${c.node_id}-${c.paragraph_id}`}
-                  onMouseEnter={() => setHoveredCitation(c.index)}
-                  onMouseLeave={() => setHoveredCitation(null)}
-                  className={
-                    "rounded-md border bg-white p-3 text-xs transition " +
-                    (hoveredCitation === c.index
-                      ? "border-indigo-400 bg-indigo-50/40"
-                      : "border-slate-200 hover:border-slate-300")
-                  }
-                >
-                  <div className="flex items-center justify-between text-[10px] font-medium uppercase tracking-wider text-slate-400">
-                    <span>[{c.index}] page {c.page}</span>
-                    <BookmarkSimple size={10} />
-                  </div>
-                  <p className="mt-1.5 line-clamp-4 leading-relaxed text-slate-700">
-                    {c.snippet}
-                  </p>
-                  <p className="mt-2 truncate font-mono text-[10px] text-slate-400">
-                    {shortNodeId(c.node_id)}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </aside>
+      <CitationsRail
+        citations={allCitations}
+        hoveredCitation={hoveredCitation}
+        onHover={setHoveredCitation}
+      />
     </div>
-  );
-}
-
-function shortNodeId(id: string): string {
-  const parts = id.split("/");
-  return parts.slice(-2).join("/");
-}
-
-function EmptyState({ onPick }: { onPick: (text: string) => void }) {
-  const examples = [
-    "Why is Aravalli called the planning region of Rajasthan?",
-    "What is Mawath rainfall?",
-    "Which districts have arid climate per Koppen?",
-    "Name the highest peak of Aravalli with its district.",
-  ];
-  return (
-    <div className="mx-auto flex h-full max-w-2xl items-center justify-center">
-      <div className="text-center">
-        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
-          <ChatCircle size={20} weight="duotone" />
-        </div>
-        <h2 className="mt-4 text-lg font-semibold text-zinc-950">
-          Ask anything
-        </h2>
-        <p className="mt-1 text-sm text-slate-600">
-          Gemma will search the canonical sources and cite every claim.
-        </p>
-        <div className="mt-6 grid gap-2 text-left">
-          {examples.map((ex) => (
-            <button
-              key={ex}
-              type="button"
-              onClick={() => onPick(ex)}
-              className="rounded-md border border-slate-200 bg-white px-4 py-2.5 text-left text-sm text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50/30"
-            >
-              {ex}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Turn({
-  turn,
-  hoveredCitation,
-  onHoverCitation,
-}: {
-  turn: ChatTurn;
-  hoveredCitation: number | null;
-  onHoverCitation: (i: number | null) => void;
-}) {
-  if (turn.role === "user") {
-    return (
-      <div className="flex justify-end">
-        <div className="max-w-[80%] rounded-2xl bg-indigo-500 px-4 py-2.5 text-sm text-white">
-          {turn.text}
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-2">
-      {turn.toolCalls.map((c) => (
-        <ToolCallPill key={c.id} call={c} />
-      ))}
-      {turn.text && (
-        <div className="rounded-2xl bg-slate-100 px-4 py-3 text-sm leading-relaxed text-zinc-900">
-          <RenderTextWithCitations
-            text={turn.text}
-            citations={turn.citations}
-            hoveredCitation={hoveredCitation}
-            onHoverCitation={onHoverCitation}
-          />
-        </div>
-      )}
-    </div>
-  );
-}
-
-function ToolCallPill({ call }: { call: ToolCallEvent }) {
-  const completed = call.hitCount !== undefined;
-  return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] text-slate-600">
-      {completed ? (
-        <span className="text-emerald-500">✓</span>
-      ) : (
-        <Spinner size={10} className="animate-spin text-indigo-500" />
-      )}
-      <span className="text-slate-500">
-        {completed
-          ? `Found ${call.hitCount} in`
-          : "Searching"}
-      </span>
-      <span className="font-medium text-zinc-900">
-        {call.scopeLabel ?? call.query}
-      </span>
-    </div>
-  );
-}
-
-function RenderTextWithCitations({
-  text,
-  citations,
-  hoveredCitation,
-  onHoverCitation,
-}: {
-  text: string;
-  citations: Citation[];
-  hoveredCitation: number | null;
-  onHoverCitation: (i: number | null) => void;
-}) {
-  const parts = text.split(/(\[\d+\])/g);
-  return (
-    <>
-      {parts.map((part, i) => {
-        const m = /^\[(\d+)\]$/.exec(part);
-        if (!m) return <span key={i}>{part}</span>;
-        const num = parseInt(m[1], 10);
-        const c = citations.find((x) => x.index === num);
-        const active = hoveredCitation === num;
-        return (
-          <span
-            key={i}
-            onMouseEnter={() => onHoverCitation(num)}
-            onMouseLeave={() => onHoverCitation(null)}
-            className={
-              "mx-0.5 inline-block cursor-help rounded border px-1 text-[11px] transition " +
-              (active
-                ? "border-indigo-500 bg-indigo-100 text-indigo-800"
-                : "border-indigo-300 bg-indigo-50 text-indigo-700")
-            }
-            title={c ? `${c.snippet} (page ${c.page})` : `Citation ${num}`}
-          >
-            [{num}]
-          </span>
-        );
-      })}
-    </>
   );
 }
