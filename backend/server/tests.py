@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/tests", tags=["tests"])
 
 _DEFAULT_SKILL_ROOT = (
-    Path(__file__).resolve().parent.parent.parent / "database" / "skills"
+    Path(__file__).resolve().parent.parent / "database" / "skills"
 )
 
 
