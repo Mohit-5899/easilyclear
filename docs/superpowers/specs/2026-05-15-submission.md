@@ -10,7 +10,7 @@ Ship a complete, polished Kaggle submission for the Gemma 4 Good Hackathon by **
 
 1. **Public Kaggle Writeup** (~1,400 words, markdown) — primary judging artifact
 2. **Public Kaggle Notebook** (runnable on Kaggle GPU)
-3. **Public GitHub repo** — Apache-2.0, README with `make demo`
+3. **Public GitHub repo** — Apache-2.0, README with one-command-per-tier quickstart (backend + frontend)
 4. **YouTube demo video** (≤3 minutes, embedded in writeup)
 5. **Cover image** (1200×630 in Media Gallery)
 6. **Hosted demo URL** (Vercel preview + Cloudflare tunnel for FastAPI backend)
@@ -71,7 +71,7 @@ Free PDFs are watermarked, fragmented, partially in Hindi.
 ## Try It (50w)
 - Hosted demo: <vercel-url>
 - GitHub: github.com/Mohit-5899/easilyclear
-- Run locally: `make demo` (Docker compose, OpenRouter key in .env)
+- Run locally: see repo `README.md` Quickstart (Python 3.12, Node 22, OpenRouter key in `.env`)
 ```
 
 ## Demo video script (2:45 target)
@@ -94,7 +94,7 @@ Recording: OBS or QuickTime, 1080p, edited in DaVinci Resolve. Voiceover in clea
 - [ ] Replace Claude Code attribution / co-author lines with neutral
 - [ ] Apache-2.0 LICENSE file
 - [ ] CONTRIBUTING.md (basic — for the open-source angle)
-- [ ] Working `make demo` — boots backend + frontend + opens browser
+- [ ] One-command-per-tier quickstart verified end-to-end (backend `uv sync && uv run uvicorn ...`, frontend `npm install && npm run dev`)
 - [ ] Architecture SVG (mermaid → SVG export, in `docs/`)
 - [ ] One canned ingestion pre-run, skill folder committed (so judges don't need OpenRouter key)
 - [ ] CHANGELOG.md tagged `v1.0-hackathon`
@@ -131,7 +131,7 @@ Constraints: must run on Kaggle GPU (T4) with Internet enabled (OpenRouter calls
 
 ## Cut points if behind schedule
 
-- Drop hosted demo (rely on local `make demo` only)
+- Drop hosted demo (rely on local README quickstart only)
 - Drop Kaggle Notebook (writeup + GitHub + video may be sufficient)
 - Drop second book (one polished book is OK)
 
