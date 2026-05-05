@@ -94,11 +94,38 @@ Gemma 4 26B (a4b-it) does every job — Proposer, Critic, Refinement, title rewr
 ## Technical Highlights
 
 - **8-stage ingestion pipeline** with 11 spec addendums documenting every design decision
-- **105 unit tests** + **7 Playwright journeys** on critical paths: structural validator, OCR merge dedupe, retrieval, prompt builder, MCQ schema, span verifier, dedup winner-rule, multi-source merge, brand-strip guard
+- **111 unit tests** + **7 Playwright journeys** on critical paths: structural validator, OCR merge dedupe, retrieval, prompt builder, MCQ schema, span verifier, dedup winner-rule, multi-source merge, hash-bag embedder, brand-strip guard
 - **100% paragraph coverage** on the Rajasthan Geography ingest (1,061 / 1,061), with 100% title-content match on a 5-leaf spot-check
 - **GitHub Actions CI** runs pytest + tsc + Playwright on every PR; the Playwright job catches brand leaks before they ship
 - **Reproducible**: see [`README.md`](../README.md) Quickstart — `uv sync && uv run uvicorn server.main:app` for backend, `npm install && npm run dev` for frontend. Pre-ingested subject tree is live at `/library/rajasthan_geography` with no manual setup beyond `OPENROUTER_API_KEY`
 - **Hosted on Vercel**: frontend (Next.js 16 native) + backend (FastAPI on Python Fluid Compute), single-domain deploy, free-tier sufficient for the demo window
+
+---
+
+## Chat Quality Eval
+
+Seven representative questions hit `/tutor/agent_chat` against real Gemma 4 26B (script: `scripts/eval_chat.py`). Categories: factual recall, multi-hop, out-of-source refusal, brand-strip stress, source-grounded quoting.
+
+| Metric | Result |
+|---|---:|
+| Tool-call rate | 5 / 7 (71%) |
+| Citation rate | 5 / 7 (71%) |
+| **Brand-strip clean** | **7 / 7 (100%)** |
+| Errors | 0 |
+| Avg first-token latency | 7.3 s |
+
+The two non-tool-calls are *correct refusals*, not failures:
+
+- **"What is photosynthesis?"** → *"The provided sources do not cover that."* No hallucination.
+- **"Which textbook are these notes from?"** → *"I do not have access to the names of the publishers or book titles. I can only refer to the information using the path and page number provided in the citations (e.g., Source 1 · page 18)."* — the brand-strip rule cleanly enforced at runtime.
+
+Spot-check on factual questions:
+
+- **"Highest peak of Aravalli with its district"** → *"Gurushikhar, which stands at 1722 metres and is located in the Sirohi district [2, 4]."* Page-30 citation matches source.
+- **"Which districts have arid climate per Koppen?"** → cites page 43, lists Jaisalmer, Bikaner, Churu, Sriganganagar, Hanumangarh — verifiable against the source paragraphs.
+- **"Why is Aravalli called the planning region?"** → grounded answer about state-budget allocation, citing page 30.
+
+The harness is committed (`scripts/eval_chat.py`) so any contributor can re-run it and compare deltas before shipping a prompt or retrieval change.
 
 ---
 
