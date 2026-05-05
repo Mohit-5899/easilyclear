@@ -74,7 +74,7 @@ class _MockLLM:
 @pytest.fixture
 def app_with_corpus(tmp_path: Path):
     """Builds a tiny skill folder + injects mock LLM into FastAPI state."""
-    from api.main import app
+    from server.main import app
 
     book = tmp_path / "geography" / "test_book"
     book.mkdir(parents=True)
