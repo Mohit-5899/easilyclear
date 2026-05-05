@@ -37,3 +37,14 @@ yarn-error.log*
 
 # Local DB experiments
 database/users/user_*.json
+.gstack/
+
+# Claude / agent operating instructions — local-only, kept out of the
+# public repo. These files encode the way I work with Claude as a
+# partner; not artifacts a judge or external contributor needs.
+CLAUDE.md
+**/CLAUDE.md
+AGENTS.md
+**/AGENTS.md
+.claude/
+**/.claude/
