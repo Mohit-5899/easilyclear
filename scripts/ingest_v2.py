@@ -56,6 +56,7 @@ logging.basicConfig(
 )
 
 
+from ingestion_v2.embedders import HashBagEmbedder  # noqa: E402
 from ingestion_v2.pdf_downloader import download_pdf  # noqa: E402
 from ingestion_v2.pipeline import run_pipeline  # noqa: E402
 from ingestion_v2.text_cleanup import BRANDING_BUNDLES  # noqa: E402
@@ -181,6 +182,23 @@ async def _main() -> int:
     # --subject for callers still on the v2 CLI surface.
     subject_slug = args.subject_slug or args.subject
 
+    # Stage 6.5b — when an existing subject tree is on disk and we're not
+    # clobbering, the pipeline merges this source in via cosine + judge.
+    # Wire a deterministic stdlib embedder by default so no extra deps or
+    # API keys are needed; callers wanting higher-quality semantic match
+    # can swap this for a real embedder by importing run_pipeline directly.
+    candidate_root = output_root or (
+        Path(__file__).resolve().parent.parent / "database" / "skills"
+    )
+    embedder = None
+    if (candidate_root / subject_slug).exists() and not args.overwrite_subject:
+        embedder = HashBagEmbedder()
+        logging.info(
+            "subject tree already exists at %s — wiring HashBagEmbedder for "
+            "merge stage (cosine prefilter; no API cost)",
+            candidate_root / subject_slug,
+        )
+
     result = await run_pipeline(
         pdf_path=pdf_path,
         subject_slug=subject_slug,
@@ -189,6 +207,7 @@ async def _main() -> int:
         output_root=output_root,
         source_patterns=source_patterns,
         overwrite_subject=args.overwrite_subject,
+        embedder=embedder,
     )
 
     print("=" * 70)
@@ -199,6 +218,12 @@ async def _main() -> int:
     print(f"total_leaves       : {result.total_leaves}")
     print(f"coverage           : {result.coverage * 100:.1f}%")
     print(f"elapsed_seconds    : {result.elapsed_seconds:.1f}")
+    if result.merge_report is not None:
+        m = result.merge_report
+        print(
+            f"merge              : appended={m.appended}  "
+            f"added_leaves={m.added_leaves}  added_chapters={m.added_chapters}"
+        )
     return 0
 
 
