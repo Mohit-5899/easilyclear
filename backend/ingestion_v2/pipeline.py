@@ -10,7 +10,7 @@ from __future__ import annotations
 import logging
 import time
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 from pydantic import BaseModel, Field
 
@@ -18,8 +18,10 @@ from config import Settings, get_settings
 from llm.factory import get_llm_client
 
 from .content_fill import FilledNode, FilledTree, fill_content
+from .dedup import Embedder, LeafLabel
 from .emit import emit_skill_folder
 from .extract import ExtractedDoc, extract_document
+from .merge import MergeReport, merge_into_subject_tree
 from .multi_agent import ProposedTree, decompose
 from .pre_structure import build_draft
 from .text_cleanup import CleanupPattern
@@ -43,6 +45,7 @@ class PipelineResult(BaseModel):
     total_leaves: int = Field(ge=0)
     coverage: float = Field(ge=0.0, le=1.0)
     elapsed_seconds: float = Field(ge=0.0)
+    merge_report: MergeReport | None = None
 
     model_config = {"arbitrary_types_allowed": True}
 
@@ -69,6 +72,8 @@ async def run_pipeline(
     settings: Settings | None = None,
     source_patterns: list[CleanupPattern] | None = None,
     overwrite_subject: bool = False,
+    embedder: Embedder | None = None,
+    judge: "Callable[[LeafLabel, LeafLabel], str] | None" = None,
 ) -> PipelineResult:
     """Run the full V2 ingestion pipeline end-to-end (v3 schema).
 
@@ -176,20 +181,46 @@ async def run_pipeline(
     filled: FilledTree = fill_content(tree=proposed, extracted=extracted)
 
     # Stage 8 — Emit (v3 schema; subject-canonical layout)
-    logger.info("pipeline: stage 8 — emitting skill folder")
     source_metadata = {
         "publisher": book_metadata.get("publisher", "unknown"),
         "book_slug": effective_book_slug,
         "authority_rank": int(book_metadata.get("authority_rank", 3)),
     }
-    folder = await emit_skill_folder(
-        filled=filled,
-        subject_slug=subject_slug,
-        book_metadata=book_metadata,
-        output_root=root,
-        source_metadata=source_metadata,
-        overwrite=overwrite_subject,
-    )
+    subject_dir = root / subject_slug
+    merge_report: MergeReport | None = None
+
+    if subject_dir.exists() and not overwrite_subject:
+        # Stage 6.5b — merge into existing subject tree (spec §6).
+        if embedder is None:
+            raise RuntimeError(
+                f"subject tree already exists at {subject_dir}. "
+                f"Pass embedder=<Embedder> to merge this source in, or "
+                f"overwrite_subject=True to clobber. See ingestion_v2/merge.py."
+            )
+        logger.info("pipeline: stage 6.5b — merging into existing subject tree")
+        merge_report = merge_into_subject_tree(
+            filled, subject_dir,
+            source_metadata=source_metadata,
+            embedder=embedder,
+            judge=judge,
+        )
+        logger.info(
+            "pipeline: merge complete — appended=%d added_leaves=%d added_chapters=%d",
+            merge_report.appended,
+            merge_report.added_leaves,
+            merge_report.added_chapters,
+        )
+        folder = subject_dir
+    else:
+        logger.info("pipeline: stage 8 — emitting skill folder")
+        folder = await emit_skill_folder(
+            filled=filled,
+            subject_slug=subject_slug,
+            book_metadata=book_metadata,
+            output_root=root,
+            source_metadata=source_metadata,
+            overwrite=overwrite_subject,
+        )
 
     total_nodes, total_leaves = _count_nodes(filled.root)
     elapsed = time.monotonic() - started
@@ -207,4 +238,5 @@ async def run_pipeline(
         total_leaves=total_leaves,
         coverage=validation.coverage,
         elapsed_seconds=elapsed,
+        merge_report=merge_report,
     )
