@@ -12,8 +12,9 @@ Usage:
         --publisher NCERT
 
 The CLI accepts either:
-  * an http(s) URL or ZIP URL — downloaded + merged via the existing
-    ingestion.pdf_downloader (same helper used by V1)
+  * an http(s) URL or ZIP URL — downloaded + merged via the
+    ingestion_v2.pdf_downloader helper (kept after V1 cleanup since it
+    handles ZIP-of-PDFs merging that V2 still needs).
   * a local filesystem path (absolute or relative) — used as-is
   * a file:// URI — stripped to a local path
 
@@ -55,7 +56,7 @@ logging.basicConfig(
 )
 
 
-from ingestion.pdf_downloader import download_pdf  # noqa: E402
+from ingestion_v2.pdf_downloader import download_pdf  # noqa: E402
 from ingestion_v2.pipeline import run_pipeline  # noqa: E402
 from ingestion_v2.text_cleanup import BRANDING_BUNDLES  # noqa: E402
 
