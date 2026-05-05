@@ -99,17 +99,17 @@ What's novel here:
 ## Technical Highlights
 
 - **8-stage ingestion pipeline** with 11 spec addendums documenting every decision (`docs/superpowers/specs/2026-04-17-v2-ingestion-pipeline-design.md`)
-- **101 unit tests** on critical paths: structural validator, OCR merge dedupe, BM25 retriever, MCQ schema, span verifier, dedup winner-rule, JSON utils
-- **100% paragraph coverage** on the Springboard ingest (1061/1061), with 100% title-content match on spot check
-- **Reproducible**: `make demo` → backend boots, frontend connects, pre-ingested skill folder is live at `/explorer`. No manual setup beyond `OPENROUTER_API_KEY`
+- **97 unit tests** + **7 Playwright journeys** on critical paths: structural validator, OCR merge dedupe, retrieval, MCQ schema, span verifier, dedup winner-rule, JSON utils, brand-strip guard
+- **100% paragraph coverage** on the Rajasthan Geography ingest (1061/1061), with 100% title-content match on spot check
+- **Reproducible**: see [`README.md`](../README.md) Quickstart — `uv sync && uv run uvicorn ...` for backend, `npm install && npm run dev` for frontend; pre-ingested subject tree is live at `/library/rajasthan_geography`. No manual setup beyond `OPENROUTER_API_KEY`.
 
 ---
 
 ## Try It
 
-- **Hosted demo**: [vercel-url] (read-only, pre-ingested with Springboard Rajasthan Geography)
+- **Hosted demo**: [GCP Cloud Run url — pending] (read-only, pre-ingested with Rajasthan Geography subject tree)
 - **GitHub**: https://github.com/Mohit-5899/easilyclear
-- **Run locally**: `make demo` (Docker Compose + OpenRouter key in `.env`)
+- **Run locally**: see [`README.md`](../README.md) Quickstart (Python 3.12, Node 22, `OPENROUTER_API_KEY`).
 
 ---
 

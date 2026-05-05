@@ -223,9 +223,9 @@ To add a new book: drop the PDF into `/ingest`, fill the metadata form, watch th
 ```markdown
 ## Try the live demo
 
-- **Hosted demo**: [vercel-url] (read-only, pre-ingested with Springboard Rajasthan Geography)
+- **Hosted demo**: [GCP Cloud Run url — pending] (read-only, pre-ingested with Rajasthan Geography subject tree)
 - **GitHub**: https://github.com/Mohit-5899/easilyclear
-- **Run locally**: `make demo` (Docker Compose + OpenRouter key in `.env`)
+- **Run locally**: see the repo `README.md` Quickstart (Python 3.12, Node 22, `OPENROUTER_API_KEY`).
 
 Built solo over 33 days. Every implementation choice has a research note or spec — check `docs/research/` and `docs/superpowers/specs/`.
 

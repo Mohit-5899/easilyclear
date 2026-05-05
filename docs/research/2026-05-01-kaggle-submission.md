@@ -44,7 +44,7 @@ Given Gemma Tutor (RAS aspirants, English-canonical KB + Hindi output, PageIndex
 
 - **Writeup (1,400 words):** lead with one named aspirant persona ("Pooja, BA-Hindi, Sikar district, no coaching budget"). Then Gemma 4 features used (E4B + E2B retrieval traversal, function calling for MCQs, multimodal for diagram pages). Architecture diagram. Results: retrieval recall@5, glossary-injection eval, FSRS retention curve.
 - **Kaggle Notebook:** end-to-end demo — load NCERT JSON → PageIndex query → Gemma E4B answer in Hindi → MCQ tool-call → FSRS schedule. Must run on Kaggle GPU.
-- **GitHub:** public, Apache-2.0, `make demo` runs the whole stack on Ollama.
+- **GitHub:** public, Apache-2.0, README quickstart runs the whole stack (Ollama for offline / OpenRouter for hosted).
 - **Video (2:45):** 0–30s Pooja's day, 30–90s tutor in action (Hindi answer, MCQ, spaced review), 90–150s offline toggle + low-bandwidth claim, 150–165s tech stack flash.
 - **Hosted demo:** Vercel preview of frontend pointing to a Cloudflare-tunneled Ollama box for judge testing window only.
 - **Stretch (Unsloth $10K):** thin LoRA on Hindi-glossary outputs — was deferred per `CLAUDE.md §3`, **reconsider on Day 14** if time permits.
