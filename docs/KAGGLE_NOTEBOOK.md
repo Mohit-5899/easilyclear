@@ -1,11 +1,8 @@
 # Kaggle Notebook — Gemma Tutor Demo
 
-> This is the source-of-truth for the notebook we'll publish on Kaggle. Convert to `.ipynb` via `jupytext` or by pasting the cells into a fresh notebook.
-
-```bash
-# Convert to ipynb when ready to publish:
-#   jupytext --to ipynb docs/KAGGLE_NOTEBOOK.md -o submission.ipynb
-```
+> The runnable notebook lives at [`docs/kaggle/gemma_tutor_demo.ipynb`](./kaggle/gemma_tutor_demo.ipynb) — that's the artifact that goes up on Kaggle. This Markdown file is a human-readable mirror of the same cells, kept in sync for easier review.
+>
+> Open the .ipynb in Jupyter / VS Code / Kaggle to execute it. Outputs are stripped on commit; they get re-run on submission day with the OpenRouter key in `Kaggle Secrets`.
 
 ---
 
@@ -33,7 +30,7 @@ Pooja, 23, is preparing for the Rajasthan Administrative Services Preliminary ex
 
 Free PDFs exist but are watermarked, fragmented across coaching brands, and partly in Hindi. Off-the-shelf chatbots either don't know the syllabus or hallucinate without citations.
 
-Gemma Tutor ingests publisher-clean textbooks (NCERT > RBSE > vetted coaching) into a hierarchical skill tree with verbatim source content, then lets the student chat with each topic and generate verifiable mock tests grounded in the actual textbook.
+**Gemma Tutor** ingests publisher-clean textbooks (NCERT > RBSE) into a *subject-canonical* skill tree with verbatim source content — multiple sources merge into a single tree, brand names stay in internal frontmatter only — then lets the student chat with each topic and generate verifiable mock tests grounded in the actual textbook.
 ```
 
 ---
@@ -41,40 +38,44 @@ Gemma Tutor ingests publisher-clean textbooks (NCERT > RBSE > vetted coaching) i
 ## Cell 3 — Code · Setup
 
 ```python
-# %% [code]
-!pip install -q openrouter PyMuPDF pytesseract rank-bm25 pydantic frontmatter sentence-transformers
-!apt-get install -qq tesseract-ocr
+# Setup — Kaggle has Tesseract pre-installed; we just pip-install Python deps.
+!pip install -q PyMuPDF pytesseract rank-bm25 pydantic python-frontmatter sentence-transformers httpx
 
-import os, json
+import os
 from pathlib import Path
 
 # Set your OpenRouter API key as a Kaggle Secret named OPENROUTER_API_KEY
-os.environ.setdefault("OPENROUTER_API_KEY", "<your-key-here>")
+from kaggle_secrets import UserSecretsClient  # type: ignore
+try:
+    os.environ["OPENROUTER_API_KEY"] = UserSecretsClient().get_secret("OPENROUTER_API_KEY")
+except Exception:
+    os.environ.setdefault("OPENROUTER_API_KEY", "<paste-your-key-here>")
 print("Setup complete.")
 ```
 
 ---
 
-## Cell 4 — Markdown · Step 1: Inspect a pre-ingested skill folder
+## Cell 4 — Markdown · Step 1: Inspect a pre-ingested subject tree
 
 ```markdown
-## Step 1: Inspect a pre-ingested skill folder
+## Step 1: Inspect a pre-ingested subject tree
 
-We've pre-ingested the Springboard Academy "Rajasthan Geography" notes (267 pages → 1061 paragraphs after OCR, 13 chapters / 34 leaves, 100% paragraph coverage). Each leaf is a Markdown file with YAML frontmatter and verbatim source content.
+We've pre-ingested the Rajasthan Geography subject tree (267-page source, 1061 paragraphs after OCR, 13 chapters, 100% paragraph coverage). Each leaf is a Markdown file with YAML frontmatter and verbatim source content.
+
+The tree is **subject-canonical**: there's one tree per subject, not per book. When NCERT Class 11 lands as a second source, its leaves merge into this same tree (via cosine + Gemma judge), with each source kept distinct in the leaf's `sources[]` list and a separate `## Source N` body section.
 ```
 
 ---
 
-## Cell 5 — Code · Show the tree structure
+## Cell 5 — Code · Show the chapter structure
 
 ```python
-# %% [code]
 !git clone -q https://github.com/Mohit-5899/easilyclear /kaggle/working/gemma-tutor
 import os
 os.chdir("/kaggle/working/gemma-tutor")
 
-# List the skill folder
-!find database/skills/geography/springboard_rajasthan_geography -type f -name "*.md" | sort | head -30
+# Show the chapter structure
+!find database/skills/rajasthan_geography -maxdepth 1 -type d | sort | head -20
 ```
 
 ---
@@ -82,18 +83,18 @@ os.chdir("/kaggle/working/gemma-tutor")
 ## Cell 6 — Code · Read one leaf to see the source-preserved content
 
 ```python
-# %% [code]
+# Read one leaf to see the frontmatter (multi-source) + body (verbatim).
 import frontmatter
 from pathlib import Path
 
-leaf = Path("database/skills/geography/springboard_rajasthan_geography/02-physiographic-divisions/03-characteristics-and-divisions-of-aravali.md")
+leaf = Path("database/skills/rajasthan_geography/02-physiographic-divisions/03-characteristics-and-divisions-of-aravali.md")
 post = frontmatter.load(leaf)
 
-print("=== Frontmatter ===")
+print("=== Frontmatter (sources[] is what makes the tree multi-publisher) ===")
 for k, v in post.metadata.items():
     print(f"  {k}: {v}")
 
-print("\n=== Body (first 800 chars) ===")
+print("\n=== Body (first 800 chars; bodies are verbatim source paragraphs) ===")
 print(post.content[:800])
 ```
 
@@ -104,7 +105,7 @@ print(post.content[:800])
 ```markdown
 ## Step 2: Tutor Q&A — answer with source citations
 
-The tutor agent does BM25 retrieval over the selected node's subtree, then asks Gemma 4 26B to answer using **only** those paragraphs, with `[N]` citation markers.
+The production tutor is an **agent** that calls a `lookup_skill_content` tool against the canonical subject tree, then streams the answer with `[N]` citation markers tied to the retrieved paragraphs. For a one-cell illustration we'll call the BM25 retriever directly — same paragraphs the agent would see, minus the tool-calling envelope.
 ```
 
 ---
@@ -112,20 +113,21 @@ The tutor agent does BM25 retrieval over the selected node's subtree, then asks 
 ## Cell 8 — Code · Run a tutor query
 
 ```python
-# %% [code]
-import sys
+import sys, asyncio
 sys.path.insert(0, "backend")
 
 from tutor.retriever import build_retriever_for_node
 from tutor.prompt import build_tutor_messages
 from llm.openrouter import OpenRouterClient
+from llm.base import Message
 
-retriever = build_retriever_for_node(
-    Path("database/skills"),
-    "geography/springboard_rajasthan_geography/02-physiographic-divisions/03-characteristics-and-divisions-of-aravali",
+node_id = (
+    "rajasthan_geography/02-physiographic-divisions/"
+    "03-characteristics-and-divisions-of-aravali"
 )
+retriever = build_retriever_for_node(Path("database/skills"), node_id)
 hits = retriever.search("Why is Aravalli called the planning region?", k=3)
-print("Retrieved", len(hits), "paragraphs:")
+print(f"Retrieved {len(hits)} paragraphs:")
 for h in hits:
     print(f"  [score={h.score:.2f} page={h.page}] {h.snippet[:120]}…")
 
@@ -136,9 +138,6 @@ messages = build_tutor_messages(
 )
 
 client = OpenRouterClient(api_key=os.environ["OPENROUTER_API_KEY"])
-import asyncio
-from llm.base import Message
-
 response = asyncio.run(client.complete(
     [Message(**m) for m in messages],
     model="google/gemma-4-26b-a4b-it",
@@ -160,9 +159,9 @@ The mock test generator runs three stages:
 
 1. **Generation** — Gemma 4 26B emits structured MCQs in JSON mode, with an `answer_span` field that's a verbatim substring of the cited paragraph
 2. **Span verification** (deterministic, no LLM) — confirms `answer_span` actually appears in the source
-3. **LLM judge** — confirms the question has a single correct answer and isn't solvable from general knowledge alone
+3. **LLM judge** — confirms each question has a single correct answer and isn't solvable from general knowledge alone
 
-We oversample to 13 candidates and keep the 10 that pass.
+We oversample to 8 candidates and keep the 5 that pass.
 ```
 
 ---
@@ -170,8 +169,6 @@ We oversample to 13 candidates and keep the 10 that pass.
 ## Cell 10 — Code · Generate 5 questions on the Aravalli leaf
 
 ```python
-# %% [code]
-import asyncio
 from tests_engine.orchestrator import build_mock_test
 
 # Reuse the retriever's paragraph list as the corpus.
@@ -181,7 +178,7 @@ test = asyncio.run(build_mock_test(
     llm=client,
     generator_model="google/gemma-4-26b-a4b-it",
     judge_model="google/gemma-4-26b-a4b-it",
-    node_id="geography/springboard_rajasthan_geography/02-physiographic-divisions/03-characteristics-and-divisions-of-aravali",
+    node_id=node_id,
     paragraphs=paragraphs,
     n=5,
     oversample_n=8,
@@ -207,13 +204,13 @@ for i, q in enumerate(test.questions, 1):
 
 The same pipeline works for any English-language textbook with a clean source:
 
-- **NCERT Class 10/12** — pre-structured PDFs, ~10 min ingest time per book on the paid Gemma 4 26B tier
-- **RBSE Class 10/12** — analogous structure for Rajasthan State Board
-- **Patwari + REET** — different source whitelist, same code
+- **NCERT Class 11 / 12** — pre-structured PDFs, ~10 min ingest on the paid Gemma 4 26B tier; auto-merges into the existing subject tree via Stage 6.5b
+- **RBSE Class 10 / 12** — analogous structure for Rajasthan State Board
+- **Patwari + REET** — different exam-coverage tags, same code
 
 Per-student cost is ₹0 once self-hosted (Ollama + commodity hardware). Compare to ₹35K/year coaching.
 
-To add a new book: drop the PDF into `/ingest`, fill the metadata form, watch the 8 pipeline stages stream live. Skill folder appears in `/explorer` when done.
+To add a new source: drop the PDF into `/admin`, fill the metadata form, watch the 8 pipeline stages stream live. The merged subject tree appears in `/library/<subject>` when done.
 ```
 
 ---
@@ -223,7 +220,7 @@ To add a new book: drop the PDF into `/ingest`, fill the metadata form, watch th
 ```markdown
 ## Try the live demo
 
-- **Hosted demo**: [GCP Cloud Run url — pending] (read-only, pre-ingested with Rajasthan Geography subject tree)
+- **Hosted demo**: [GCP Cloud Run url — pending] (read-only, pre-ingested with the Rajasthan Geography subject tree)
 - **GitHub**: https://github.com/Mohit-5899/easilyclear
 - **Run locally**: see the repo `README.md` Quickstart (Python 3.12, Node 22, `OPENROUTER_API_KEY`).
 
