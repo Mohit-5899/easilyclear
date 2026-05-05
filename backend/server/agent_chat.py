@@ -25,7 +25,7 @@ router = APIRouter(prefix="/tutor", tags=["tutor"])
 
 
 _DEFAULT_SKILL_ROOT = (
-    Path(__file__).resolve().parent.parent.parent / "database" / "skills"
+    Path(__file__).resolve().parent.parent / "database" / "skills"
 )
 _PROMPT_PATH = (
     Path(__file__).resolve().parent.parent / "prompts_v2" / "agent_chat_system.md"

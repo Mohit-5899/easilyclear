@@ -18,3 +18,4 @@ wheels/
 
 # Build logs
 logs/
+.vercel

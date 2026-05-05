@@ -47,7 +47,7 @@ import frontmatter
 logger = logging.getLogger(__name__)
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
-_SKILLS_ROOT = _REPO_ROOT / "database" / "skills"
+_SKILLS_ROOT = _REPO_ROOT / "backend" / "database" / "skills"
 
 # Splits paragraphs on blank-line boundaries (matches V2 ingestion convention).
 _PARAGRAPH_SPLIT = re.compile(r"\n\s*\n+")

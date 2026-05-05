@@ -1,14 +1,11 @@
 """Vercel Function entry — exposes the FastAPI ASGI app to Vercel.
 
-Vercel auto-detects ASGI apps (FastAPI / Starlette / etc.) when a single
-top-level `app` is found. The `vercel.json` rewrite at the project root
-forwards every incoming path to `/api/index`, so this one file handles
-the entire backend surface (`/health`, `/tutor/agent_chat`, `/tests`, …).
+Vercel auto-detects ``app`` exported at module level. The ``vercel.json``
+rewrite sends every incoming path to ``/api/index``, so this one Function
+handles the entire backend surface.
 
-For local dev, keep using:
+Local dev keeps using:
     uv run uvicorn server.main:app --host 127.0.0.1 --port 8010 --reload
-
-This file is touched only when Vercel boots the cold instance.
 """
 
 from __future__ import annotations
@@ -16,14 +13,13 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-# Vercel runs functions with the Function file's directory on sys.path; the
-# parent (`backend/`) is what holds our `server/`, `tutor/`, `llm/`, …
-# packages, so add it explicitly.
+# Vercel runs the Function with the entry file's directory on sys.path; the
+# parent (`backend/`) holds our `server/`, `tutor/`, `llm/`, … packages,
+# so add it explicitly so `from server.main import app` resolves.
 _BACKEND = Path(__file__).resolve().parent.parent
 if str(_BACKEND) not in sys.path:
     sys.path.insert(0, str(_BACKEND))
 
 from server.main import app  # noqa: E402  (sys.path tweak above is intentional)
 
-# Vercel's ASGI runtime expects `app` exported at module level.
 __all__ = ["app"]

@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 # Default output root used when the caller doesn't override it. Resolves to
 # <repo-root>/database/skills/.
 _DEFAULT_OUTPUT_ROOT = (
-    Path(__file__).resolve().parent.parent.parent / "database" / "skills"
+    Path(__file__).resolve().parent.parent / "database" / "skills"
 )
 
 

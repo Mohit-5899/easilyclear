@@ -30,7 +30,7 @@ router = APIRouter(prefix="/tutor", tags=["tutor"])
 
 
 # Default skill root — configurable via Settings.skill_root for tests/dev.
-_DEFAULT_SKILL_ROOT = Path(__file__).resolve().parent.parent.parent / "database" / "skills"
+_DEFAULT_SKILL_ROOT = Path(__file__).resolve().parent.parent / "database" / "skills"
 
 
 class ChatMessage(BaseModel):

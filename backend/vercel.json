@@ -1,9 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
   "functions": {
-    "api/index.py": {
+    "api/*.py": {
       "memory": 1024,
-      "maxDuration": 300
+      "maxDuration": 300,
+      "includeFiles": "database/skills/**"
     }
   },
   "rewrites": [

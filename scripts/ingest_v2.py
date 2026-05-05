@@ -188,7 +188,7 @@ async def _main() -> int:
     # API keys are needed; callers wanting higher-quality semantic match
     # can swap this for a real embedder by importing run_pipeline directly.
     candidate_root = output_root or (
-        Path(__file__).resolve().parent.parent / "database" / "skills"
+        Path(__file__).resolve().parent.parent / "backend" / "database" / "skills"
     )
     embedder = None
     if (candidate_root / subject_slug).exists() and not args.overwrite_subject:
