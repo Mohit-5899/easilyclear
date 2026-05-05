@@ -98,7 +98,7 @@ cd backend
 cp .env.example .env
 # Edit .env — at minimum set OPENROUTER_API_KEY
 uv sync
-uv run uvicorn api.main:app --host 127.0.0.1 --port 8010 --reload
+uv run uvicorn server.main:app --host 127.0.0.1 --port 8010 --reload
 ```
 
 Health check: `curl http://127.0.0.1:8010/health`

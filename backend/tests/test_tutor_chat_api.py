@@ -39,7 +39,7 @@ class _FakeLLM:
 
 @pytest.fixture
 def app_with_skill_root(tmp_path: Path):
-    from api.main import app
+    from server.main import app
 
     # Build a tiny skill folder
     book = tmp_path / "geography" / "tinybook"

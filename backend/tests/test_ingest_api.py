@@ -18,7 +18,7 @@ _BACKEND = Path(__file__).resolve().parent.parent
 if str(_BACKEND) not in sys.path:
     sys.path.insert(0, str(_BACKEND))
 
-from api.main import app
+from server.main import app
 
 
 def test_branding_options_lists_known_bundles():
