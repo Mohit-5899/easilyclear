@@ -3,6 +3,6 @@
     "slug": "rajasthan_geography",
     "name": "Rajasthan Geography",
     "scope": "rajasthan",
-    "skill_folder": "backend/database/skills/rajasthan_geography"
+    "skill_folder": "public/data/skills/rajasthan_geography"
   }
 ]
