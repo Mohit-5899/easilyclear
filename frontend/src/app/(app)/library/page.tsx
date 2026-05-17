@@ -25,13 +25,13 @@ async function buildBookCards(): Promise<BookCard[]> {
   const manifestPath = join(process.cwd(), "public", "data", "manifest.json");
   const raw = await readFile(manifestPath, "utf-8").catch(() => "[]");
   const manifest: ManifestEntry[] = JSON.parse(raw);
-  const repoRoot = resolve(process.cwd(), "..");
+  const projectRoot = process.cwd();
 
   const cards: BookCard[] = [];
   for (const entry of manifest) {
     if (!entry.skill_folder) continue;
     try {
-      const book = await readSkillFolder(resolve(repoRoot, entry.skill_folder));
+      const book = await readSkillFolder(resolve(projectRoot, entry.skill_folder));
       const stats = countTree(book.structure);
       cards.push({
         slug: entry.slug,

@@ -1,0 +1,66 @@
+---
+content_hash: sha256:6aa8643b2ce91e3e60ac3cdbf8cc3fcde219c6d07f8e10699af015675e960b5f
+depth: 2
+description: Students learn the various traditional, historical, and geographical
+  names of different regions and districts across Rajasthan.
+ingested_at: '2026-05-04T03:07:14Z'
+ingestion_version: v3
+name: Historical and Regional Names of Rajasthan
+node_id: rajasthan_geography/02-physiographic-divisions/01-historical-and-regional-names-of-rajasthan
+order: 1
+parent: rajasthan_geography/02-physiographic-divisions
+related_skills: []
+sources:
+- authority_rank: 2
+  book_slug: springboard_rajasthan_geography
+  content_hash: sha256:180af66786b0ab17bce393feda53a71bec060554b030fd5b9ed791bc63d1a81e
+  ingested_at: '2026-05-01T07:22:55Z'
+  pages:
+  - 15
+  - 16
+  - 17
+  - 18
+  paragraph_ids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  publisher: Springboard Academy
+  source_id: 1
+subject: rajasthan_geography
+superseded_by: null
+---
+
+## Source 1 (pages 15-18)
+
+1. Rathi :- Less than 25 Cm. rainfall area is known as Rathi region.  Covered district in this area : Jaisalmer, Bikaner, Barmer  The breed of cow in this area is also called Rathi  Rath/Ahirwaat: - Yadav dynasty ruled area is known as Rath. 2. Covered district in this region mainly Alwar and Kotputli-Bahror 3. Shekhawati: - Shekhawat dynasty ruled area is known as shekhawati.  Covered district: Churu, Sikar, Neem Ka Thana Jhunjhunu.  Torawati: - Catchment area of Kantli River known as Torawati.  Covered district in this region is Sikar, Jhunjhunu. 4. Thali :- Upland part of desert is known as Thali covered district in this region Churu, Bikaner. Historical & Geographical Places of Rajasthan
+
+RAJASTHAN DISTRICT (50) MAP Legend + orstmer ne Pun orasion = + nmemurona nouaary [—] scour onason Oo nataicr anninsay ‘ema nevaion DS excantasion Bp movein | Fees ovson Ex] smarcmson suaraTruncrasion — [J uoaruneeasion Dexwerovicon e Covered district in this area : Jaisalmer, Bikaner, Barmer e The breed of cow in this area is also called Rathi * Rath/Ahirwaat: - Yadav dynasty ruled area is known as Rath. © Covered district: Churu, Sikar, Neem Ka Thana Jhunjhunu. * Torawati: - Catchment area of Kantli River known as Torawati. e Covered district in this region is Sikar, Jaunjhunu. 4, Thali :- Upland part of desert is known as Thali covered district in this region Churu,
+
+ No one river in this region.  Talli :- Bottom area located between sand dunes is called Talli.  This region is mainly located in Jaisalmer district. 5. Maru :- Western region of Rajasthan state is known as maru region.  It is mainly expanded in Jodhpur division. 6. Bhorat :- It's located between Kumbhalgarh hills (Rajsamand) and Gogunda hills (Udaipur)  It's a plateau region.  Bhomat :- It's a hills and plateau region which is located beetween Udaipur and Dungarpur. 7. Matsay :- In Historical time period southern western part of Alwar was famous as Matsay. It's Capital was Bairath at present known as Virat Nagar.  Matsay Union :- Unification 1st Stage/phase was known as Matsay union.  Included district in this region Alwar, Bharatpur, Karauli, Dholpur.  The word mastsay union is given by K. M. Munshi. 8. Mal/Hadoti:- Southern- Eastern plateau region of Rajasthan is known as Hadoti and Mal.  Covered district: - Kota, Bundi, Bara, Jhalawar.  Malav: - Extension of Malwa Plateau in Rajasthan State is known as Malav Pradesh.  Included district: - Pratapgarh and Jhalawar. 9. Beed: - Grassland area is known as Beed.  It's mostly located in Jhunjhunu district of Shekhawati.  Beehad:- Badland topography is formed by the action of River known as Beehad/Ravines.  Included district: - Karauli, Dholpur, Sawai Madhopur. 10. Vagad :- Southern part of Rajasthan is known as vagad.  Covered district: Bansawara, Dungarpur and Pratapgarh.  Bangar:- Ancient alluvial soil region located western side from Arawali is known as Bangar.  Covered district in this region Pali, Nagaur, Sikar and Jhunjhunu. 11. Brajnagar : Ancient name of Jhalarapatan is called as Brajnagar.  Brijnagar: - Area of Bhartpur attached with U.P. is known as Brijnagar. 12. Marwar :- Western part of Rajasthan state is known as Marwar.  Covered district: Jodhpur, Jaisalmer, Jalore, Pali, Sirohi, and Barmer.  Merwara :- Mainly Ajmer and Minor partial part of Rajsamand is known as merwara.  Mewar - Guhil Dynasty ruled area is known as Mewar/Pragwat/ Medpat.  Covered district in this region Udaipur, Chittorgarh, Rajsamand and Bhilwara. 13. Yaudheya:- In histrocial time period Northern part of Rajasthan state was famous as Yaudheya.  Included district - Sriganganagar, Hanumangarh
+
+@ No one river in this region. * Talli :- Bottom area located between sand dunes is called Talli. e This region is mainly located in Jaisalmer district. e Itis mainly expanded in Jodhpur division. e It'sa plateau region. * Bhomat :- It's a hills and plateau region which is located beetween Udaipur and Dungarpur. * Matsay Union :- Unification 1s Stage/ phase was known as Matsay union. e Included district in this region Alwar, Bharatpur, Karauli, Dholpur. e The word mastsay union is given by K. M. Munshi. © Covered district: - Kota, Bundi, Bara, Jhalawar. * Malav: - Extension of Malwa Plateau in Rajasthan State is known as Malav Pradesh. e Included district: - Pratapgarh and Jhalawar. e It's mostly located in Jhunjhunu district of Shekhawati. * Beehad:- Badland topography is formed by the action of River known as Beehad/Ravines. e Included district: - Karauli, Dholpur, Sawai Madhopur. © Covered district: Bansawara, Dungarpur and Pratapgarh. * Bangar:- Ancient alluvial soil region located western side from Arawali is known as Bangar. e Covered district in this region Pali, Nagaur, Sikar and Jhunjhunu. * Brijnagar: - Area of Bhartpur attached with U.P. is known as Brijnagar. © Covered district: Jodhpur, Jaisalmer, Jalore, Pali, Sirohi, and Barmer. * Merwara :- Mainly Ajmer and Minor partial part of Rajsamand is known as merwara. * Mewar - Guhil Dynasty ruled area is known as Mewar/Pragwat/ Medpat. © Covered district in this region Udaipur, Chittorgarh, Rajsamand and Bhilwara. 13. Yaudheya:- In _histrocial time period Northern part of Rajasthan state was famous as e Included district - Sriganganagar, Hanumangarh
+
+14. Jangal :- Mostly Bikaner and northern part of Jodhpur was known as jangal.  Thorny vegetation is found in this region. 15. Ahichhatrapur :- It was Ancient name of Nagaur district.  It's capital was Sapadlaksh and Jangal. 16. Sapadlaksha :- Ruled area of Chauhan dynasty was known as Sapadalaksha.  It's 1st capital was Ahichhatrapur and 2nd was Shakambhari. 17. Dhundhad :- Dhundh river region is known as Dhundhad.  Covered district in this region are mainly Jaipur, Tonk and Dausa. 18. Kuru region/Pradesh :- Northern Part of Alwar district is known as Kuru region.  It's capital was Indraprastha. 19. Shursen region :- Eastern part of Rajasthan was known as shursen in historical time period.  Covered district in this region Bhartpur, Karauli and Dholpur.  It's capital was Mathura. 20. Hayahay region :- Bundi and Kota district is known as Hayhay.  It was ruled area of Chauhan dynasty (Hada Chauhan) 21. Chandrawati- It was ancient name of Sirohi.  Anti Earthquake buildings are found here. 22. Jabalipur :- Land of Jabali Rishi is known as Jabalipur.  At Present this region is known as Jalore.  Mainly Jal trees are found in this region. 23. Malani :- Ancient name of Barmer district.  It was the land of Mallinath Saint. 24. Mand :- Jaisalmer district is known as Mand because Mand singing is famous in this region.  Surrounding area of mand is known as Vall. 25. Mewat :- Alwar and Bharatpur district is known as Mewat because Mev cast is found in this region.  Meval :- It's a hills region located between Dungarpur and Banswara. 26. Kathal :- Pratapgarh district is known as Kathal. It is located on the bank of Mahi River.
+
+e Thorny vegetation is found in this region. e It's capital was Sapadlaksh and Jangal. e It's 1st capital was Ahichhatrapur and 2°4 was Shakambhari. © Covered district in this region are mainly Jaipur, Tonk and Dausa. e It's capital was Indraprastha. © Covered district in this region Bhartpur, Karauli and Dholpur. e It's capital was Mathura. e It was ruled area of Chauhan dynasty (Hada Chauhan) e Anti Earthquake buildings are found here. e At Present this region is known as Jalore. @ Mainly Jal trees are found in this region. e It was the land of Mallinath Saint. 24, Mand :- Jaisalmer district is known as Mand because Mand singing is famous in this region. e Surrounding area of mand is known as Vall. e Meval :- It's a hills region located between Dungarpur and Banswara.
+
+ Rajasthan is divided into four physical divisions.
+
+ General Information of Physical Divisions :-
+
+Desert Aravali Eastern Plain Hadoti Plateau
+
+Area 61.11% 9% 23% 6.89% Population 40% 10% 39% 11% Districts 12 13 10 7 Soil Sandy Mountain / Forest Soil Alluvial Soil Black / Regur Soil Climate Arid and Semi Arid Sub Humid Humid Very Humid
+
+PHYSICAL DIVISION OF RAJASTHAN
+
+{ PHYSICAL DIVISION OF RAJASTHAN | > Rajasthan is divided into four physical divisions. South Eastern > General Information of Physical Divisions :- Soil Sandy Mountain / Alluvial Soil Black / Regur Forest Soil Soil Climate Arid and Semi Sub Humid Humid Very Humid

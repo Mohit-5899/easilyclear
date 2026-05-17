@@ -58,14 +58,14 @@ export async function GET() {
     return NextResponse.json([] as LeafOption[]);
   }
 
-  const repoRoot = resolve(process.cwd(), "..");
+  const projectRoot = process.cwd();
   const out: LeafOption[] = [];
 
   for (const entry of manifest) {
     if (!entry.skill_folder) continue;
     let book: BookData;
     try {
-      book = await readSkillFolder(resolve(repoRoot, entry.skill_folder));
+      book = await readSkillFolder(resolve(projectRoot, entry.skill_folder));
     } catch {
       continue;
     }

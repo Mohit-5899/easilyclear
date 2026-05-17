@@ -45,10 +45,10 @@ export default async function LibrarySubjectPage({ params }: PageProps) {
     redirect("/library");
   }
 
-  const repoRoot = resolve(process.cwd(), "..");
+  const projectRoot = process.cwd();
   let book: BookData;
   try {
-    book = await readSkillFolder(resolve(repoRoot, entry.skill_folder));
+    book = await readSkillFolder(resolve(projectRoot, entry.skill_folder));
   } catch {
     redirect("/library");
   }
